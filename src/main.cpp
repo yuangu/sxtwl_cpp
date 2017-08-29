@@ -5,24 +5,25 @@
 #include "lunar.h"
 #include "eph.h"
 #include "SSQ.h"
+
 int main()
 {
 
-	static const char* Gan[] = { "ç”²", "ä¹™", "ä¸™", "ä¸", "æˆŠ", "å·±", "åºš", "è¾›", "å£¬", "ç™¸" };
-	static const char* Zhi[] = { "å­", "ä¸‘", "å¯…", "å¯", "è¾°", "å·³", "åˆ", "æœª", "ç”³", "é…‰", "æˆŒ", "äº¥" };
-	static const char* ShX[] = { "é¼ ", "ç‰›", "è™", "å…”", "é¾™", "è›‡", "é©¬", "ç¾Š", "çŒ´", "é¸¡", "ç‹—", "çŒª" };
-	static const char* numCn[] = { "é›¶", "ä¸€", "äºŒ", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹", "å" }; //ä¸­æ–‡æ•°å­—
-	static const char* jqmc[] = { "å†¬è‡³", "å°å¯’", "å¤§å¯’", "ç«‹æ˜¥", "é›¨æ°´", "æƒŠè›°", "æ˜¥åˆ†", "æ¸…æ˜", "è°·é›¨", "ç«‹å¤", "å°æ»¡", "èŠ’ç§", "å¤è‡³", "å°æš‘", "å¤§æš‘", "ç«‹ç§‹", "å¤„æš‘", "ç™½éœ²", "ç§‹åˆ†", "å¯’éœ²", "éœœé™", "ç«‹å†¬", "å°é›ª", "å¤§é›ª" };
-	static const char* ymc[] = { "åä¸€", "åäºŒ", "æ­£", "äºŒ", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹", "å" }; //æœˆåç§°,å»ºå¯…
-	static const char*  rmc[] = { "åˆä¸€", "åˆäºŒ", "åˆä¸‰", "åˆå››", "åˆäº”", "åˆå…­", "åˆä¸ƒ", "åˆå…«", "åˆä¹", "åˆå", "åä¸€", "åäºŒ", "åä¸‰", "åå››", "åäº”", "åå…­", "åä¸ƒ", "åå…«", "åä¹", "äºŒå", "å»¿ä¸€", "å»¿äºŒ", "å»¿ä¸‰", "å»¿å››", "å»¿äº”", "å»¿å…­", "å»¿ä¸ƒ", "å»¿å…«", "å»¿ä¹", "ä¸‰å", "å…ä¸€" };
+	static const char* Gan[] = { "¼×", "ÒÒ", "±û", "¶¡", "Îì", "¼º", "¸ı", "ĞÁ", "ÈÉ", "¹ï" };
+	static const char* Zhi[] = { "×Ó", "³ó", "Òú", "Ã®", "³½", "ËÈ", "Îç", "Î´", "Éê", "ÓÏ", "Ğç", "º¥" };
+	static const char* ShX[] = { "Êó", "Å£", "»¢", "ÍÃ", "Áú", "Éß", "Âí", "Ñò", "ºï", "¼¦", "¹·", "Öí" };
+	static const char* numCn[] = { "Áã", "Ò»", "¶ş", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å", "Ê®" }; //ÖĞÎÄÊı×Ö
+	static const char* jqmc[] = { "¶¬ÖÁ", "Ğ¡º®", "´óº®", "Á¢´º", "ÓêË®", "¾ªÕİ", "´º·Ö", "ÇåÃ÷", "¹ÈÓê", "Á¢ÏÄ", "Ğ¡Âú", "Ã¢ÖÖ", "ÏÄÖÁ", "Ğ¡Êî", "´óÊî", "Á¢Çï", "´¦Êî", "°×Â¶", "Çï·Ö", "º®Â¶", "Ëª½µ", "Á¢¶¬", "Ğ¡Ñ©", "´óÑ©" };
+	static const char* ymc[] = { "Ê®Ò»", "Ê®¶ş", "Õı", "¶ş", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å", "Ê®" }; //ÔÂÃû³Æ,½¨Òú
+	static const char*  rmc[] = { "³õÒ»", "³õ¶ş", "³õÈı", "³õËÄ", "³õÎå", "³õÁù", "³õÆß", "³õ°Ë", "³õ¾Å", "³õÊ®", "Ê®Ò»", "Ê®¶ş", "Ê®Èı", "Ê®ËÄ", "Ê®Îå", "Ê®Áù", "Ê®Æß", "Ê®°Ë", "Ê®¾Å", "¶şÊ®", "Ø¥Ò»", "Ø¥¶ş", "Ø¥Èı", "Ø¥ËÄ", "Ø¥Îå", "Ø¥Áù", "Ø¥Æß", "Ø¥°Ë", "Ø¥¾Å", "ÈıÊ®", "Ø¦Ò»" };
 
 
 	Lunar lunar;
-    Month month = lunar.yueLiCalc(2017, 2);
+    Month month = lunar.yueLiCalc(2017, 8);
 	
-	std::cout  << month.y << "å¹´"  << (int)month.m << "æœˆ" << std::endl;
-	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "å¹´" << std::endl;
-	std::cout << "ç”Ÿè‚–ï¼š" << ShX[month.ShX] << std::endl;
+	std::cout  << month.y << "Äê"  << (int)month.m << "ÔÂ" << std::endl;
+	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "Äê" << std::endl;
+	std::cout << "ÉúĞ¤£º" << ShX[month.ShX] << std::endl;
 
 
 	std::vector<Day>& days = month.days;
@@ -30,29 +31,29 @@ int main()
 	{
 		Day& day = (*it);
 		std::cout << "===================================================" << std::endl;;
-		std::cout << "å…¬å†ï¼š" << day.y << "å¹´" << (int)day.m << "æœˆ" << day.d << "æ—¥" << std::endl;
+		std::cout << "¹«Àú£º" << day.y << "Äê" << (int)day.m << "ÔÂ" << day.d << "ÈÕ" << std::endl;
 		if (day.Lleap)
 		{
-			std::cout << "æ¶¦" << ymc[day.Lmc] << "æœˆ" << rmc[day.Ldi] << "æ—¥" << std::endl;
+			std::cout << "Èó" << ymc[day.Lmc] << "ÔÂ" << rmc[day.Ldi] << "ÈÕ" << std::endl;
 		}
 		else
 		{
-			std::cout << ymc[day.Lmc] << "æœˆ" << rmc[day.Ldi] << "æ—¥" << std::endl;
+			std::cout << ymc[day.Lmc] << "ÔÂ" << rmc[day.Ldi] << "ÈÕ" << std::endl;
 		}
 		
-		std::cout << "å„’ç•¥å†:JD" << J2000 + day.d0 << std::endl;
-		std::cout << "æ˜ŸæœŸ" << numCn[day.week] << std::endl;
+		std::cout << "ÈåÂÔÀú:JD" << J2000 + day.d0 << std::endl;
+		std::cout << "ĞÇÆÚ" << numCn[day.week] << std::endl;
 		
-		std::cout << Gan[day.Lyear2.tg] << Zhi[day.Lyear2.dz] << "å¹´" 
-			<< Gan[day.Lmonth2.tg] << Zhi[day.Lmonth2.dz] << "æœˆ"
-			<< Gan[day.Lday2.tg] << Zhi[day.Lday2.dz] << "æ—¥"
+		std::cout << Gan[day.Lyear2.tg] << Zhi[day.Lyear2.dz] << "Äê" 
+			<< Gan[day.Lmonth2.tg] << Zhi[day.Lmonth2.dz] << "ÔÂ"
+			<< Gan[day.Lday2.tg] << Zhi[day.Lday2.dz] << "ÈÕ"
 			<< std::endl;
 		
-		std::cout << "è·å†¬è‡³" << day.cur_dz << "å¤©" << std::endl;
-		std::cout << "è·å¤è‡³" << day.cur_xz << "å¤©" << std::endl;
-		std::cout << "è·ç«‹ç§‹" << day.cur_lq << "å¤©" << std::endl;
-		std::cout << "è·èŠ’ç§" << day.cur_mz << "å¤©" << std::endl;
-		std::cout << "è·å°æš‘" << day.cur_xs << "å¤©" << std::endl;
+		std::cout << "¾à¶¬ÖÁ" << day.cur_dz << "Ìì" << std::endl;
+		std::cout << "¾àÏÄÖÁ" << day.cur_xz << "Ìì" << std::endl;
+		std::cout << "¾àÁ¢Çï" << day.cur_lq << "Ìì" << std::endl;
+		std::cout << "¾àÃ¢ÖÖ" << day.cur_mz << "Ìì" << std::endl;
+		std::cout << "¾àĞ¡Êî" << day.cur_xs << "Ìì" << std::endl;
 	
 
 

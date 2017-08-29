@@ -28,11 +28,11 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 	t.Y = By; t.M = Bm; t.D = 1;
 
 	//公历月首的儒略日,中午;
-	Bd0 = (int)(JD::toJD(t)) - J2000;
+	Bd0 = int2(JD::toJD(t)) - J2000;
 
 	t.M++; if (t.M > 12) t.Y++, t.M = 1;
 	//本月天数(公历);
-	Bdn = (int)(JD::toJD(t)) - J2000 - Bd0;
+	Bdn = int2(JD::toJD(t)) - J2000 - Bd0;
 
 	//本月第一天的星期;
 	int w0 = (Bd0 + J2000 + 1 + 7000000) % 7;
@@ -67,8 +67,8 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 		day.dn = Bdn;   //公历月天数
 		day.week0 = w0; //月首的星期
 		day.week = (w0 + i) % 7; //当前日的星期
-		day.weeki = int((w0 + i) / 7); //本日所在的周序号
-		day.weekN = int((w0 + Bdn - 1) / 7) + 1;  //本月的总周数	
+		day.weeki = int2((w0 + i) / 7); //本日所在的周序号
+		day.weekN = int2((w0 + Bdn - 1) / 7) + 1;  //本月的总周数	
 		Time time = JD::JD2DD(day.d0 + J2000);
 		day.d = time.D; //公历日名称;
 
@@ -92,8 +92,8 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 		day.cur_lq = day.d0 - mSSQ.ZQ[15];  //距立秋的天数
 		day.cur_mz = day.d0 - mSSQ.ZQ[11];  //距芒种的天数
 		day.cur_xs = day.d0 - mSSQ.ZQ[13];  //距小暑的天数
-		if (day.d0 == mSSQ.HS[mk] || day.d0 == Bd0) { //月的信息
-			day.Lmc = mk; //月名称
+		if (day.d0 == mSSQ.HS[mk] || day.d0 == Bd0) { //月的信息			
+			day.Lmc = mSSQ.ym[mk]; //月名称
 			day.Ldn = mSSQ.dx[mk]; //月大小
 			day.Lleap = (mSSQ.leap&&mSSQ.leap == mk); //闰状况
 			day.Lmc2 = mk < 13 ? mk + 1 : -1; //下个月名称,判断除夕时要用到
@@ -124,7 +124,7 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 		//干支纪年处理
 		//以立春为界定年首
 		D = mSSQ.ZQ[3] + (day.d0 < mSSQ.ZQ[3] ? -365 : 0) + 365.25 * 16 - 35; //以立春为界定纪年
-		day.Lyear = (int)(D / 365.2422 + 0.5); //农历纪年(10进制,1984年起算)
+		day.Lyear = floor(D / 365.2422 + 0.5); //农历纪年(10进制,1984年起算)
 		//以下几行以正月初一定年首
 		D = mSSQ.HS[2]; //一般第3个月为春节
 		for (j = 0; j < 14; j++) { //找春节
@@ -134,7 +134,7 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 			if (day.d0 < D) { D -= 365; break; } //无需再找下一个正月
 		}
 		D = D + 5810;  //计算该年春节与1984年平均春节(立春附近)相差天数估计
-		day.Lyear0 = (int)(D / 365.2422 + 0.5); //农历纪年(10进制,1984年起算)
+		day.Lyear0 = floor(D / 365.2422 + 0.5); //农历纪年(10进制,1984年起算)
 
 		//干支纪年(立春)
 		D = day.Lyear + 12000;

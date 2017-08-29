@@ -24,7 +24,7 @@ long double  rad2rrad(long double v)
 long double mod2(long double a, long double b)
 {
 	long double c = a / b;
-	c -= (int)(c);
+	c -= floor(c);
 	if (c > 0.5) c -= 1;
 	return c*b;
 }

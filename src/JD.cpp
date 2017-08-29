@@ -2,6 +2,7 @@
 #include "const.h"
 #include <cstring>
 
+//公历转儒略日
 long double JD::DD2JD(int y, uint8_t m, long double d)
 {
  	int n = 0, G = 0;
@@ -17,23 +18,24 @@ long double JD::DD2JD(int y, uint8_t m, long double d)
 	//加百年闰
 	if (G)
 	{
-		n = (int)(y / 100), n = 2 - n + int(n / 4);
+		n = int2(y / 100), n = 2 - n + int(n / 4);
 	}
-	return (int)(365.25*(y + 4716)) + (int)(30.6001*(m + 1)) + d + n - 1524.5;
+	return int2(365.25*(y + 4716)) + int2(30.6001*(m + 1)) + d + n - 1524.5;
 }
 
+//儒略日数转公历
 Time JD::JD2DD(int jd)
 {
 	Time r;
-	int D = (int)(jd + 0.5);
+	int D = int2(jd + 0.5);
 	float F = jd + 0.5 - D, c;  //取得日数的整数部份A及小数部分F
 	if (D >= 2299161)
 	{
-		c = int((D - 1867216.25) / 36524.25), D += 1 + c - (int)(c / 4);
+		c = int((D - 1867216.25) / 36524.25), D += 1 + c - int2(c / 4);
 	}
-	D += 1524;               r.Y = (int)((D - 122.1) / 365.25);//年数
-	D -= (int)(365.25*r.Y);   r.M = (int)(D / 30.601); //月数
-	D -= (int)(30.601*r.M);   r.D = D; //日数
+	D += 1524;               r.Y = int2((D - 122.1) / 365.25);//年数
+	D -= int2(365.25*r.Y);   r.M = int2(D / 30.601); //月数
+	D -= int2(30.601*r.M);   r.D = D; //日数
 	if (r.M > 13)
 	{
 		r.M -= 13, r.Y -= 4715;
@@ -43,8 +45,8 @@ Time JD::JD2DD(int jd)
 		r.M -= 1, r.Y -= 4716;
 	}
 	//日的小数转为时分秒
-	F *= 24; r.h = (int)(F); F -= r.h;
-	F *= 60; r.m = (int)(F); F -= r.m;
+	F *= 24; r.h = int2(F); F -= r.h;
+	F *= 60; r.m = int2(F); F -= r.m;
 	F *= 60; r.s = F;
 	return r;
 }
