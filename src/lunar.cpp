@@ -160,7 +160,7 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 		D = mk + int2((mSSQ.ZQ[12] + 390) / 365.2422) * 12 + 900000; //相对于1998年12月7(大雪)的月数,900000为正数基数
 		day.Lmonth = D % 12;	
 		day.Lmonth2.tg = D % 10;
-		day.Lmonth2.dz = D % 10;
+		day.Lmonth2.dz = D % 12;
 
 		////纪日,2000年1月7日起算
 		D = day.d0 - 6 + 9000000;

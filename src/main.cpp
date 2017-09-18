@@ -19,7 +19,7 @@ int main()
 
 
 	Lunar lunar;
-    Month month = lunar.yueLiCalc(2017, 8);
+    Month month = lunar.yueLiCalc(2017, 9);
 	
 	std::cout  << month.y << "Äê"  << (int)month.m << "ÔÂ" << std::endl;
 	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "Äê" << std::endl;
