@@ -86,7 +86,7 @@ long double j1_j2(long double J1, long double W1, long double J2, long double W2
 Vector3  h2g(Vector3 z, Vector3 a) {
 	a = llr2xyz(a); //地球
 	z = llr2xyz(z); //星体
-	z.x -= z.x; z.y -= a.y; z.z -= a.z;
+	z.x -= a.x; z.y -= a.y; z.z -= a.z;
 	return xyz2llr(z);
 }
 
