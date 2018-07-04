@@ -24,10 +24,14 @@ struct Day
 	uint8_t Ldi;  //距农历月首的编移量,0对应初一
 	int cur_dz;  //距冬至的天数
 	int cur_xz; //距夏至的天数
-	int cur_lq;//距立秋的天数
+	int cur_lq;//距立秋的天数
 	int cur_mz ;  //距芒种的天数
 	int cur_xs;  //距小暑的天数
-
+    
+    std::vector<long double> cur_jq;
+    
+    
+    
 	uint8_t Lmc;  //阴历月的月份
 	uint8_t Ldn;  //阴历月的天数
 	bool Lleap; //是不是阴历的润月
@@ -67,11 +71,27 @@ struct Month
 	std::vector<Day> days;
 };
 
+struct Year
+{
+    int y; //公历年份
+    //年生肖
+    uint8_t ShX;
+    uint8_t yearGan;
+    uint8_t yearZhi;
+};
 
 class Lunar
 {
 public:
 	Month yueLiCalc(int By, uint8_t Bm);
+    
+    Day getDayBySolar(int year, uint8_t month, uint8_t day);
+    
+    Day getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun = false);
+    
+    GZ  getShiGz(uint8_t dayTg,  uint8_t hour);
+    
+    Year getYearCal(int By);
 private:
 	SSQ mSSQ;
 };

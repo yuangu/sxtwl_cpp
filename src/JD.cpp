@@ -24,7 +24,7 @@ long double JD::DD2JD(int y, uint8_t m, long double d)
 }
 
 //儒略日数转公历
-Time JD::JD2DD(int jd)
+Time JD::JD2DD(long double jd)
 {
 	Time r;
 	int D = int2(jd + 0.5);

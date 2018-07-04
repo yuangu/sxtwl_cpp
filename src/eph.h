@@ -34,7 +34,7 @@ struct Vector3
 			case 2: return z;
 		}
 
-	}
+    };
 	const long double& operator [](const uint64_t index) const////重载[]操作符，作为右值
 	{
 		switch (index)
@@ -58,10 +58,6 @@ struct Vector2
 
 	long double& operator [](const uint64_t index)////重载[]操作符，作为左值
 	{
-		if (index == 0)
-		{
-			return x;
-		}
 		switch (index)
 		{
 		case 0: return x;
