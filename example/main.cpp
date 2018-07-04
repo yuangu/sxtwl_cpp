@@ -1,11 +1,9 @@
-#include "JD.h"
 #include <iostream>
 #include <sstream>
 #include<vector>
 #include "const.h"
 #include "lunar.h"
-#include "eph.h"
-#include "SSQ.h"
+
 
 #ifdef _WIN32
 class MBuf : public std::stringbuf {
