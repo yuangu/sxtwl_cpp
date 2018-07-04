@@ -6,6 +6,7 @@ ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
 add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
 add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 ENDIF()
+  
 
 add_subdirectory(src)
 
@@ -23,6 +24,7 @@ if(SXTWL_WRAPPER_PYTHON)
     include_directories(${PYTHON_INCLUDE_DIR} "./src")
 
     set_property(SOURCE swig/sxtwl.i PROPERTY CPLUSPLUS ON)
+   
     SWIG_ADD_LIBRARY(sxtwl MODULE LANGUAGE python  SOURCES swig/sxtwl.i)
-    SWIG_LINK_LIBRARIES(sxtwl ${PYTHON_LIBRARY} sxwnl)
+    SWIG_LINK_LIBRARIES(sxtwl ${PYTHON_LIBRARY} sxtwl)
 endif(SXTWL_WRAPPER_PYTHON)
