@@ -22,7 +22,7 @@ if(SXTWL_WRAPPER_PYTHON)
 
     find_package(PythonLibs)
     include_directories(${PYTHON_INCLUDE_DIR} "./src")
-
+    set(CMAKE_SWIG_FLAGS)
     set_property(SOURCE swig/sxtwl.i PROPERTY CPLUSPLUS ON)
    
     SWIG_ADD_LIBRARY(sxtwl_python MODULE LANGUAGE python  SOURCES swig/sxtwl.i)
@@ -49,3 +49,36 @@ if(SXTWL_WRAPPER_JAVA)
     SWIG_ADD_LIBRARY(sxtwl_java MODULE LANGUAGE java  SOURCES swig/sxtwl.i)
     SWIG_LINK_LIBRARIES(sxtwl_java ${JNI_LIBRARIES} sxtwl)
 endif(SXTWL_WRAPPER_JAVA)
+
+#lua接口的导出
+if(SXTWL_WRAPPER_LUA)
+    find_package(SWIG REQUIRED)
+    include(${SWIG_USE_FILE})
+
+    find_package(Lua)
+    if(${LUA_FOUND})
+        message(STATUS "Jni Found")
+    else(${JNI_FOUND})
+        message(FATAL_ERROR "not found Jni")
+    endif()
+
+    include_directories(${LUA_INCLUDE_DIR} "./src")
+    set_property(SOURCE swig/sxtwl.i PROPERTY CPLUSPLUS ON)
+    set(CMAKE_SWIG_FLAGS)
+    SWIG_ADD_LIBRARY(sxtwl_lua MODULE LANGUAGE lua SOURCES swig/sxtwl.i)
+    SWIG_LINK_LIBRARIES(sxtwl_lua ${LUA_LIBRARIES} sxtwl)
+endif(SXTWL_WRAPPER_LUA)
+
+
+#C#接口导出
+if(SXTWL_WRAPPER_CSHARP)
+    find_package(SWIG REQUIRED)
+    include(${SWIG_USE_FILE})
+
+    include_directories( "./src")
+
+    set_property(SOURCE swig/sxtwl.i PROPERTY CPLUSPLUS ON)
+    set(CMAKE_SWIG_FLAGS)
+    SWIG_ADD_LIBRARY(sxtwl_csharp MODULE LANGUAGE csharp SOURCES swig/sxtwl.i)
+    SWIG_LINK_LIBRARIES(sxtwl_csharp  sxtwl)
+endif(SXTWL_WRAPPER_CSHARP)
