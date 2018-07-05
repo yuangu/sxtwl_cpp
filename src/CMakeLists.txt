@@ -6,17 +6,9 @@ set(CMAKE_C_STANDARD 11)
 
 file(GLOB SRC_FILES  "*.cpp" )
 
-IF(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
-ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
-ENDIF()
-
-
-
 if(CMAKE_COMPILER_IS_GNUCXX)
     add_compile_options(-fPIC)
-elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Windows" and not CMAKE_COMPILER_IS_GNUCXX)
+elseif(MSVC)
     ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
     add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
     add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
