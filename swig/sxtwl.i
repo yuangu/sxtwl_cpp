@@ -13,4 +13,5 @@ namespace std{
    %template(VectorOfStructVector) vector<Day>;
 }
 
+%constant int J2000=2451545;
 %include "../src/lunar.h"
