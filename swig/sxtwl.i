@@ -10,7 +10,7 @@
 %include "std_string.i"
 
 namespace std{
-   %template(VectorOfStructVector) vector<Day>;
+   %template(DayList) vector<Day>;
 }
 
 %constant int J2000=2451545;
