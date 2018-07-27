@@ -1,0 +1,21 @@
+version: 1.0.{build}
+skip_tags: true
+skip_branch_with_pr: true
+image:
+  - Visual Studio 2015
+  - Visual Studio 2017
+
+
+platform: Any CPU
+
+configuration:
+  - Debug
+  - Release
+
+before_build:
+  - mkdir build
+  - cd build
+  - cmake ..
+
+build_script:
+  - pwsh: cmake --build .
