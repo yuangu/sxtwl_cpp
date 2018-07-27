@@ -1,8 +1,9 @@
-#include <iostream>
+﻿#include <iostream>
 #include <sstream>
 #include<vector>
 #include "const.h"
 #include "lunar.h"
+
 
 
 #ifdef _WIN32
@@ -86,5 +87,5 @@ int main()
 		std::cout << "距小暑" << day.cur_xs << "天" << std::endl;
 	}
 
-	getchar();
+	//getchar();
 }

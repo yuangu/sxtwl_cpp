@@ -1,0 +1,16 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+os:
+  - linux
+  - osx
+
+script:
+- mkdir build 
+- cd build 
+- cmake .. -DSXTWL_BUILD_EXAMPLES=1
+- make
+- ./example/example

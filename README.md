@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/yuangu/sxtwl_cpp.svg?branch=master)](https://travis-ci.org/yuangu/sxtwl_cpp)
+
 ## 详细介绍
 
 sxtwl_cpp是一个[寿星天文历](http://www.nongli.net/sxwnl/)的C++实现日历库。因为其依据天文历法算法实现，故其可查询范围广(BC722年以后与实历相符)。支持Android、IOS、Windows、MacOS、Linux等平台。使用swig暴露接口给python,lua,java等语言使用。
