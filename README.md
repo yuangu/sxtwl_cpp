@@ -1,5 +1,6 @@
 
 [![Build Status](https://travis-ci.org/yuangu/sxtwl_cpp.svg?branch=master)](https://travis-ci.org/yuangu/sxtwl_cpp)
+[![Build status](https://ci.appveyor.com/api/projects/status/i78d0p0dggp9v475?svg=true)](https://ci.appveyor.com/project/yuangu/sxtwl-cpp)
 
 ## 详细介绍
 

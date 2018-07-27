@@ -15,7 +15,10 @@ configuration:
 before_build:
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake ..  -DSXTWL_BUILD_EXAMPLES=1 -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=C:/projects/sxtwl-cpp/build/out -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG=C:/projects/sxtwl-cpp/build/out
 
 build_script:
-  - pwsh: cmake --build .
+  - cmake --build . 
+
+after_build:
+  - C:/projects/sxtwl-cpp/build/out/example.exe
