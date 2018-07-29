@@ -1,16 +1,74 @@
-language: cpp
+matrix:
+  include:
+    #IOS
+    - os: osx
+      language: cpp
+      env: BUILD_TARGET=Ios
+      sudo: true
+      script:
+        - mkdir build 
+        - cd build 
+        - cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.cmake 
+          -DIOS_PLATFORM=OS  
+          -DCMAKE_BUILD_TYPE=Release 
+        - cmake --build .
 
-compiler:
-  - clang
-  - gcc
+     #Android
+    - os: linux
+      language: cpp
+      env: BUILD_TARGET=Android
+      sudo: true
+      script:
+        - wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip
+        - unzip -q ./android-ndk-r14b-linux-x86_64.zip
+        - export ANDROID_NDK_ROOT=`pwd`/android-ndk-r14b
+        - export ANDROID_NDK=`pwd`/android-ndk-r14b
+        - wget https://cmake.org/files/v3.12/cmake-3.12.0-Linux-x86_64.tar.gz
+        - tar -xf ./cmake-3.12.0-Linux-x86_64.tar.gz
+        - export PATH=`pwd`/cmake-3.12.0-Linux-x86_64/bin:$PATH
+        - echo $ANDROID_NDK
+        - which cmake
+        - mkdir build 
+        - cd build 
+        - cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/android.cmake  
+          -DCMAKE_BUILD_TYPE=Release 
+          -DANDROID_ABI=armeabi-v7a 
+          -DANDROID_STL=gnustl_static 
+          -DANDROID_TOOLCHAIN_NAME=arm-linux-androideabi-4.9 
+          -DCMAKE_MAKE_PROGRAM=$ANDROID_NDK/prebuilt/linux-x86_64/bin/make 
+          -DANDROID_NATIVE_API_LEVEL=21 
+          -DSXTWL_BUILD_EXAMPLES=1 
+          -G "Unix Makefiles" 
+        - cmake --build .
 
-os:
-  - linux
-  - osx
+    # linux 
+    - os: linux
+      language: cpp
+      env: BUILD_TARGET=Linux
+      compiler:
+        - clang
+        - gcc
+      script:
+        - mkdir build 
+        - cd build 
+        - cmake .. -DSXTWL_BUILD_EXAMPLES=1
+        - cmake --build .
+        - ./example/example
 
-script:
-- mkdir build 
-- cd build 
-- cmake .. -DSXTWL_BUILD_EXAMPLES=1
-- make
-- ./example/example
+    #mac
+    - os: osx
+      language: cpp
+      env: BUILD_TARGET=Mac
+      compiler:
+        - clang
+        - gcc
+      script:
+        - mkdir build 
+        - cd build 
+        - cmake .. -DSXTWL_BUILD_EXAMPLES=1
+        - cmake --build .
+        - ./example/example
+
+   
+
+

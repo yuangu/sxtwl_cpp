@@ -86,6 +86,5 @@ int main()
 		std::cout << "距芒种" << day.cur_mz << "天" << std::endl;
 		std::cout << "距小暑" << day.cur_xs << "天" << std::endl;
 	}
-
 	//getchar();
 }
