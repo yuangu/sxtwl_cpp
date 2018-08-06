@@ -83,14 +83,15 @@ struct Year
 class Lunar
 {
 public:
+	//获取一个月的信息
 	Month yueLiCalc(int By, uint8_t Bm);
-    
+    //通过阳历获取Day对像
     Day getDayBySolar(int year, uint8_t month, uint8_t day);
-    
+    //通过阴历获取Day对像
     Day getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun = false);
-    
+	//获取时辰上的那个天干
     GZ  getShiGz(uint8_t dayTg,  uint8_t hour);
-    
+    //获取一年的信息
     Year getYearCal(int By);
 private:
 	SSQ mSSQ;
