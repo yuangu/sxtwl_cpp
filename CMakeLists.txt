@@ -103,3 +103,28 @@ if(SXTWL_WRAPPER_CSHARP)
     #SWIG_ADD_LIBRARY(sxtwl_csharp MODULE LANGUAGE csharp SOURCES swig/sxtwl.i)
     SWIG_LINK_LIBRARIES(sxtwl_csharp  sxtwl)
 endif(SXTWL_WRAPPER_CSHARP)
+
+
+#php接口导出(仅支持php5和php7)
+if(SXTWL_WRAPPER_PHP)
+
+    include(${CMAKE_SOURCE_DIR}/cmake/FindPHP.cmake)
+    
+    include_directories(${PHP_INCLUDE_DIRS})
+    include_directories(${PHP_EXTENSIONS_INCLUDE_DIR})
+  
+    include_directories( "./src")
+
+    find_package(SWIG REQUIRED)
+    include(${SWIG_USE_FILE})
+    set_property(SOURCE swig/sxtwl.i PROPERTY CPLUSPLUS ON)
+    set(CMAKE_SWIG_FLAGS)
+    
+    if(${PHP_VERSION_MAJOR} MATCHES 7)
+        SWIG_ADD_MODULE(sxtwl_php  php7 swig/sxtwl.i)
+    else(${PHP_VERSION_MAJOR} MATCHES 7)
+        SWIG_ADD_MODULE(sxtwl_php  php swig/sxtwl.i)
+    endif(${PHP_VERSION_MAJOR} MATCHES 7)
+    SWIG_LINK_LIBRARIES(sxtwl_php  sxtwl )
+    
+endif(SXTWL_WRAPPER_PHP)
