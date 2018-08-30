@@ -3,11 +3,15 @@
 
 import setuptools
 from distutils import ccompiler
-import os
+import os,sys
 import shutil,os
+if sys.version_info < (3, 0):
+    with open("README.md", "r") as fh:
+        long_description = fh.read()
+else:
+    with open("README.md", "r", encoding='utf-8') as fh:
+        long_description = fh.read()
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
 
 if os.path.isdir("../src"):
     if os.path.isdir("src"):
