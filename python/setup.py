@@ -5,9 +5,13 @@ import setuptools
 from distutils import ccompiler
 import os,sys
 import shutil,os
+import platform
+
 if sys.version_info < (3, 0):
     with open("README.md", "r") as fh:
         long_description = fh.read()
+        if platform.system() == 'Windows':
+            long_description = long_description.decode("utf8").encode("gbk")
 else:
     with open("README.md", "r", encoding='utf-8') as fh:
         long_description = fh.read()
