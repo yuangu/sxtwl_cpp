@@ -6,15 +6,37 @@ from distutils import ccompiler
 import os,sys
 import shutil,os
 import platform
+import io 
 
-if sys.version_info < (3, 0):
-    with open("README.md", "r") as fh:
-        long_description = fh.read()
-        if platform.system() == 'Windows':
-            long_description = long_description.decode("utf8").encode("gbk")
-else:
-    with open("README.md", "r", encoding='utf-8') as fh:
-        long_description = fh.read()
+long_description = io.open('README.md', 'r', encoding="utf-8").read()
+if sys.version_info < (3, 0) and platform.system() == 'Windows':
+    long_description = long_description.encode("gbk")
+
+if sys.version_info >= (3, 0) and platform.system() == 'Windows':
+        try:
+            long_description.encode("mbcs")
+        except Exception as e:
+            long_description = ''
+        else:
+            pass
+
+
+# if sys.version_info < (3, 0):
+#     with open("README.md", "r") as fh:
+#         long_description = fh.read()
+#         if platform.system() == 'Windows':
+#             long_description = long_description.decode("utf8").encode("gbk")
+# else:
+#     with open("README.md", "r", encoding='utf-8') as fh:
+#         long_description = "".join(fh.readlines())
+#         #发现了一个有趣的问题：http://www.queasy.me/rbsoaeod.html/questions/43255455/unicode+character+causing+error+with+bdist_wininst+on+python+3+but+not+python+2
+#         try:
+#             long_description.encode("mbcs")
+#         except Exception as e:
+#             long_description = ''
+#         else:
+#             pass
+      
 
 
 if os.path.isdir("../src"):
@@ -44,9 +66,9 @@ setuptools.setup(
     version="1.0.3",
     author="yuangu",
     author_email="lifulinghan@aol.com",
-    description="寿星天文历的python实现版本",
+    description="sxtwl_cpp warpper for python",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    #long_description_content_type="text/markdown",
     license = "BSD",   
     #package_dir={'src': '../src'},
     url="https://github.com/yuangu/sxtwl_cpp",
