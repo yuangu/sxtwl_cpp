@@ -130,9 +130,14 @@ print( Gan[gz.tg], Zhi[gz.dz])
 year = lunar.getYearCal(2018)
 ```
 
-### 懒人下载地址 （只提供Win版本）：
+### 懒人安装包下载地址 （只提供Win版本）：
 
 https://pan.baidu.com/s/1VR4MtPVV9iP9SSHNDjKZnQ
+
+## 交流沟通群
+
+如果在使用过程中遇到困难，可加微信群(如二维码过期，邮件:lifulinghan@aol.com索要新的):
+![微信群](https://raw.githubusercontent.com/yuangu/sxtwl_cpp/master/doc/img/wxq.jpg)
 
 ###  最后
 

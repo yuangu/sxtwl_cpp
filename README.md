@@ -50,10 +50,16 @@ sxtwl_cpp是一个[寿星天文历](http://www.nongli.net/sxwnl/)的C++实现日
 ![python的执行效果图](doc/img/python.png)
 
 
-## 贡献者
+### Python懒人安装包下载地址 （只提供Win版本）：
 
-* 元谷  <lifulinghan@aol.com>
-* 没谱的人 <541632950@qq.com> 
+https://pan.baidu.com/s/1VR4MtPVV9iP9SSHNDjKZnQ
+
+
+## 交流沟通群
+
+如果在使用过程中遇到困难，可加微信群(如二维码过期，邮件:lifulinghan@aol.com索要新的):
+![微信群](doc/img/wxq.jpg)
+
 
 ## 最后
 

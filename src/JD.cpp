@@ -1,6 +1,7 @@
 #include "JD.h"
 #include "const.h"
 #include <cstring>
+#include <cstdio>
 
 //公历转儒略日
 long double JD::DD2JD(int y, uint8_t m, long double d)

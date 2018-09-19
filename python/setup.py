@@ -8,13 +8,20 @@ import shutil,os
 import platform
 import io 
 
-long_description = io.open('README.md', 'r', encoding="utf-8").read()
-if sys.version_info < (3, 0) and platform.system() == 'Windows':
-    long_description = long_description.encode("gbk")
+long_description  = ""
+with open('README.md') as f:
+    long_description = f.read()
+
+
+# long_description = io.open('README.md', 'r', encoding="utf-8").read()
+# if sys.version_info < (3, 0) and platform.system() == 'Windows':
+#     long_description = long_description.decode("utf-8").encode("gbk")
 
 if sys.version_info >= (3, 0) and platform.system() == 'Windows':
         try:
-            long_description.encode("mbcs")
+            if isinstance(long_description, unicode):
+                tmp=copy.deepcopy(long_description)
+                tmp.encode("mbcs")
         except Exception as e:
             long_description = ''
         else:
@@ -47,6 +54,8 @@ if os.path.isdir("../src"):
 extra_compile_args = []
 if ccompiler.get_default_compiler() == "msvc":
     extra_compile_args.append("/utf-8")
+else:
+    extra_compile_args.append('-std=c++11')
 
 
 sxtwl_module = setuptools.Extension('_sxtwl',
@@ -63,12 +72,12 @@ sxtwl_module = setuptools.Extension('_sxtwl',
 
 setuptools.setup(
     name="sxtwl",
-    version="1.0.3",
+    version="1.0.5",
     author="yuangu",
     author_email="lifulinghan@aol.com",
     description="sxtwl_cpp warpper for python",
     long_description=long_description,
-    #long_description_content_type="text/markdown",
+    long_description_content_type="text/markdown",
     license = "BSD",   
     #package_dir={'src': '../src'},
     url="https://github.com/yuangu/sxtwl_cpp",
