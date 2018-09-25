@@ -9,11 +9,12 @@ import platform
 import io 
 
 long_description  = ""
-with open('README.md') as f:
-    long_description = f.read()
 
-
-# long_description = io.open('README.md', 'r', encoding="utf-8").read()
+if sys.version_info < (3, 0) :
+    with open('README.md') as f:
+        long_description = f.read()
+else:
+    long_description = io.open('README.md', 'r', encoding="utf-8").read()
 # if sys.version_info < (3, 0) and platform.system() == 'Windows':
 #     long_description = long_description.decode("utf-8").encode("gbk")
 
