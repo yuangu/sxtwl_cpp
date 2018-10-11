@@ -196,16 +196,11 @@ class  AndroidSDK():
          
             return android_ndk_path
         
-        ndk_bundle_dir  = os.path.join(self.ANDROID_SDK,  "ndk-bundle")
-        ndk_bundle_list = os.listdir( ndk_bundle_dir)
-        
-        ndk_bundle_list_len = len(ndk_bundle_list)
-        if ndk_bundle_list_len <= 0 :
-            return None
+        ndk_bundle_dir  = os.path.join(self.ANDROID_SDK,  "ndk-bundle/toolchains")
+        if os.path.isdir(ndk_bundle_dir):
+            return  os.path.join(self.ANDROID_SDK, "ndk-bundle")
 
-        #取最后一个高版本的使用
-        return  os.path.join(self.ANDROID_SDK,  "ndk-bundle/" + ndk_bundle_dir[ndk_bundle_list_len - 1] )
-
+    
     # 根据系统变量android sdk的路径
     def getAndroidSDKPath(self):
         environ_names = [
