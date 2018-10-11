@@ -54,6 +54,9 @@ if(SXTWL_WRAPPER_JAVA)
         string(REPLACE "." "/" JAVA_GEN_SUBDIR ${JAVA_GEN_PACKAGE})
         set(JAVA_GEN_DIR ${Project_SOURCE_DIR}/src/main/java/${JAVA_GEN_SUBDIR})
 
+        # -s选项为strip，不strip生成的库文件会很大   
+        set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
+
         set(CMAKE_SWIG_FLAGS -c++ -package ${JAVA_GEN_PACKAGE})
         if(CONSOLE)
         else(CONSOLE)
