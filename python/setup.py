@@ -10,11 +10,17 @@ import io
 
 long_description  = ""
 
-if sys.version_info < (3, 0) :
-    with open('README.md') as f:
-        long_description = f.read()
-else:
-    long_description = io.open('README.md', 'r', encoding="utf-8").read()
+try:
+    if sys.version_info < (3, 0) :
+        with open('README.md') as f:
+            long_description = f.read()
+    else:
+        long_description = io.open('README.md', 'r', encoding="utf-8").read()
+except Exception as e:
+    long_description = ""
+finally:
+    pass
+
 # if sys.version_info < (3, 0) and platform.system() == 'Windows':
 #     long_description = long_description.decode("utf-8").encode("gbk")
 
@@ -73,7 +79,7 @@ sxtwl_module = setuptools.Extension('_sxtwl',
 
 setuptools.setup(
     name="sxtwl",
-    version="1.0.5",
+    version="1.0.6",
     author="yuangu",
     author_email="lifulinghan@aol.com",
     description="sxtwl_cpp warpper for python",
