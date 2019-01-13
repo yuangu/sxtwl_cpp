@@ -505,9 +505,10 @@ Day Lunar::getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun)
     //{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
     
     static int mkIndex[] = { 0, 2, 3,4,5,6,7,8,9, 10,11,0,1 };
-    
-     mk = mkIndex[month ];
-    if (isRun  &&  (mSSQ.leap&&mSSQ.leap ==  mkIndex[month + 1]) )
+    mk = mkIndex[month ];
+
+    if ((isRun  &&  (mSSQ.leap&&mSSQ.leap ==  mkIndex[month + 1]) ) ||
+        (mSSQ.leap > 0 && mSSQ.leap < mkIndex[month]) )
     {
          mk = mkIndex[month + 1];
     }
