@@ -493,25 +493,79 @@ Day Lunar::getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun)
         mSSQ.calcY(Bd0);
     }
     
-    int mk = 0;
-    for(auto it = mSSQ.ym.begin(); it != mSSQ.ym.end(); ++it)
+    //{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
+   // static int mkIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
+    static int yueIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
+    
+    
+    int yue = 0;
+    
+    for(int i = 0; i < sizeof(yueIndex); ++i)
     {
-        if(mSSQ.ym[*it] == month)
+        if( *(yueIndex + i) == month)
         {
-            mk = *it;
+            yue = i;
             break;
         }
     }
-    //{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
     
-    static int mkIndex[] = { 0, 2, 3,4,5,6,7,8,9, 10,11,0,1 };
-    mk = mkIndex[month ];
-
-    if ((isRun  &&  (mSSQ.leap&&mSSQ.leap ==  mkIndex[month + 1]) ) ||
-        (mSSQ.leap > 0 && mSSQ.leap < mkIndex[month + 1]) )
+    int mk = 0;
+    int leap = mSSQ.leap - 1;
+    
+    for(auto it = mSSQ.ym.begin(); it != mSSQ.ym.end(); ++it)
     {
-         mk = mkIndex[month + 1];
+        
+        if(leap < 0)
+        {
+            if(*it == yue)
+            {
+                break;
+            }
+        }else{
+            if(yue < leap && *it == yue)
+            {
+                break;
+            }
+            
+            if(yue == leap && *it == yue && isRun)
+            {
+                ++mk;
+                break;
+            }
+            
+            if(yue == leap && *it == yue && !isRun)
+            {
+                break;
+            }
+            
+            if(yue > leap && *it == yue )
+            {
+                break;
+            }
+            
+        }
+        ++mk;
     }
+    
+//    if(mSSQ.leap > 0 && (mSSQ.leap < month || (isRun && mSSQ.leap == month)))
+//    {
+//        mk = mSSQ.ym[month + 1];
+//    }else{
+//        mk = mSSQ.ym[month];
+//    }
+    
+    
+    
+    
+//    static int mkIndex[] = { 0, 2, 3,4,5,6,7,8,9, 10,11,0,1 };
+//    mk = mkIndex[month];
+    
+
+//    if ((isRun  &&  (mSSQ.leap&&mSSQ.leap ==  mkIndex[month + 1]) ) ||
+//        (mSSQ.leap > 0 && mSSQ.leap < mkIndex[month + 1 ]) )
+//    {
+//         mk = mkIndex[month + 1];
+//    }
     
     //阴历首月的儒略日
     int bdi =  mSSQ.HS[mk];
