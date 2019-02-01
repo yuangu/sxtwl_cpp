@@ -1,6 +1,7 @@
 #pragma once
 #include <stdint.h>
 #include "SSQ.h"
+#include "JD.h"
 
 struct  GZ
 {
@@ -29,7 +30,8 @@ struct Day
 	int cur_xs;  //距小暑的天数
     
     std::vector<long double> cur_jq;
-    
+    std::vector<Time> cur_jq_cutoff_datetime;
+
     
     
 	uint8_t Lmc;  //阴历月的月份
