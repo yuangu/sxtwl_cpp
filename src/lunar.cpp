@@ -467,7 +467,7 @@ Day Lunar::getDayBySolar(int _year,  uint8_t _month, uint8_t _day)
         Time t3 = JD::JD2DD(jd + J2000);
         
         day.cur_jq.push_back( jd );
-        cur_jq_cutoff_datetime
+        cur_jq_cutoff_datetime.push_back(t3);
     }
     
     
