@@ -479,7 +479,7 @@ Day Lunar::getDayBySolar(int _year,  uint8_t _month, uint8_t _day)
    tm_struc.tm_min=t3.m;
    tm_struc.tm_sec=t3.s;
    tm_struc.tm_isdst=0;
-   t3_ctime=mktime(&tm_struc);
+   t3_ctime=std::mktime(&tm_struc);
            
         cur_jq_cutoff_datetime.push_back(t3_ctime);
     }
