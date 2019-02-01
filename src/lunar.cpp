@@ -469,7 +469,7 @@ Day Lunar::getDayBySolar(int _year,  uint8_t _month, uint8_t _day)
         
         day.cur_jq.push_back( jd );
         
-        time_t std_ctime;
+        time_t t3_ctime;
 
    tm tm_struc;
    tm_struc.tm_year=t3.Y-1900;
@@ -479,9 +479,9 @@ Day Lunar::getDayBySolar(int _year,  uint8_t _month, uint8_t _day)
    tm_struc.tm_min=t3.m;
    tm_struc.tm_sec=t3.s;
    tm_struc.tm_isdst=0;
-   std_ctime=mktime(&tm_struc);
+   t3_ctime=mktime(&tm_struc);
            
-        cur_jq_cutoff_datetime.push_back(std_ctime);
+        cur_jq_cutoff_datetime.push_back(t3_ctime);
     }
     
     
