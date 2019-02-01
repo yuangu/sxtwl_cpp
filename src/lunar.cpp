@@ -3,6 +3,7 @@
 #include "JD.h"
 #include "eph.h"
 #include <cmath>
+#include <ctime>
 
 //精气
 inline long double qi_accurate(long double W)
@@ -467,7 +468,20 @@ Day Lunar::getDayBySolar(int _year,  uint8_t _month, uint8_t _day)
         Time t3 = JD::JD2DD(jd + J2000);
         
         day.cur_jq.push_back( jd );
-        cur_jq_cutoff_datetime.push_back(t3);
+        
+        time_t std_ctime;
+
+   tm tm_struc;
+   tm_struc.tm_year=t3.Y-1900;
+   tm_struc.tm_mon=t3.M-1;
+   tm_struc.tm_mday=t3.D;
+   tm_struc.tm_hour=t3.h;
+   tm_struc.tm_min=t3.m;
+   tm_struc.tm_sec=t3.s;
+   tm_struc.tm_isdst=0;
+   std_ctime=mktime(&tm_struc);
+           
+        cur_jq_cutoff_datetime.push_back(std_ctime);
     }
     
     
