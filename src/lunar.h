@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "SSQ.h"
 #include "JD.h"
+#include <ctime>
 
 struct  GZ
 {
@@ -30,7 +31,7 @@ struct Day
 	int cur_xs;  //距小暑的天数
     
     std::vector<long double> cur_jq;
-    std::vector<Time> cur_jq_cutoff_datetime;
+    std::vector<time_t> cur_jq_cutoff_datetime;
 
     
     
