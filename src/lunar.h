@@ -1,6 +1,7 @@
 #pragma once
 #include <stdint.h>
 #include "SSQ.h"
+#include <functional>
 
 struct  GZ
 {
@@ -80,11 +81,48 @@ struct Year
     uint8_t yearZhi;
 };
 
+
+enum ErrorCode
+{
+	ErrorCode_Success = 0,
+	ErrorCode_NotRun = -1, //非润月
+	ErrorCode_DateError = -2, //日期错误
+};
+
+class LunarException :public std::exception
+{
+public:
+	LunarException(ErrorCode code) { mErrorCode = code; };
+	const char* what() const throw()
+		//函数后面必须跟throw(),括号里面不能有任务参数，表示不抛出任务异常
+		//因为这个已经是一个异常处理信息了，不能再抛异常。
+	{
+		switch (mErrorCode)
+		{
+		case ErrorCode_Success:
+			return "ErrorCode_Success";
+		case ErrorCode_NotRun:
+			return "ErrorCode_NotRun";
+		case ErrorCode_DateError:
+			return "ErrorCode_DateError";
+		default:
+			return "unkownError";
+		}
+	}
+
+	ErrorCode getErrorCode()
+	{
+		return mErrorCode;
+	}
+private:
+	ErrorCode mErrorCode;
+};
+
 class Lunar
 {
 public:
 	//获取一个月的信息
-	Month yueLiCalc(int By, uint8_t Bm);
+	Month yueLiCalc(int By, uint8_t Bm) ;
     //通过阳历获取Day对像
     Day getDayBySolar(int year, uint8_t month, uint8_t day);
     //通过阴历获取Day对像
@@ -93,6 +131,10 @@ public:
     GZ  getShiGz(uint8_t dayTg,  uint8_t hour);
     //获取一年的信息
     Year getYearCal(int By);
+	//获取一年中的润月(不存，则返回0)
+	uint8_t getRunMonth(int By);
+	//获取一月中的阴日数量 
+	uint8_t getLunarMonthNum(int By, uint8_t month, bool isRun = false);
 private:
 	SSQ mSSQ;
 };

@@ -541,6 +541,33 @@ class Year(_object):
 Year_swigregister = _sxtwl.Year_swigregister
 Year_swigregister(Year)
 
+ErrorCode_Success = _sxtwl.ErrorCode_Success
+ErrorCode_NotRun = _sxtwl.ErrorCode_NotRun
+ErrorCode_DateError = _sxtwl.ErrorCode_DateError
+class LunarException(Exception):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, LunarException, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, LunarException, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, code):
+        this = _sxtwl.new_LunarException(code)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def what(self):
+        return _sxtwl.LunarException_what(self)
+
+    def getErrorCode(self):
+        return _sxtwl.LunarException_getErrorCode(self)
+    __swig_destroy__ = _sxtwl.delete_LunarException
+    __del__ = lambda self: None
+LunarException_swigregister = _sxtwl.LunarException_swigregister
+LunarException_swigregister(LunarException)
+
 class Lunar(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Lunar, name, value)
@@ -562,6 +589,12 @@ class Lunar(_object):
 
     def getYearCal(self, By):
         return _sxtwl.Lunar_getYearCal(self, By)
+
+    def getRunMonth(self, By):
+        return _sxtwl.Lunar_getRunMonth(self, By)
+
+    def getLunarMonthNum(self, By, month, isRun=False):
+        return _sxtwl.Lunar_getLunarMonthNum(self, By, month, isRun)
 
     def __init__(self):
         this = _sxtwl.new_Lunar()
