@@ -29,8 +29,8 @@ struct Day
 	int cur_mz ;  //距芒种的天数
 	int cur_xs;  //距小暑的天数
     
-    std::vector<long double> cur_jq;
-    
+    std::vector<long double> cur_jq;  //节气时间索引 （这里可以使用JD::JD2DD转换成准确时间）
+	std::vector<int> cur_cn;  //节气名称索引 
     
     
 	uint8_t Lmc;  //阴历月的月份
