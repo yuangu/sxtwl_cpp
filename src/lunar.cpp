@@ -481,7 +481,7 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
         Time t3 = JD::JD2DD(jd + J2000);
 		
         day.cur_jq.push_back( jd );
-		day.cur_cn.push_back(xn);
+		day.cur_cn.push_back((int)xn);
     }
     
     

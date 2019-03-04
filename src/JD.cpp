@@ -3,8 +3,10 @@
 #include <cstring>
 #include <cstdio>
 
+
+//https://github.com/guolisen/YiEngine/blob/2ce67dc91fd5fea8e394a5af60dc1e56c5044452/src/DateTime/JulianDay.cpp
 //公历转儒略日
-long double JD::DD2JD(int y, uint8_t m, long double d)
+double JD::DD2JD(int y, uint8_t m, double d)
 {
  	int n = 0, G = 0;
 	//判断是否为格里高利历日1582*372+10*31+15
@@ -21,11 +23,13 @@ long double JD::DD2JD(int y, uint8_t m, long double d)
 	{
 		n = int2(y / 100), n = 2 - n + int(n / 4);
 	}
+
 	return int2(365.25*(y + 4716)) + int2(30.6001*(m + 1)) + d + n - 1524.5;
+	
 }
 
 //儒略日数转公历
-Time JD::JD2DD(long double jd)
+Time JD::JD2DD(double jd)
 {
 	Time r;
 	int D = int2(jd + 0.5);
@@ -52,13 +56,13 @@ Time JD::JD2DD(long double jd)
 	return r;
 }
 
-long double JD::toJD(Time& time)
+double JD::toJD(Time& time)
 {
 	return JD::DD2JD(time.Y, time.M, time.D + ((time.s / 60 + time.m) / 60 + time.h) / 24);
 }
 
 //提取jd中的时间(去除日期);
-std::string JD::timeStr(long double jd)
+std::string JD::timeStr(double jd)
 {
 	int h, m, s;
 	jd += 0.5; jd = (jd - int2(jd));

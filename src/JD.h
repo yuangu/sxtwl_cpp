@@ -14,9 +14,9 @@ class JD
 {
 public :
 	//公历转儒略日
-	static long double DD2JD(int y, uint8_t m, long double d);
-	static Time JD2DD(long double jd);
+	static double DD2JD(int y, uint8_t m, double d);
+	static Time JD2DD(double jd);
 
-	static long double toJD(Time& time);
-	static std::string timeStr(long double jd);
+	static  double toJD(Time& time);
+	static std::string timeStr( double jd);
 };
