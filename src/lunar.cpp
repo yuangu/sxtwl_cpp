@@ -313,10 +313,10 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
     day.cur_mz = day.d0 - mSSQ.ZQ[11];  //距芒种的天数
     day.cur_xs = day.d0 - mSSQ.ZQ[13];  //距小暑的天数
     
-    for(auto it = mSSQ.ZQ.begin(); it != mSSQ.ZQ.end(); ++it)
+  /*  for(auto it = mSSQ.ZQ.begin(); it != mSSQ.ZQ.end(); ++it)
     {
         day.cur_jq.push_back(  *it );
-    }
+    }*/
 
     
     if (day.d0 == mSSQ.HS[mk] || day.d0 == Bd0) { //月的信息
@@ -453,10 +453,11 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
     
     
     //获取准确节气的时间
-    jd2 = day.cur_jq[0] + dt_T(day.cur_jq[0]) - (8.0 / 24.0);
+    jd2 = mSSQ.ZQ[0] + dt_T(mSSQ.ZQ[0]) - (8.0 / 24.0);
     w = XL::S_aLon(jd2 / 36525, 3);
     w = int2((w - 0.13) / pi2 * 24) *pi2 / 24;
     
+	
     for(auto it = mSSQ.ZQ.begin(); it != mSSQ.ZQ.end(); ++it)
     {
         while(true)
