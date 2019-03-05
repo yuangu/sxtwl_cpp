@@ -68,6 +68,18 @@ int main()
 	std::cout.rdbuf(&buf);
 #endif
 	Lunar lunar;
+
+
+	// 根据天干地支反查
+	///1990-6-15 庚午年 壬午月 辛亥日
+
+	GZ yearGz(6, 6);
+	GZ yueGz(8, 6);
+	GZ riGz(7, 11);
+	GZ shiGz(2, 8);
+	lunar.siZhu2Year(yearGz, yueGz, riGz, shiGz, 1990, 2100);
+
+
 	//=============================================================================================================
 	//获取年的润月
 	int run_month = lunar.getRunMonth(1990);

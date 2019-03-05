@@ -5,6 +5,9 @@
 
 struct  GZ
 {
+	GZ() {};
+	GZ(uint8_t tg, uint8_t dz) :tg(tg), dz(dz) {
+	}
 	uint8_t tg;
 	uint8_t dz;
 };
@@ -127,6 +130,10 @@ public:
     Day getDayBySolar(int year, uint8_t month, uint8_t day);
     //通过阴历获取Day对像
     Day getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun = false);
+	
+	//通过四柱获取年月日
+	std::vector<Day> siZhu2Year(GZ year, GZ  yue, GZ  ri, GZ  shi, int fromYear, int  toYear);
+
 	//获取时辰上的那个天干
     GZ  getShiGz(uint8_t dayTg,  uint8_t hour);
     //获取一年的信息
