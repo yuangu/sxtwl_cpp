@@ -132,7 +132,7 @@ public:
     Day getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun = false);
 	
 	//通过四柱获取年月日
-	std::vector<Day> siZhu2Year(GZ year, GZ  yue, GZ  ri, GZ  shi, int fromYear, int  toYear);
+	std::vector<double> siZhu2Year(GZ year, GZ  yue, GZ  ri, GZ  shi, int fromYear, int  toYear);
 
 	//获取时辰上的那个天干
     GZ  getShiGz(uint8_t dayTg,  uint8_t hour);

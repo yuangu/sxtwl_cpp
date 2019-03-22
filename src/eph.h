@@ -28,6 +28,7 @@ struct Vector3
 			case 0: return x;
 			case 1: return y;
 			case 2: return z;
+			default: return x;
 		}
 
     };
@@ -38,6 +39,7 @@ struct Vector3
 		case 0: return x;
 		case 1: return y;
 		case 2: return z;
+		default: return x;
 		}
 	};
 };
@@ -57,7 +59,8 @@ struct Vector2
 		switch (index)
 		{
 		case 0: return x;
-		case 1: return y;		
+		case 1: return y;	
+		default: return x;
 		}
 
 	};
@@ -67,6 +70,7 @@ struct Vector2
 		{
 		case 0: return x;
 		case 1: return y;	
+		default: return x;
 		}
 	};
 };

@@ -208,6 +208,7 @@ int  SSQ::calc(long double jd, QSType qs)
 		if (n == "2") return D - 1;
 		return D;
 	}
+    return 0;
 }
 
 

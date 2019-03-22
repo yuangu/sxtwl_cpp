@@ -243,7 +243,7 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 }
 
 //通过四柱获取年月日
-std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, int fromYear, int  toYear)
+std::vector<double> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, int fromYear, int  toYear)
 {
 	auto fromDiff = fromYear - 1984;
 
@@ -297,15 +297,12 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 		mayBeTGMoth = mayBeTGMoth + 10;
 	}
 
-	std::vector<Day> ret;
+	std::vector<double> ret;
 	//说明没有合适的
-	if (mayBeTGMoth != mayBeDzMoth)
+	if (!(mayBeTGMoth == mayBeDzMoth || mayBeTGMoth + 10 == mayBeDzMoth))
 	{
 		return ret;
 	}
-
-	
-
 
 	///时
 	//    甲己日起甲子时
@@ -330,7 +327,7 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 	}
 
 	if (riGz.tg ==  4 || riGz.tg ==  9) {
-		startHourtg = 6;
+		startHourtg = 8;
 	}
 
 
@@ -342,7 +339,8 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 
 	
 	//说明没有合适的
-	if (mayBeTGHour != shiGz.dz)
+	if (!(mayBeTGHour == shiGz.dz || mayBeTGHour + 10 == shiGz.dz
+		|| (shiGz.dz ==12 && mayBeTGHour + 10 == 12))) //晚子时
 	{
 		return ret;
 	}
@@ -350,8 +348,26 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 
 	///年
 	GZ fromYearGz;
-	fromYearGz.tg = fromDiff % 10;
-	fromYearGz.dz = fromDiff % 12;
+	if (fromDiff < 0)
+	{
+		fromYearGz.tg = fromDiff * -1 % 10;
+		if (fromYearGz.tg > 0)
+		{
+			fromYearGz.tg = 10 - fromYearGz.tg;
+		}
+		fromYearGz.dz = fromDiff * -1 % 12;
+
+		if (fromYearGz.dz > 0)
+		{
+			fromYearGz.dz = 12 - fromYearGz.dz;
+		}
+	}
+	else {
+		fromYearGz.tg = fromDiff  % 10;
+		fromYearGz.dz = fromDiff  % 12;
+	}
+
+	
 
 	//获取起始年天干支所在的位置
 	auto fromGzPos = getGanZhiIndex(fromYearGz);
@@ -375,41 +391,73 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 		loop += 1;
 	}
 
+	//理论是是第几个小时 (晚子时算成13)
+	int hour  = (shiGz.dz % 13) * 2 - 1;
+	if (hour < 0) hour = 0;
+	
+
+	//获取这个月应当需要落下的节气
+	int jiqiIndex = 3 + (mayBeDzMoth * 2);
+	bool needAddOne = false;//需要算到下一年
+	if (jiqiIndex > 24)
+	{
+		jiqiIndex = jiqiIndex - 24;
+		needAddOne = true;
+	}
+
 	//遍历符条件的年
 	for (auto it = matchYears.begin(); it != matchYears.end(); ++it)
 	{
 		int year = *it;
+		if (needAddOne)
+		{
+			year = year + 1;
+		}
 
 		//计算1月1号的信息
 		Time t;
 		t.h = 12, t.m = 0, t.s = 0.1;
-		t.Y = year; t.M = 1; t.D = 1;
+		t.Y = year; t.M = 9; t.D = 1;
 
 		//公历月首的儒略日,中午;
 		int Bd0 = int2(JD::toJD(t)) - J2000;
 
-		if (!mSSQ.ZQ.size() || Bd0 < mSSQ.ZQ[0] || Bd0 >= mSSQ.ZQ[24])
-		{
-			mSSQ.calcY(Bd0);
-		}
+		
 
-		int jiqiIndex = 3 + (mayBeDzMoth * 2);
-		if (jiqiIndex > 24)
-		{
-			jiqiIndex = jiqiIndex - 24;
-		}
-
+		
 		GZ startGz;
 		GZ endGz;
 		long double startJD = 0;
 		long double endJD = 0;
+		Time startT;
+		Time endT;
+
 		//纪月处理,1998年12月7(大雪)开始连续进行节气计数,0为甲子
-		for (int i = 0; i < 2; ++i)
+		for (int i = 1; i >= 0; --i)
 		{
+			int index = jiqiIndex + 2 * i;
+			//定节气范围
+			if (i == 1 && jiqiIndex == 23)
+			{
+				if (!mSSQ.ZQ.size() || Bd0 + 360 < mSSQ.ZQ[0] || Bd0 + 360 >= mSSQ.ZQ[24])
+				{
+					mSSQ.calcY(Bd0 + 360);
+				}
+				index = 1;
+			}
+			else {
+				if (!mSSQ.ZQ.size() || Bd0 < mSSQ.ZQ[0] || Bd0 >= mSSQ.ZQ[24])
+				{
+					mSSQ.calcY(Bd0);
+				}
+			}
+
+
 			
-			int mk = int2((mSSQ.ZQ[jiqiIndex + 2 * i] - mSSQ.ZQ[0]) / 30.43685);
+
+			int mk = int2((mSSQ.ZQ[index] - mSSQ.ZQ[0]) / 30.43685);
 			//相对大雪的月数计算,mk的取值范围0-12
-			if (mk < 12 && mSSQ.ZQ[jiqiIndex + 2 * i] >= mSSQ.ZQ[2 * mk + 1])
+			if (mk < 12 && mSSQ.ZQ[index] >= mSSQ.ZQ[2 * mk + 1])
 			{
 				mk++;
 			}
@@ -417,18 +465,74 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 			int D = mk + int2((mSSQ.ZQ[12] + 390) / 365.2422) * 12 + 900000; //相对于1998年12月7(大雪)的月数,900000为正数基数
 
 			////纪日,2000年1月7日起算
-			D = mSSQ.ZQ[jiqiIndex + 2 * i] - 6 + 9000000;
+			D = mSSQ.ZQ[index] - 6 + 9000000;
 			
 			if (i == 0)
 			{
-				startJD = mSSQ.ZQ[jiqiIndex + 2 * i];
+				startJD = mSSQ.ZQ[index];
+				startT = JD::JD2DD(startJD + J2000);
 				startGz.tg = D % 10;
 				startGz.dz = D % 12;
+
+				//获取准确节气的时间
+				auto jd2 = mSSQ.ZQ[0] + dt_T(mSSQ.ZQ[0]) - (8.0 / 24.0);
+				auto w = XL::S_aLon(jd2 / 36525, 3);
+				w = int2((w - 0.13) / pi2 * 24) *pi2 / 24;
+
+
+				for (int i = 0; i <= index; ++i)
+				{
+					long double  d = 0;
+					while (true)
+					{
+						d = qi_accurate(w);
+						D = int2(d + 0.5);
+						auto xn = int2(w / pi2 * 24 + 24000006.01) % 24;
+						w += pi2 / 24;
+						if (D < mSSQ.ZQ[i]) continue;
+						break;
+					}
+
+					if (index != i) continue;
+					Time t1 = JD::JD2DD(d);
+					startT.h = t1.h;
+					startT.m = t1.m;
+					startT.s = t1.s;
+					break;
+				}
 			}
 			else {
-				endJD = mSSQ.ZQ[jiqiIndex + 2 * i];
+				endJD = mSSQ.ZQ[index];
+				endT = JD::JD2DD(endJD + J2000);
 				endGz.tg = D % 10;
 				endGz.dz = D % 12;
+
+				//获取准确节气的时间
+				auto jd2 = mSSQ.ZQ[0] + dt_T(mSSQ.ZQ[0]) - (8.0 / 24.0);
+				auto w = XL::S_aLon(jd2 / 36525, 3);
+				w = int2((w - 0.13) / pi2 * 24) *pi2 / 24;
+
+
+				for (int i = 0; i <= index; ++i)
+				{
+					long double  d = 0;
+					while (true)
+					{
+						d = qi_accurate(w);
+						D = int2(d + 0.5);
+						auto xn = int2(w / pi2 * 24 + 24000006.01) % 24;
+						w += pi2 / 24;
+						if (D < mSSQ.ZQ[i]) continue;
+						break;
+					}
+
+					if (index != i) continue;
+					Time t1 = JD::JD2DD(d);
+					endT.h = t1.h;
+					endT.m = t1.m;
+					endT.s = t1.s;
+					break;
+				}
 			}
 		}
 
@@ -436,25 +540,93 @@ std::vector<Day> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz, in
 		long double startDay = 0;
 		if (diff >= 0)
 		{
-			startDay = mSSQ.ZQ[jiqiIndex] + diff;			
+			startDay = startJD + diff;
 		}
 		else {
-			startDay = mSSQ.ZQ[jiqiIndex] + 60 + diff;
+			startDay = startJD + 60 + diff;
 		}
 		
 		
+		
+		/*Time st = JD::JD2DD(startJD + J2000);
+		Time et = JD::JD2DD(endJD + J2000);*/
+		
 		do {
-			Time t = JD::JD2DD(startDay + J2000);
-			if (startDay < endJD) {
-				auto day = this->getDayBySolar(t.Y, t.M, t.D);
-				ret.push_back(day);
+
+			Time mayBet = JD::JD2DD(startDay + J2000);
+			mayBet.h = hour;
+			mayBet.m = 0;
+			mayBet.s = 0;
+
+			if (diff == 0)
+			{
+				bool isMatch = false;
+				
+
+				//此时算上一个月的
+				if (hour > t.h)
+				{
+					isMatch = true;
+				}
+				else
+				{
+					if (hour != 0 || hour != 23)
+					{
+						mayBet.h = hour;
+						mayBet.m = 59;
+						mayBet.s = 0;
+
+					}
+					else
+					{
+						mayBet.h = hour;
+						mayBet.m = 59;
+						mayBet.s = 0;
+					}
+
+
+					if (mayBet.h >= t.h && t.m < 59)
+					{
+						isMatch = true;
+					}
+				}
+
+				if (!isMatch)
+				{
+					break;
+				}
 			}
-			else
+
+			else if (diff == int2(endJD - startJD))
+			{
+				bool isMatch = false;
+				
+				//此时算上一个月的
+				if (hour < endT.h)
+				{
+					isMatch = true;
+				}
+				else
+				{
+					if (mayBet.h == endT.h && endT.m > 0)
+					{
+						isMatch = true;
+					}
+				}
+
+				if (!isMatch)
+				{
+					break;
+				}
+			}
+
+			if (diff > int2(endJD - startJD))
 			{
 				break;
 			}
-			startDay += 60;
-		} while (true);
+
+			ret.push_back(JD::toJD(mayBet));
+		} while (false);
 
 	}
 	return ret;
@@ -614,6 +786,7 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
 	day.Lyear4 = day.Lyear0 + 1984 + 2698; //黄帝纪年
 
 	//纪月处理,1998年12月7(大雪)开始连续进行节气计数,0为甲子
+    //一年固定有12个中气日，平均每个中气日间隔30.43685天
 	mk = int2((day.d0 - mSSQ.ZQ[0]) / 30.43685);
 	//相对大雪的月数计算,mk的取值范围0-12
 	if (mk < 12 && day.d0 >= mSSQ.ZQ[2 * mk + 1])
