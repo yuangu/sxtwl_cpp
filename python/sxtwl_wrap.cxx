@@ -3025,15 +3025,16 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_std__exception swig_types[16]
 #define SWIGTYPE_p_std__invalid_argument swig_types[17]
 #define SWIGTYPE_p_std__vectorT_Day_std__allocatorT_Day_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_long_double_std__allocatorT_long_double_t_t swig_types[19]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[20]
-#define SWIGTYPE_p_unsigned_char swig_types[21]
-#define SWIGTYPE_p_unsigned_int swig_types[22]
-#define SWIGTYPE_p_unsigned_long_long swig_types[23]
-#define SWIGTYPE_p_unsigned_short swig_types[24]
-#define SWIGTYPE_p_value_type swig_types[25]
-static swig_type_info *swig_types[27];
-static swig_module_info swig_module = {swig_types, 26, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[19]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[20]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[21]
+#define SWIGTYPE_p_unsigned_char swig_types[22]
+#define SWIGTYPE_p_unsigned_int swig_types[23]
+#define SWIGTYPE_p_unsigned_long_long swig_types[24]
+#define SWIGTYPE_p_unsigned_short swig_types[25]
+#define SWIGTYPE_p_value_type swig_types[26]
+static swig_type_info *swig_types[28];
+static swig_module_info swig_module = {swig_types, 27, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -7985,6 +7986,91 @@ SWIGINTERN PyObject *DayList_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObje
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_new_GZ__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GZ *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_GZ")) SWIG_fail;
+  result = (GZ *)new GZ();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GZ, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_GZ__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  uint8_t arg1 ;
+  uint8_t arg2 ;
+  unsigned char val1 ;
+  int ecode1 = 0 ;
+  unsigned char val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GZ *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_GZ",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_unsigned_SS_char(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_GZ" "', argument " "1"" of type '" "uint8_t""'");
+  } 
+  arg1 = static_cast< uint8_t >(val1);
+  ecode2 = SWIG_AsVal_unsigned_SS_char(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_GZ" "', argument " "2"" of type '" "uint8_t""'");
+  } 
+  arg2 = static_cast< uint8_t >(val2);
+  result = (GZ *)new GZ(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GZ, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_GZ(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_GZ__SWIG_0(self, args);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_char(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_char(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_new_GZ__SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_GZ'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    GZ::GZ()\n"
+    "    GZ::GZ(uint8_t,uint8_t)\n");
+  return 0;
+}
+
+
 SWIGINTERN PyObject *_wrap_GZ_tg_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GZ *arg1 = (GZ *) 0 ;
@@ -8083,19 +8169,6 @@ SWIGINTERN PyObject *_wrap_GZ_dz_get(PyObject *SWIGUNUSEDPARM(self), PyObject *a
   arg1 = reinterpret_cast< GZ * >(argp1);
   result = (uint8_t) ((arg1)->dz);
   resultobj = SWIG_From_unsigned_SS_char(static_cast< unsigned char >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_GZ(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GZ *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_GZ")) SWIG_fail;
-  result = (GZ *)new GZ();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GZ, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -8965,7 +9038,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Day_cur_jq_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Day *arg1 = (Day *) 0 ;
-  std::vector< long double,std::allocator< long double > > *arg2 = (std::vector< long double,std::allocator< long double > > *) 0 ;
+  std::vector< double,std::allocator< double > > *arg2 = (std::vector< double,std::allocator< double > > *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 = 0 ;
@@ -8979,11 +9052,11 @@ SWIGINTERN PyObject *_wrap_Day_cur_jq_set(PyObject *SWIGUNUSEDPARM(self), PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_cur_jq_set" "', argument " "1"" of type '" "Day *""'"); 
   }
   arg1 = reinterpret_cast< Day * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_long_double_std__allocatorT_long_double_t_t, 0 |  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Day_cur_jq_set" "', argument " "2"" of type '" "std::vector< long double,std::allocator< long double > > *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Day_cur_jq_set" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > *""'"); 
   }
-  arg2 = reinterpret_cast< std::vector< long double,std::allocator< long double > > * >(argp2);
+  arg2 = reinterpret_cast< std::vector< double,std::allocator< double > > * >(argp2);
   if (arg1) (arg1)->cur_jq = *arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -8998,7 +9071,7 @@ SWIGINTERN PyObject *_wrap_Day_cur_jq_get(PyObject *SWIGUNUSEDPARM(self), PyObje
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  std::vector< long double,std::allocator< long double > > *result = 0 ;
+  std::vector< double,std::allocator< double > > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Day_cur_jq_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Day, 0 |  0 );
@@ -9006,8 +9079,60 @@ SWIGINTERN PyObject *_wrap_Day_cur_jq_get(PyObject *SWIGUNUSEDPARM(self), PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_cur_jq_get" "', argument " "1"" of type '" "Day *""'"); 
   }
   arg1 = reinterpret_cast< Day * >(argp1);
-  result = (std::vector< long double,std::allocator< long double > > *)& ((arg1)->cur_jq);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_long_double_std__allocatorT_long_double_t_t, 0 |  0 );
+  result = (std::vector< double,std::allocator< double > > *)& ((arg1)->cur_jq);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Day_cur_cn_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Day *arg1 = (Day *) 0 ;
+  std::vector< int,std::allocator< int > > *arg2 = (std::vector< int,std::allocator< int > > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Day_cur_cn_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Day, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_cur_cn_set" "', argument " "1"" of type '" "Day *""'"); 
+  }
+  arg1 = reinterpret_cast< Day * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Day_cur_cn_set" "', argument " "2"" of type '" "std::vector< int,std::allocator< int > > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< int,std::allocator< int > > * >(argp2);
+  if (arg1) (arg1)->cur_cn = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Day_cur_cn_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Day *arg1 = (Day *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int,std::allocator< int > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Day_cur_cn_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Day, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_cur_cn_get" "', argument " "1"" of type '" "Day *""'"); 
+  }
+  arg1 = reinterpret_cast< Day * >(argp1);
+  result = (std::vector< int,std::allocator< int > > *)& ((arg1)->cur_cn);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -11101,6 +11226,114 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Lunar_siZhu2Year(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Lunar *arg1 = (Lunar *) 0 ;
+  GZ arg2 ;
+  GZ arg3 ;
+  GZ arg4 ;
+  GZ arg5 ;
+  int arg6 ;
+  int arg7 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  int val6 ;
+  int ecode6 = 0 ;
+  int val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  PyObject * obj5 = 0 ;
+  PyObject * obj6 = 0 ;
+  SwigValueWrapper< std::vector< double,std::allocator< double > > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOO:Lunar_siZhu2Year",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Lunar, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Lunar_siZhu2Year" "', argument " "1"" of type '" "Lunar *""'"); 
+  }
+  arg1 = reinterpret_cast< Lunar * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GZ,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Lunar_siZhu2Year" "', argument " "2"" of type '" "GZ""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Lunar_siZhu2Year" "', argument " "2"" of type '" "GZ""'");
+    } else {
+      GZ * temp = reinterpret_cast< GZ * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  {
+    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_GZ,  0  | 0);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Lunar_siZhu2Year" "', argument " "3"" of type '" "GZ""'"); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Lunar_siZhu2Year" "', argument " "3"" of type '" "GZ""'");
+    } else {
+      GZ * temp = reinterpret_cast< GZ * >(argp3);
+      arg3 = *temp;
+      if (SWIG_IsNewObj(res3)) delete temp;
+    }
+  }
+  {
+    res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_GZ,  0  | 0);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Lunar_siZhu2Year" "', argument " "4"" of type '" "GZ""'"); 
+    }  
+    if (!argp4) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Lunar_siZhu2Year" "', argument " "4"" of type '" "GZ""'");
+    } else {
+      GZ * temp = reinterpret_cast< GZ * >(argp4);
+      arg4 = *temp;
+      if (SWIG_IsNewObj(res4)) delete temp;
+    }
+  }
+  {
+    res5 = SWIG_ConvertPtr(obj4, &argp5, SWIGTYPE_p_GZ,  0  | 0);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Lunar_siZhu2Year" "', argument " "5"" of type '" "GZ""'"); 
+    }  
+    if (!argp5) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Lunar_siZhu2Year" "', argument " "5"" of type '" "GZ""'");
+    } else {
+      GZ * temp = reinterpret_cast< GZ * >(argp5);
+      arg5 = *temp;
+      if (SWIG_IsNewObj(res5)) delete temp;
+    }
+  }
+  ecode6 = SWIG_AsVal_int(obj5, &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "Lunar_siZhu2Year" "', argument " "6"" of type '" "int""'");
+  } 
+  arg6 = static_cast< int >(val6);
+  ecode7 = SWIG_AsVal_int(obj6, &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "Lunar_siZhu2Year" "', argument " "7"" of type '" "int""'");
+  } 
+  arg7 = static_cast< int >(val7);
+  result = (arg1)->siZhu2Year(arg2,arg3,arg4,arg5,arg6,arg7);
+  resultobj = SWIG_NewPointerObj((new std::vector< double,std::allocator< double > >(static_cast< const std::vector< double,std::allocator< double > >& >(result))), SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Lunar_getShiGz(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Lunar *arg1 = (Lunar *) 0 ;
@@ -11469,11 +11702,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"DayList_capacity", _wrap_DayList_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_DayList", _wrap_delete_DayList, METH_VARARGS, NULL},
 	 { (char *)"DayList_swigregister", DayList_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_GZ", _wrap_new_GZ, METH_VARARGS, NULL},
 	 { (char *)"GZ_tg_set", _wrap_GZ_tg_set, METH_VARARGS, NULL},
 	 { (char *)"GZ_tg_get", _wrap_GZ_tg_get, METH_VARARGS, NULL},
 	 { (char *)"GZ_dz_set", _wrap_GZ_dz_set, METH_VARARGS, NULL},
 	 { (char *)"GZ_dz_get", _wrap_GZ_dz_get, METH_VARARGS, NULL},
-	 { (char *)"new_GZ", _wrap_new_GZ, METH_VARARGS, NULL},
 	 { (char *)"delete_GZ", _wrap_delete_GZ, METH_VARARGS, NULL},
 	 { (char *)"GZ_swigregister", GZ_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Day_d0_set", _wrap_Day_d0_set, METH_VARARGS, NULL},
@@ -11510,6 +11743,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Day_cur_xs_get", _wrap_Day_cur_xs_get, METH_VARARGS, NULL},
 	 { (char *)"Day_cur_jq_set", _wrap_Day_cur_jq_set, METH_VARARGS, NULL},
 	 { (char *)"Day_cur_jq_get", _wrap_Day_cur_jq_get, METH_VARARGS, NULL},
+	 { (char *)"Day_cur_cn_set", _wrap_Day_cur_cn_set, METH_VARARGS, NULL},
+	 { (char *)"Day_cur_cn_get", _wrap_Day_cur_cn_get, METH_VARARGS, NULL},
 	 { (char *)"Day_Lmc_set", _wrap_Day_Lmc_set, METH_VARARGS, NULL},
 	 { (char *)"Day_Lmc_get", _wrap_Day_Lmc_get, METH_VARARGS, NULL},
 	 { (char *)"Day_Ldn_set", _wrap_Day_Ldn_set, METH_VARARGS, NULL},
@@ -11587,6 +11822,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Lunar_yueLiCalc", _wrap_Lunar_yueLiCalc, METH_VARARGS, NULL},
 	 { (char *)"Lunar_getDayBySolar", _wrap_Lunar_getDayBySolar, METH_VARARGS, NULL},
 	 { (char *)"Lunar_getDayByLunar", _wrap_Lunar_getDayByLunar, METH_VARARGS, NULL},
+	 { (char *)"Lunar_siZhu2Year", _wrap_Lunar_siZhu2Year, METH_VARARGS, NULL},
 	 { (char *)"Lunar_getShiGz", _wrap_Lunar_getShiGz, METH_VARARGS, NULL},
 	 { (char *)"Lunar_getYearCal", _wrap_Lunar_getYearCal, METH_VARARGS, NULL},
 	 { (char *)"Lunar_getRunMonth", _wrap_Lunar_getRunMonth, METH_VARARGS, NULL},
@@ -11622,7 +11858,8 @@ static swig_type_info _swigt__p_std__allocatorT_Day_t = {"_p_std__allocatorT_Day
 static swig_type_info _swigt__p_std__exception = {"_p_std__exception", "std::exception *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_Day_std__allocatorT_Day_t_t = {"_p_std__vectorT_Day_std__allocatorT_Day_t_t", "std::vector< Day,std::allocator< Day > > *|std::vector< Day > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_long_double_std__allocatorT_long_double_t_t = {"_p_std__vectorT_long_double_std__allocatorT_long_double_t_t", "std::vector< long double,std::allocator< long double > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_double_std__allocatorT_double_t_t = {"_p_std__vectorT_double_std__allocatorT_double_t_t", "std::vector< double,std::allocator< double > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_int_std__allocatorT_int_t_t = {"_p_std__vectorT_int_std__allocatorT_int_t_t", "std::vector< int,std::allocator< int > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *|uint_least8_t *|uint_fast8_t *|uint8_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "uintptr_t *|uint_least32_t *|uint_fast32_t *|uint32_t *|unsigned int *|uint_fast16_t *", 0, 0, (void*)0, 0};
@@ -11650,7 +11887,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__exception,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__vectorT_Day_std__allocatorT_Day_t_t,
-  &_swigt__p_std__vectorT_long_double_std__allocatorT_long_double_t_t,
+  &_swigt__p_std__vectorT_double_std__allocatorT_double_t_t,
+  &_swigt__p_std__vectorT_int_std__allocatorT_int_t_t,
   &_swigt__p_swig__SwigPyIterator,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
@@ -11678,7 +11916,8 @@ static swig_cast_info _swigc__p_std__allocatorT_Day_t[] = {  {&_swigt__p_std__al
 static swig_cast_info _swigc__p_std__exception[] = {  {&_swigt__p_std__exception, 0, 0, 0},  {&_swigt__p_LunarException, _p_LunarExceptionTo_p_std__exception, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_Day_std__allocatorT_Day_t_t[] = {  {&_swigt__p_std__vectorT_Day_std__allocatorT_Day_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_long_double_std__allocatorT_long_double_t_t[] = {  {&_swigt__p_std__vectorT_long_double_std__allocatorT_long_double_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_double_std__allocatorT_double_t_t[] = {  {&_swigt__p_std__vectorT_double_std__allocatorT_double_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_int_std__allocatorT_int_t_t[] = {  {&_swigt__p_std__vectorT_int_std__allocatorT_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
@@ -11706,7 +11945,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__exception,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__vectorT_Day_std__allocatorT_Day_t_t,
-  _swigc__p_std__vectorT_long_double_std__allocatorT_long_double_t_t,
+  _swigc__p_std__vectorT_double_std__allocatorT_double_t_t,
+  _swigc__p_std__vectorT_int_std__allocatorT_int_t_t,
   _swigc__p_swig__SwigPyIterator,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
