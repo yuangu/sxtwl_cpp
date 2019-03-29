@@ -538,16 +538,14 @@ std::vector<double> Lunar::siZhu2Year(GZ yearGz, GZ  yueGz, GZ  riGz, GZ  shiGz,
 
 		int diff = getGanZhiIndex(riGz) - getGanZhiIndex(startGz);
 		long double startDay = 0;
-		if (diff >= 0)
+		if (diff  <  0)
 		{
-			startDay = startJD + diff;
-		}
-		else {
-			startDay = startJD + 60 + diff;
+        
+			diff =  60 + diff;
 		}
 		
-		
-		
+		startDay = startJD + diff;
+	
 		/*Time st = JD::JD2DD(startJD + J2000);
 		Time et = JD::JD2DD(endJD + J2000);*/
 		

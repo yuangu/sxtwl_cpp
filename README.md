@@ -38,10 +38,6 @@ sxtwl_cpp是一个[寿星天文历](http://www.nongli.net/sxwnl/)的C++实现日
 * 由于js代码为弱语言类型，在翻译成C++过程中，为了考虑精度使用的是long double类型.有些地方可以考虑用int类型替代
 * 部分语法无C++语法特点。
 
-## 构建方法
-
-请参考[构建文档](doc/如何构建.md)
-
 ## 效果图
 
 ![C#的执行效果图](doc/img/csharp_img.png)
@@ -50,30 +46,27 @@ sxtwl_cpp是一个[寿星天文历](http://www.nongli.net/sxwnl/)的C++实现日
 ![python的执行效果图](doc/img/python.png)
 
 
-### Python懒人安装包下载地址 （只提供Win版本）：
+## 构建方法（C++，C#，PHP,Lua等）
 
-https://pan.baidu.com/s/1VR4MtPVV9iP9SSHNDjKZnQ
+请参考[构建文档](doc/如何构建.md)
 
+### Python用户懒人安装方法
+```
+pip install sxtwl
+```
+具体详情可以参考：
+https://pypi.org/project/sxtwl/
 
 ## 交流沟通群
 
-如果在使用过程中遇到困难，可加微信群(如二维码过期，邮件:lifulinghan@aol.com索要新的):
-![微信群](doc/img/wxq.jpg)
-
++ 如有对日历，易学等感觉兴趣的同学或使用此项目过程中遇到困难的同学，可加微信（yyguzi）入群讨论。
++ 如有需要付费类的技术支持（如，八字工具类APP，万年历，sxtwl_cpp移值等），也可以微信（yyguzi）议价合作。
 
 ## 最后
 
 * 如果想加入此项目请联系 元谷(lifulinghan@aol.com)
 * 如果使用此项目，请告之一下作者
 * 如果您使用了此项目的代码，为了表示对寿星天文历原作者的尊重，请您项目适当的位置表达对许剑伟先生感谢
-* 如果你觉得本库不错，欢迎打赏作者
 
 
-微信用户打赏入口：
 
-![微信支付](doc/img/webchat.png)    
-
-
-支付宝用户打赏入口：
-
-![支付宝](doc/img/ali.png)
