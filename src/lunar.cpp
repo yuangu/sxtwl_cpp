@@ -642,7 +642,9 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
 	static int num[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
 	if (_day <= 0 || _day > num[_month])
 	{
-		if (!(_month == 2 && _year % 4 == 0 && _day == 29))
+        int year = _year;
+        if(year < 0) year++; //公元前润年  
+		if (!(year % 4 == 0 && _month == 2 && _day == 29))
 		{
 			throw LunarException(ErrorCode_DateError);
 		}
