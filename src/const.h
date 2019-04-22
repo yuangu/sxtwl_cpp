@@ -1,4 +1,6 @@
 #pragma once
+#include <math.h>
+
 //PI
 #define PI (3.141592653589793)
 
@@ -38,6 +40,7 @@
 #define  cs_sSun ( 959.64) //用于太阳视半径计算
 
 //转整型
-#define int2(v) ((v)>=0?(int)(v):((int)(v)-1))
+//#define int2(v) ((v)>=0?(int)(v):((int)(v)-1))
+#define int2(v) ((int)floor(v))
 //求余
 #define fmod2(v, n) ((v%n + n) % n)
