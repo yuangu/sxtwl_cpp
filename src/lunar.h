@@ -39,7 +39,7 @@ struct Day
 	uint8_t Lmc;  //阴历月的月份
 	uint8_t Ldn;  //阴历月的天数
 	bool Lleap; //是不是阴历的润月
-	int8_t Lmc2; //下个月的月份，不存在则为-1
+	//int8_t Lmc2; //下个月的月份，不存在则为-1
 
 	int8_t qk;  //节气，不存在则为-1
 

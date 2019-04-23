@@ -15,11 +15,12 @@ struct DayInfo
     int ly; //阴历年(以立春为界)
     int lm; //阴历月
     int ld; //阴历日
-    bool isRun;
+    bool isRun; //是不是润月
 
-    int8_t qk;  //节气，不存在则为-1
-
-    void reset();
+    
+	bool hasJq; //此日是否是节气
+	int jqIndex; //节气的索引
+	double jqjd;  //节气的儒略日
 };
 
 class SXDay
@@ -41,13 +42,14 @@ class SXDay
         
         //获取今天是星期几
         int getWeek();
+		//是否有节气信息
+		bool hasQJ();
 
         //节气类型
         int getJQIndex();
-        //节气儒略日（精确到日）
-        int getJQJD();
-        //精确节气的儒略日
-        int getJQExactJD();
+        //节气儒略日
+		double getJQJD();
+       
 
     private:
         void lunar(int di);
@@ -56,7 +58,13 @@ class SXDay
 
     private:
 	    SSQ mSSQ;
-
+	
+	private:
+		bool hasLunar;  //是否初使化阴历
+		bool hasLunarYear;//是否初使化了阴历年
+		bool hasCheckJQ; //是否判断过了，有节气？
+		bool hasGetJQJd; //是否计算过节气的时间
+		bool hasGetJQIndex; 
     private:
         DayInfo mDayInfo;
 };

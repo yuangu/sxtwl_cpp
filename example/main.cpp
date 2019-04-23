@@ -4,6 +4,7 @@
 #include "const.h"
 #include "lunar.h"
 #include "JD.h"
+#include "day.h"
 
 //===============================================================
 #ifdef _WIN32
@@ -60,59 +61,81 @@ void printDay(Day &day)
 int main()
 {
 	
-#ifdef _WIN32
-	////http://m.blog.csdn.net/article/details?id=52789570
-	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
-	setvbuf(stdout, nullptr, _IONBF, 0);
-	MBuf buf;
-	std::cout.rdbuf(&buf);
-#endif
-	Lunar lunar;
-
-
-	// 根据天干地支反查
-	///1990-6-15 庚午年 壬午月 辛亥日
-
-	GZ yearGz(6, 6);
-	GZ yueGz(8, 6);
-	GZ riGz(7, 11);
-	GZ shiGz(2, 8);
-	lunar.siZhu2Year(yearGz, yueGz, riGz, shiGz, 1990, 2100);
-
-
-	//=============================================================================================================
-	//获取年的润月
-	int run_month = lunar.getRunMonth(1990);
-	//============================================================================================================
-	int month_num = lunar.getLunarMonthNum(1990, 5);
-	//=============================================================================================================
-	//通过阳历获取当天的信息。（可以用于阳历转阴历,获取当天星期几等功能）
-	try
+	SXDay day;
+	for (auto i = 1; i < 20; ++i)
 	{
-		Day day = lunar.getDayBySolar(2010, 13, 10);
-		printDay(day);
-	}
-	catch (LunarException e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+		Lunar lunar;
+		Day day2 = lunar.getDayBySolar(2017, 5, i);
+		day.initBySolar(2017, 5, i);
+		auto day1 = day.getDay();
+		auto year = day.getYear();
+		auto month = day.getMonth();
 
-	//=============================================================================================================
-	//通过阴历获取当天的信息。（可以用于阴历转阳历等,获取当天星期几等功能）
-	Day day2 = lunar.getDayByLunar(1995, 12, 10);
-	printDay(day2);
-	//=============================================================================================================
-	Month month = lunar.yueLiCalc(1990, 7);
+		auto lday = day.getLDay();
+		auto lmonth = day.getLMonth();
+		auto lyear = day.getLYear();
+		auto isLun = day.isRun();
 
-	std::cout << month.y << "年" << (int)month.m << "月" << std::endl;
-	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "年" << std::endl;
-	std::cout << "生肖：" << ShX[month.ShX] << std::endl;
-
-	std::vector<Day> &days = month.days;
-	for (auto it = days.begin(); it != days.end(); ++it)
-	{
-		printDay((*it));
+		auto jqIndex = day.getJQIndex();
+		auto jqJd = day.getJQJD();
+		auto time = JD::JD2DD(jqJd + J2000);
+		printf("");
 	}
-	//=============================================================================================================
-	return 0;
+	
+
+//#ifdef _WIN32
+//	////http://m.blog.csdn.net/article/details?id=52789570
+//	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
+//	setvbuf(stdout, nullptr, _IONBF, 0);
+//	MBuf buf;
+//	std::cout.rdbuf(&buf);
+//#endif
+//	Lunar lunar;
+//
+//
+//	// 根据天干地支反查
+//	///1990-6-15 庚午年 壬午月 辛亥日
+//
+//	GZ yearGz(6, 6);
+//	GZ yueGz(8, 6);
+//	GZ riGz(7, 11);
+//	GZ shiGz(2, 8);
+//	lunar.siZhu2Year(yearGz, yueGz, riGz, shiGz, 1990, 2100);
+//
+//
+//	//=============================================================================================================
+//	//获取年的润月
+//	int run_month = lunar.getRunMonth(1990);
+//	//============================================================================================================
+//	int month_num = lunar.getLunarMonthNum(1990, 5);
+//	//=============================================================================================================
+//	//通过阳历获取当天的信息。（可以用于阳历转阴历,获取当天星期几等功能）
+//	try
+//	{
+//		Day day = lunar.getDayBySolar(2010, 13, 10);
+//		printDay(day);
+//	}
+//	catch (LunarException e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
+//
+//	//=============================================================================================================
+//	//通过阴历获取当天的信息。（可以用于阴历转阳历等,获取当天星期几等功能）
+//	Day day2 = lunar.getDayByLunar(1995, 12, 10);
+//	printDay(day2);
+//	//=============================================================================================================
+//	Month month = lunar.yueLiCalc(1990, 7);
+//
+//	std::cout << month.y << "年" << (int)month.m << "月" << std::endl;
+//	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "年" << std::endl;
+//	std::cout << "生肖：" << ShX[month.ShX] << std::endl;
+//
+//	std::vector<Day> &days = month.days;
+//	for (auto it = days.begin(); it != days.end(); ++it)
+//	{
+//		printDay((*it));
+//	}
+//	//=============================================================================================================
+//	return 0;
 }

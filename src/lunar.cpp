@@ -731,13 +731,15 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
 		day.Lmc = mSSQ.ym[mk]; //月名称
 		day.Ldn = mSSQ.dx[mk]; //月大小
 		day.Lleap = (mSSQ.leap&&mSSQ.leap == mk); //闰状况
-		day.Lmc2 = mk < 13 ? mk + 1 : -1; //下个月名称,判断除夕时要用到
+		//day.Lmc2 = mk < 13 ? mk + 1 : -1; //下个月名称,判断除夕时要用到
 	}
-	else {
+
+	/*else {
 		Day day2 = getDayBySolar(_year, _month, _day - 1);
 		day.Lmc = day2.Lmc, day.Ldn = day2.Ldn;
 		day.Lleap = day2.Lleap, day.Lmc2 = day2.Lmc2;
-	}
+	}*/
+
 	int qk = int2((day.d0 - mSSQ.ZQ[0] - 7) / 15.2184);
 
 	//节气的取值范围是0-23
