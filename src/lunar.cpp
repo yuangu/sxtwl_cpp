@@ -1103,12 +1103,27 @@ uint8_t Lunar::getRunMonth(int By)
 	// static int mkIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
 	static int yueIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
 
+    //需要排除11月和12月的，这个可能属于上一个月的信息
 	int leap = mSSQ.leap - 1;
-	if (leap < 0)
-	{
-		return 0;
-	}
-	return yueIndex[leap];
+    if(leap > 1)
+    {
+        return yueIndex[leap];
+    }
+	
+    //看看11月和12月是否有闰
+    t.Y = By + 1;
+    Bd0 = int2(JD::toJD(t)) - J2000;
+    if (!mSSQ.ZQ.size() || Bd0 < mSSQ.ZQ[0] || Bd0 >= mSSQ.ZQ[24])
+    {
+        mSSQ.calcY(Bd0);
+    }
+    leap = mSSQ.leap - 1;
+    if (leap > 1 || leap < 0)
+    {
+        return 0;
+    }
+    return yueIndex[leap];
+    
 
 }
 

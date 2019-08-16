@@ -3,7 +3,6 @@
 #include <vector>
 #include "const.h"
 #include "lunar.h"
-#include "JD.h"
 
 //===============================================================
 #ifdef _WIN32
@@ -68,51 +67,33 @@ int main()
 	std::cout.rdbuf(&buf);
 #endif
 	Lunar lunar;
-
-
-	// 根据天干地支反查
-	///1990-6-15 庚午年 壬午月 辛亥日
-
-	GZ yearGz(6, 6);
-	GZ yueGz(8, 6);
-	GZ riGz(7, 11);
-	GZ shiGz(2, 8);
-	lunar.siZhu2Year(yearGz, yueGz, riGz, shiGz, 1990, 2100);
-
-
-	//=============================================================================================================
-	//获取年的润月
-	int run_month = lunar.getRunMonth(1990);
-	//============================================================================================================
-	int month_num = lunar.getLunarMonthNum(1990, 5);
 	//=============================================================================================================
 	//通过阳历获取当天的信息。（可以用于阳历转阴历,获取当天星期几等功能）
-	try
-	{
-		Day day = lunar.getDayBySolar(2010, 13, 10);
-		printDay(day);
-	}
-	catch (LunarException e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
+    
+//    Day day = lunar.getDayBySolar(2017, 11, 26);
+//    printDay(day);
+    
 	//=============================================================================================================
 	//通过阴历获取当天的信息。（可以用于阴历转阳历等,获取当天星期几等功能）
-	Day day2 = lunar.getDayByLunar(1995, 12, 10);
-	printDay(day2);
-	//=============================================================================================================
-	Month month = lunar.yueLiCalc(1990, 7);
+    for(auto i = 1; i < 13; ++i)
+    {
+        Day day2 = lunar.getDayByLunar(2016, i, 5, true);
+        printDay(day2);
+    }
 
-	std::cout << month.y << "年" << (int)month.m << "月" << std::endl;
-	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "年" << std::endl;
-	std::cout << "生肖：" << ShX[month.ShX] << std::endl;
-
-	std::vector<Day> &days = month.days;
-	for (auto it = days.begin(); it != days.end(); ++it)
-	{
-		printDay((*it));
-	}
+//    Day day2 = lunar.getDayByLunar(2017, 10, 5, true);
+//    printDay(day2);
 	//=============================================================================================================
-	return 0;
+//    Month month = lunar.yueLiCalc(1990, 7);
+//
+//    std::cout << month.y << "年" << (int)month.m << "月" << std::endl;
+//    std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "年" << std::endl;
+//    std::cout << "生肖：" << ShX[month.ShX] << std::endl;
+//
+//    std::vector<Day> &days = month.days;
+//    for (auto it = days.begin(); it != days.end(); ++it)
+//    {
+//        printDay((*it));
+//    }
+	//=============================================================================================================
 }
