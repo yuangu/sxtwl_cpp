@@ -3,6 +3,7 @@
 #include "JD.h"
 #include "eph.h"
 #include <cmath>
+#include <ctime>
 
 
 //获取干支索引
@@ -104,10 +105,29 @@ Month Lunar::yueLiCalc(int By, uint8_t Bm)
 		day.Ldi = day.d0 - mSSQ.HS[mk];   //距农历月首的编移量,0对应初一
 
 		day.cur_dz = day.d0 - mSSQ.ZQ[0];   //距冬至的天数
-		day.cur_xz = day.d0 - mSSQ.ZQ[12];  //距夏至的天数
-		day.cur_lq = day.d0 - mSSQ.ZQ[15];  //距立秋的天数
+		day.cur_xh = day.d0 - mSSQ.ZQ[1];
+		day.cur_dh = day.d0 - mSSQ.ZQ[2];   //距大寒的天数
+		day.cur_lc = day.d0 - mSSQ.ZQ[3];   //距立春的天数
+		day.cur_ys = day.d0 - mSSQ.ZQ[4];
+		day.cur_zc = day.d0 - mSSQ.ZQ[5];
+		day.cur_cf = day.d0 - mSSQ.ZQ[6];
+		day.cur_qm = day.d0 - mSSQ.ZQ[7];
+		day.cur_gy = day.d0 - mSSQ.ZQ[8];
+		day.cur_lx = day.d0 - mSSQ.ZQ[9];
+		day.cur_xm = day.d0 - mSSQ.ZQ[10];
 		day.cur_mz = day.d0 - mSSQ.ZQ[11];  //距芒种的天数
+		day.cur_xz = day.d0 - mSSQ.ZQ[12];  //距夏至的天数
 		day.cur_xs = day.d0 - mSSQ.ZQ[13];  //距小暑的天数
+		day.cur_ds = day.d0 - mSSQ.ZQ[14];
+		day.cur_lq = day.d0 - mSSQ.ZQ[15];  //距立秋的天数
+		day.cur_cs = day.d0 - mSSQ.ZQ[16];
+		day.cur_bl = day.d0 - mSSQ.ZQ[17];
+		day.cur_qf = day.d0 - mSSQ.ZQ[18];
+		day.cur_hl = day.d0 - mSSQ.ZQ[19];
+		day.cur_sj = day.d0 - mSSQ.ZQ[20];
+		day.cur_ld = day.d0 - mSSQ.ZQ[21];
+		day.cur_xx = day.d0 - mSSQ.ZQ[22];
+		day.cur_dx = day.d0 - mSSQ.ZQ[23];
 
 //        for(auto it = mSSQ.ZQ.begin(); it != mSSQ.ZQ.end(); ++it)
 //        {
@@ -716,11 +736,29 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
 	day.Ldi = day.d0 - mSSQ.HS[mk];   //距农历月首的编移量,0对应初一
 
 	day.cur_dz = day.d0 - mSSQ.ZQ[0];   //距冬至的天数
-	day.cur_xz = day.d0 - mSSQ.ZQ[12];  //距夏至的天数
-	day.cur_lq = day.d0 - mSSQ.ZQ[15];  //距立秋的天数
+    day.cur_xh = day.d0 - mSSQ.ZQ[1];
+    day.cur_dh = day.d0 - mSSQ.ZQ[2];   //距大寒的天数
+    day.cur_lc = day.d0 - mSSQ.ZQ[3];   //距立春的天数
+    day.cur_ys = day.d0 - mSSQ.ZQ[4];
+    day.cur_zc = day.d0 - mSSQ.ZQ[5];
+    day.cur_cf = day.d0 - mSSQ.ZQ[6];
+    day.cur_qm = day.d0 - mSSQ.ZQ[7];
+    day.cur_gy = day.d0 - mSSQ.ZQ[8];
+    day.cur_lx = day.d0 - mSSQ.ZQ[9];
+    day.cur_xm = day.d0 - mSSQ.ZQ[10];
 	day.cur_mz = day.d0 - mSSQ.ZQ[11];  //距芒种的天数
+	day.cur_xz = day.d0 - mSSQ.ZQ[12];  //距夏至的天数
 	day.cur_xs = day.d0 - mSSQ.ZQ[13];  //距小暑的天数
-
+    day.cur_ds = day.d0 - mSSQ.ZQ[14];
+	day.cur_lq = day.d0 - mSSQ.ZQ[15];  //距立秋的天数
+    day.cur_cs = day.d0 - mSSQ.ZQ[16];
+    day.cur_bl = day.d0 - mSSQ.ZQ[17];
+    day.cur_qf = day.d0 - mSSQ.ZQ[18];
+    day.cur_hl = day.d0 - mSSQ.ZQ[19];
+    day.cur_sj = day.d0 - mSSQ.ZQ[20];
+    day.cur_ld = day.d0 - mSSQ.ZQ[21];
+    day.cur_xx = day.d0 - mSSQ.ZQ[22];
+    day.cur_dx = day.d0 - mSSQ.ZQ[23];
   /*  for(auto it = mSSQ.ZQ.begin(); it != mSSQ.ZQ.end(); ++it)
 	{
 		day.cur_jq.push_back(  *it );
@@ -892,6 +930,20 @@ Day Lunar::getDayBySolar(int _year, uint8_t _month, uint8_t _day)
 
 		day.cur_jq.push_back(jd);
 		day.cur_cn.push_back((int)xn);
+
+		time_t t3_ctime; 
+
+		tm tm_struc;
+		tm_struc.tm_year=t3.Y-1900;
+		tm_struc.tm_mon=t3.M-1;
+		tm_struc.tm_mday=t3.D;
+		tm_struc.tm_hour=t3.h;
+		tm_struc.tm_min=t3.m;
+		tm_struc.tm_sec=t3.s;
+		tm_struc.tm_isdst=0;
+		t3_ctime=std::mktime(&tm_struc);
+           
+        day.cur_jq_cutoff_datetime.push_back(t3_ctime);
 	}
 
 

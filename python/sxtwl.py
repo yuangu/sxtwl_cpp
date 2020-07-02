@@ -347,30 +347,132 @@ class Day(_object):
         weekN = _swig_property(_sxtwl.Day_weekN_get, _sxtwl.Day_weekN_set)
     __swig_setmethods__["Ldi"] = _sxtwl.Day_Ldi_set
     __swig_getmethods__["Ldi"] = _sxtwl.Day_Ldi_get
+
     if _newclass:
         Ldi = _swig_property(_sxtwl.Day_Ldi_get, _sxtwl.Day_Ldi_set)
     __swig_setmethods__["cur_dz"] = _sxtwl.Day_cur_dz_set
     __swig_getmethods__["cur_dz"] = _sxtwl.Day_cur_dz_get
+
     if _newclass:
         cur_dz = _swig_property(_sxtwl.Day_cur_dz_get, _sxtwl.Day_cur_dz_set)
     __swig_setmethods__["cur_xz"] = _sxtwl.Day_cur_xz_set
     __swig_getmethods__["cur_xz"] = _sxtwl.Day_cur_xz_get
+
     if _newclass:
         cur_xz = _swig_property(_sxtwl.Day_cur_xz_get, _sxtwl.Day_cur_xz_set)
     __swig_setmethods__["cur_lq"] = _sxtwl.Day_cur_lq_set
     __swig_getmethods__["cur_lq"] = _sxtwl.Day_cur_lq_get
+
     if _newclass:
         cur_lq = _swig_property(_sxtwl.Day_cur_lq_get, _sxtwl.Day_cur_lq_set)
     __swig_setmethods__["cur_mz"] = _sxtwl.Day_cur_mz_set
     __swig_getmethods__["cur_mz"] = _sxtwl.Day_cur_mz_get
+
     if _newclass:
         cur_mz = _swig_property(_sxtwl.Day_cur_mz_get, _sxtwl.Day_cur_mz_set)
     __swig_setmethods__["cur_xs"] = _sxtwl.Day_cur_xs_set
     __swig_getmethods__["cur_xs"] = _sxtwl.Day_cur_xs_get
+
     if _newclass:
         cur_xs = _swig_property(_sxtwl.Day_cur_xs_get, _sxtwl.Day_cur_xs_set)
     __swig_setmethods__["cur_jq"] = _sxtwl.Day_cur_jq_set
     __swig_getmethods__["cur_jq"] = _sxtwl.Day_cur_jq_get
+
+    __swig_setmethods__["cur_xh"] = _sxtwl.Day_cur_xh_set
+    __swig_getmethods__["cur_xh"] = _sxtwl.Day_cur_xh_get
+    if _newclass:
+        cur_xh = _swig_property(_sxtwl.Day_cur_xh_get, _sxtwl.Day_cur_xh_set)
+
+    __swig_setmethods__["cur_dh"] = _sxtwl.Day_cur_dh_set
+    __swig_getmethods__["cur_dh"] = _sxtwl.Day_cur_dh_get
+    if _newclass:
+        cur_dh = _swig_property(_sxtwl.Day_cur_dh_get, _sxtwl.Day_cur_dh_set)
+
+    __swig_setmethods__["cur_lc"] = _sxtwl.Day_cur_lc_set
+    __swig_getmethods__["cur_lc"] = _sxtwl.Day_cur_lc_get
+    if _newclass:
+        cur_lc = _swig_property(_sxtwl.Day_cur_lc_get, _sxtwl.Day_cur_lc_set)
+
+    __swig_setmethods__["cur_ys"] = _sxtwl.Day_cur_ys_set
+    __swig_getmethods__["cur_ys"] = _sxtwl.Day_cur_ys_get
+    if _newclass:
+        cur_ys = _swig_property(_sxtwl.Day_cur_ys_get, _sxtwl.Day_cur_ys_set)
+
+    __swig_setmethods__["cur_zc"] = _sxtwl.Day_cur_zc_set
+    __swig_getmethods__["cur_zc"] = _sxtwl.Day_cur_zc_get
+    if _newclass:
+        cur_zc = _swig_property(_sxtwl.Day_cur_zc_get, _sxtwl.Day_cur_zc_set)
+
+    __swig_setmethods__["cur_cf"] = _sxtwl.Day_cur_cf_set
+    __swig_getmethods__["cur_cf"] = _sxtwl.Day_cur_cf_get
+    if _newclass:
+        cur_cf = _swig_property(_sxtwl.Day_cur_cf_get, _sxtwl.Day_cur_cf_set)
+
+    __swig_setmethods__["cur_qm"] = _sxtwl.Day_cur_qm_set
+    __swig_getmethods__["cur_qm"] = _sxtwl.Day_cur_qm_get
+    if _newclass:
+        cur_qm = _swig_property(_sxtwl.Day_cur_qm_get, _sxtwl.Day_cur_qm_set)
+
+    __swig_setmethods__["cur_gy"] = _sxtwl.Day_cur_gy_set
+    __swig_getmethods__["cur_gy"] = _sxtwl.Day_cur_gy_get
+    if _newclass:
+        cur_gy = _swig_property(_sxtwl.Day_cur_gy_get, _sxtwl.Day_cur_gy_set)
+
+    __swig_setmethods__["cur_lx"] = _sxtwl.Day_cur_lx_set
+    __swig_getmethods__["cur_lx"] = _sxtwl.Day_cur_lx_get
+    if _newclass:
+        cur_lx = _swig_property(_sxtwl.Day_cur_lx_get, _sxtwl.Day_cur_lx_set)
+
+    __swig_setmethods__["cur_xm"] = _sxtwl.Day_cur_xm_set
+    __swig_getmethods__["cur_xm"] = _sxtwl.Day_cur_xm_get
+    if _newclass:
+        cur_xm = _swig_property(_sxtwl.Day_cur_xm_get, _sxtwl.Day_cur_xm_set)
+
+    __swig_setmethods__["cur_ds"] = _sxtwl.Day_cur_ds_set
+    __swig_getmethods__["cur_ds"] = _sxtwl.Day_cur_ds_get
+    if _newclass:
+        cur_ds = _swig_property(_sxtwl.Day_cur_ds_get, _sxtwl.Day_cur_ds_set)
+
+    __swig_setmethods__["cur_cs"] = _sxtwl.Day_cur_cs_set
+    __swig_getmethods__["cur_cs"] = _sxtwl.Day_cur_cs_get
+    if _newclass:
+        cur_cs = _swig_property(_sxtwl.Day_cur_cs_get, _sxtwl.Day_cur_cs_set)
+
+    __swig_setmethods__["cur_bl"] = _sxtwl.Day_cur_bl_set
+    __swig_getmethods__["cur_bl"] = _sxtwl.Day_cur_bl_get
+    if _newclass:
+        cur_bl = _swig_property(_sxtwl.Day_cur_bl_get, _sxtwl.Day_cur_bl_set)
+
+    __swig_setmethods__["cur_qf"] = _sxtwl.Day_cur_qf_set
+    __swig_getmethods__["cur_qf"] = _sxtwl.Day_cur_qf_get
+    if _newclass:
+        cur_qf = _swig_property(_sxtwl.Day_cur_qf_get, _sxtwl.Day_cur_qf_set)
+
+    __swig_setmethods__["cur_hl"] = _sxtwl.Day_cur_hl_set
+    __swig_getmethods__["cur_hl"] = _sxtwl.Day_cur_hl_get
+    if _newclass:
+        cur_hl = _swig_property(_sxtwl.Day_cur_hl_get, _sxtwl.Day_cur_hl_set)
+
+    __swig_setmethods__["cur_sj"] = _sxtwl.Day_cur_sj_set
+    __swig_getmethods__["cur_sj"] = _sxtwl.Day_cur_sj_get
+    if _newclass:
+        cur_sj = _swig_property(_sxtwl.Day_cur_sj_get, _sxtwl.Day_cur_sj_set)
+
+    __swig_setmethods__["cur_ld"] = _sxtwl.Day_cur_ld_set
+    __swig_getmethods__["cur_ld"] = _sxtwl.Day_cur_ld_get
+    if _newclass:
+        cur_ld = _swig_property(_sxtwl.Day_cur_ld_get, _sxtwl.Day_cur_ld_set)
+
+    __swig_setmethods__["cur_xx"] = _sxtwl.Day_cur_xx_set
+    __swig_getmethods__["cur_xx"] = _sxtwl.Day_cur_xx_get
+    if _newclass:
+        cur_xx = _swig_property(_sxtwl.Day_cur_xx_get, _sxtwl.Day_cur_xx_set)
+
+    __swig_setmethods__["cur_dx"] = _sxtwl.Day_cur_dx_set
+    __swig_getmethods__["cur_dx"] = _sxtwl.Day_cur_dx_get
+    if _newclass:
+        cur_dx = _swig_property(_sxtwl.Day_cur_dx_get, _sxtwl.Day_cur_dx_set)
+
     if _newclass:
         cur_jq = _swig_property(_sxtwl.Day_cur_jq_get, _sxtwl.Day_cur_jq_set)
     __swig_setmethods__["Lmc"] = _sxtwl.Day_Lmc_set

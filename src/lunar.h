@@ -31,9 +31,29 @@ struct Day
 	int cur_lq;//距立秋的天数
 	int cur_mz ;  //距芒种的天数
 	int cur_xs;  //距小暑的天数
+    int cur_ys;   //雨水 4
+    int cur_zc;  //惊蛰  5
+    int cur_cf;  //春分  6
+    int cur_qm;  //清明  7
+    int cur_gy;  //谷雨  8
+    int cur_lx;  //立夏  9
+    int cur_xm;  //小滿 10
+    int cur_ds;  //大暑 14
+    int cur_cs;  //处暑 16
+    int cur_bl; // 白露 17
+    int cur_qf; // 秋分 18
+    int cur_hl; // 寒露 19
+    int cur_sj; //  霜降 20
+    int cur_ld; //  立冬 21
+    int cur_xx; // 小雪 22
+    int cur_dx; //  大雪 23
+    int cur_xh; // 小寒 1
+    int cur_dh; //距大寒的天数  2
+    int cur_lc;  //距立春的天数  3
     
     std::vector<double> cur_jq;  //节气时间索引 （这里可以使用JD::JD2DD转换成准确时间）
 	std::vector<int> cur_cn;  //节气名称索引 
+	std::vector<time_t> cur_jq_cutoff_datetime;
     
     
 	uint8_t Lmc;  //阴历月的月份

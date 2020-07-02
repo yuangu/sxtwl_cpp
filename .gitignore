@@ -15,3 +15,8 @@
 *.vs
 *Debug
 *build
+python/dist/
+python/src/
+python/sxtwl.egg-info/
+__pycache__
+.idea
