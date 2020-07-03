@@ -228,6 +228,112 @@ class DayList(object):
 # Register DayList in _sxtwl:
 _sxtwl.DayList_swigregister(DayList)
 
+class DoubleList(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _sxtwl.DoubleList_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _sxtwl.DoubleList___nonzero__(self)
+
+    def __bool__(self):
+        return _sxtwl.DoubleList___bool__(self)
+
+    def __len__(self):
+        return _sxtwl.DoubleList___len__(self)
+
+    def __getslice__(self, i, j):
+        return _sxtwl.DoubleList___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _sxtwl.DoubleList___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _sxtwl.DoubleList___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _sxtwl.DoubleList___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _sxtwl.DoubleList___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _sxtwl.DoubleList___setitem__(self, *args)
+
+    def pop(self):
+        return _sxtwl.DoubleList_pop(self)
+
+    def append(self, x):
+        return _sxtwl.DoubleList_append(self, x)
+
+    def empty(self):
+        return _sxtwl.DoubleList_empty(self)
+
+    def size(self):
+        return _sxtwl.DoubleList_size(self)
+
+    def swap(self, v):
+        return _sxtwl.DoubleList_swap(self, v)
+
+    def begin(self):
+        return _sxtwl.DoubleList_begin(self)
+
+    def end(self):
+        return _sxtwl.DoubleList_end(self)
+
+    def rbegin(self):
+        return _sxtwl.DoubleList_rbegin(self)
+
+    def rend(self):
+        return _sxtwl.DoubleList_rend(self)
+
+    def clear(self):
+        return _sxtwl.DoubleList_clear(self)
+
+    def get_allocator(self):
+        return _sxtwl.DoubleList_get_allocator(self)
+
+    def pop_back(self):
+        return _sxtwl.DoubleList_pop_back(self)
+
+    def erase(self, *args):
+        return _sxtwl.DoubleList_erase(self, *args)
+
+    def __init__(self, *args):
+        _sxtwl.DoubleList_swiginit(self, _sxtwl.new_DoubleList(*args))
+
+    def push_back(self, x):
+        return _sxtwl.DoubleList_push_back(self, x)
+
+    def front(self):
+        return _sxtwl.DoubleList_front(self)
+
+    def back(self):
+        return _sxtwl.DoubleList_back(self)
+
+    def assign(self, n, x):
+        return _sxtwl.DoubleList_assign(self, n, x)
+
+    def resize(self, *args):
+        return _sxtwl.DoubleList_resize(self, *args)
+
+    def insert(self, *args):
+        return _sxtwl.DoubleList_insert(self, *args)
+
+    def reserve(self, n):
+        return _sxtwl.DoubleList_reserve(self, n)
+
+    def capacity(self):
+        return _sxtwl.DoubleList_capacity(self)
+    __swig_destroy__ = _sxtwl.delete_DoubleList
+
+# Register DoubleList in _sxtwl:
+_sxtwl.DoubleList_swigregister(DoubleList)
+
 J2000 = _sxtwl.J2000
 class GZ(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
@@ -377,6 +483,62 @@ class Lunar(object):
 
 # Register Lunar in _sxtwl:
 _sxtwl.Lunar_swigregister(Lunar)
+
+class Time(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    Y = property(_sxtwl.Time_Y_get, _sxtwl.Time_Y_set)
+    M = property(_sxtwl.Time_M_get, _sxtwl.Time_M_set)
+    D = property(_sxtwl.Time_D_get, _sxtwl.Time_D_set)
+    h = property(_sxtwl.Time_h_get, _sxtwl.Time_h_set)
+    m = property(_sxtwl.Time_m_get, _sxtwl.Time_m_set)
+    s = property(_sxtwl.Time_s_get, _sxtwl.Time_s_set)
+
+    def __init__(self):
+        _sxtwl.Time_swiginit(self, _sxtwl.new_Time())
+    __swig_destroy__ = _sxtwl.delete_Time
+
+# Register Time in _sxtwl:
+_sxtwl.Time_swigregister(Time)
+
+class JD(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    @staticmethod
+    def DD2JD(y, m, d):
+        return _sxtwl.JD_DD2JD(y, m, d)
+
+    @staticmethod
+    def JD2DD(jd):
+        return _sxtwl.JD_JD2DD(jd)
+
+    @staticmethod
+    def toJD(time):
+        return _sxtwl.JD_toJD(time)
+
+    @staticmethod
+    def timeStr(jd):
+        return _sxtwl.JD_timeStr(jd)
+
+    def __init__(self):
+        _sxtwl.JD_swiginit(self, _sxtwl.new_JD())
+    __swig_destroy__ = _sxtwl.delete_JD
+
+# Register JD in _sxtwl:
+_sxtwl.JD_swigregister(JD)
+
+def JD_DD2JD(y, m, d):
+    return _sxtwl.JD_DD2JD(y, m, d)
+
+def JD_JD2DD(jd):
+    return _sxtwl.JD_JD2DD(jd)
+
+def JD_toJD(time):
+    return _sxtwl.JD_toJD(time)
+
+def JD_timeStr(jd):
+    return _sxtwl.JD_timeStr(jd)
 
 
 

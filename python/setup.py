@@ -79,7 +79,7 @@ sxtwl_module = setuptools.Extension('_sxtwl',
 
 setuptools.setup(
     name="sxtwl",
-    version="1.0.9",
+    version="1.1.0",
     author="yuangu",
     author_email="lifulinghan@aol.com",
     description="sxtwl_cpp warpper for python",

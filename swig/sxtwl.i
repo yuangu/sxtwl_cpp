@@ -11,6 +11,7 @@
 
 namespace std{
    %template(DayList) vector<Day>;
+   %template(DoubleList) vector<double>;
 }
 
 %constant int J2000=2451545;
@@ -20,4 +21,4 @@ namespace std{
 %catches(LunarException) Lunar::getDayByLunar(int year, uint8_t month, uint8_t day, bool isRun = false);
 
 %include "../src/lunar.h"
-
+%include "../src/JD.h"
