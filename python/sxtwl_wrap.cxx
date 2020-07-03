@@ -2829,6 +2829,7 @@ namespace swig {
 
 #include "const.h"
 #include "lunar.h"
+#include "JD.h"
 
 
 #include <stdint.h>		// Use the C99 official header
