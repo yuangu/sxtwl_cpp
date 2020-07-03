@@ -56,7 +56,7 @@ struct Day
 
 	uint8_t XiZ; //星座
 	uint8_t jqmc; //节气类型
-	uint8_t jqjd;
+	long double jqjd;  //节气的儒略日时间
 	std::string jqsj;  //节气时间
 
 	uint8_t yxmc; //月像类型
