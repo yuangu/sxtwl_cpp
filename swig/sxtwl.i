@@ -13,6 +13,7 @@
 namespace std{
    %template(DayList) vector<Day>;
    %template(DoubleList) vector<double>;
+   %template(IntList) vector<int>;
 }
 
 %constant int J2000=2451545;
