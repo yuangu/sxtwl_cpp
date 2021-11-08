@@ -18,12 +18,15 @@ sxtwl_cpp是参考[寿星天文历](http://www.nongli.net/sxwnl/)并使用C++实
 + 如有对日历，易学等感觉兴趣的同学想入群讨论的或使用此项目过程中遇到困难的同学，另或有需要付费类的其它技术支持及商务合作（如开发APP等）可加微信（微信号: yyguzi 或扫码）。
 
 作者微信二维码:
+
 ![微信二维码](doc/img/WechatIMG5.jpeg)  
 
 请您扫码支持作者的海棠万年历(广告):
+
 ![海棠万年历](doc/img/qrcode_for_gh_d48e82be45fb_430.jpg)
 
 如果您想请作者喝杯奶茶，扫如下微信支付码：
+
 ![微信收款](doc/img/WechatIMG7.jpeg)
 
 ## 特性
