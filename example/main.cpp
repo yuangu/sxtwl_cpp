@@ -90,12 +90,30 @@ int main()
     
     // 阳历转阴历
     {
-        Day* day = sxtwl::fromSolar(2018, 12, 1);
+        Day* day = sxtwl::fromSolar(2021, 11, 7);
         std::cout  << "农历:" << day->getLunarYear() << "年" << (int)day->getLunarMonth() << "月" << day-> getLunarDay() << "日"  << std::endl;
     
     
         day = sxtwl::fromLunar( day->getLunarYear(), day->getLunarMonth(), day-> getLunarDay(), day->isLunarLeap());
         std::cout  << "公历:" << day->getSolarYear() << "年" << (int)day->getSolarMonth() << "月" << day-> getSolarDay() << "日"  << std::endl;
+        
+        sxtwl::getShiGz(day->getDayGZ().tg, 0);
+        
+       auto c =  day->getConstellation();
+       printf("%c", c);
+        
+        if( day->hasJieQi()){
+            auto  jd = day->getJieQiJD();
+            auto t = sxtwl::JD2DD(jd);
+            jd = sxtwl::toJD(t);
+        }
+        
+       auto ret = sxtwl::siZhu2Year(day->getYearGZ(), day->getMonthGZ(), day->getDayGZ(),
+                          GZ(0, 0)
+                          , 2003, 2029);
+        
+        printf("finish");
+        
     }
     
    

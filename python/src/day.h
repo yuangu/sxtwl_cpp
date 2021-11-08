@@ -37,7 +37,7 @@ private:
     uint8_t week; //星期几
     int8_t qk;    //节令值
     uint8_t XiZ;  //星座
-    uint8_t jqjd; //节气最体的时间
+    double jqjd; //节气最体的时间
 
     GZ *Lyear2;  //干支纪年(立春)
     GZ *Lyear3;  //干支纪年(正月 春节)
@@ -60,7 +60,8 @@ private:
         this->Lday2 = NULL;
 
         this->week = 0xFF;
-        this->XiZ = -1;
+        this->XiZ = 0xFF;
+        this->jqjd = 0;
     };
 
     void checkSSQ();

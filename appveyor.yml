@@ -20,5 +20,5 @@ before_build:
 build_script:
   - cmake --build . 
 
-after_build:
-  - C:/projects/sxtwl-cpp/build/out/example.exe
+# after_build:
+#   - C:/projects/sxtwl-cpp/build/out/example.exe

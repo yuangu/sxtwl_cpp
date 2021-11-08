@@ -1,5 +1,6 @@
 
-[![Build Status](https://travis-ci.org/yuangu/sxtwl_cpp.svg?branch=master)](https://travis-ci.org/yuangu/sxtwl_cpp)
+<!-- [![Build Status](https://travis-ci.org/yuangu/sxtwl_cpp.svg?branch=master)](https://travis-ci.org/yuangu/sxtwl_cpp) -->
+
 [![Build status](https://ci.appveyor.com/api/projects/status/i78d0p0dggp9v475?svg=true)](https://ci.appveyor.com/project/yuangu/sxtwl-cpp)
 
 
@@ -17,10 +18,10 @@ sxtwl_cpp是参考[寿星天文历](http://www.nongli.net/sxwnl/)并使用C++实
 + 如有对日历，易学等感觉兴趣的同学想入群讨论的或使用此项目过程中遇到困难的同学，另或有需要付费类的其它技术支持及商务合作（如开发APP等）可加微信（微信号: yyguzi 或扫码）。
 
 作者微信二维码:
-![cmake示意图](doc/img/WechatIMG5.jpeg)  
+![微信二维码](doc/img/WechatIMG5.jpeg)  
 
 请您扫码支持作者的海棠万年历(广告):
-![cmake示意图](doc/img/qrcode_for_gh_d48e82be45fb_430.jpg)
+![海棠万年历](doc/img/qrcode_for_gh_d48e82be45fb_430.jpg)
 
 如果您想请作者喝杯奶茶，扫如下微信支付码：
 ![微信收款](doc/img/WechatIMG7.jpeg)
@@ -52,20 +53,25 @@ sxtwl_cpp是参考[寿星天文历](http://www.nongli.net/sxwnl/)并使用C++实
 我将一些常用的日历相关的算法都写成例子。如果您觉得关于此库的使用方法，没有讲清楚的，可以+微信告知作者提供。
 
 + #### Python用户专享文档
-    点击[Python安装及事例文档](doc/如何构建.md)阅读文档
+    点击[Python安装及事例文档](python/README.md)阅读文档
 
 + #### C/C++用户专享文档
-    点击[C/C++安装及事例文档](doc/如何构建.md)阅读文档
+    <!-- 点击[C/C++安装及事例文档](doc/如何构建.md)阅读文档 -->
+    待写
+
++ #### java用户专享文档
+    <!-- 点击[java安装及事例文档](doc/如何构建.md)阅读文档 -->
+    待写
 
 + #### php用户专享文档
-    点击[php安装及事例文档](doc/如何构建.md)阅读文档
-
+    <!-- 点击[php安装及事例文档](doc/如何构建.md)阅读文档 -->
+    待写
 + #### lua用户专享文档
-    点击[Python安装及事例文档](doc/如何构建.md)阅读文档
-
+    <!-- 点击[Python安装及事例文档](doc/如何构建.md)阅读文档 -->
+    待写
 + #### C#用户专享文档
-     点击[Python安装及事例文档](doc/如何构建.md)阅读文档
-
+     <!-- 点击[Python安装及事例文档](doc/如何构建.md)阅读文档 -->
+    待写
 
 ## 最后
 * 如果您喜欢本项目或者发现该库的bug可加微信留言

@@ -80,9 +80,9 @@ sxtwl_module = setuptools.Extension('_sxtwl',
 
 setuptools.setup(
     name="sxtwl",
-    version="1.0.7 ",
+    version="2.0.1",
     author="yuangu",
-    author_email="lifulinghan@aol.com",
+    author_email="seantone@126.com",
     description="sxtwl_cpp warpper for python",
     long_description=long_description,
     long_description_content_type="text/markdown",

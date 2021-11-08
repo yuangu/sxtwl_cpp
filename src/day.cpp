@@ -289,7 +289,7 @@ double Day::getJieQiJD()
 // 获取星座
 uint8_t Day::getConstellation()
 {
-    if (this->XiZ == -1)
+    if (this->XiZ == 0xFF)
     {
         this->checkSSQ();
         int mk = int2((this->d0 - SSQPtr->ZQ[0] - 15) / 30.43685);
