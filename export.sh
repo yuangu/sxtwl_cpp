@@ -22,5 +22,5 @@ swig -go -cgo -intgosize 32 -outdir export/golang swig/sxtwl.i
 mv sxtwl_wrap.cxx  export/golang/sxtwl_wrap.cxx
 
 # python
-swig -go -cgo -intgosize 32 -outdir python swig/sxtwl.i
-mv sxtwl_wrap.cxx  python/sxtwl_wrap.cxx
+swig -c++ -python -outdir  python swig/sxtwl.i
+mv swig/sxtwl_wrap.cxx  python/sxtwl_wrap.cxx
