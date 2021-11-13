@@ -69,9 +69,7 @@ int main()
 	std::cout.rdbuf(&buf);
 #endif
     
-
-    
-    
+	
     // 获取一年当中的闰月
     for(auto i = 1; i <= 3000; ++i)
     {
@@ -81,7 +79,7 @@ int main()
     }
     
     //从阳历获取一个day对像
-    Day* day = sxtwl::fromLunar(2018, 12, 1);
+    Day* day = sxtwl::fromSolar(118, 10, 3);
     printDay(*day);
     for(auto i = 0; i < 100; ++i){
         day =  day->after(1);

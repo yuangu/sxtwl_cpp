@@ -162,7 +162,8 @@ std::string SSQ::jieya(std::string s) { //气朔解压缩
 int  SSQ::calc(long double jd, QSType qs)
 {
 	jd += 2451545;
-	int i, D;
+	int i;
+	long double D;
 	std::string n;
 	std::vector<long double> B = *suoKB;
 	long double pc = 14;
