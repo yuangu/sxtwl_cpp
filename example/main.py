@@ -82,9 +82,26 @@ if day.hasJieQi():
 else:
     print("当天不是节气日")
 
+###==================================================================================
+# 四柱反查工具方法
+# 实际项目中不要这样子搞哈，因为汉字utf-8，GBK2312不同的编码。建议还是直接使用天干地支的数字索引 
+def getGZ(gzStr):
+    tg = -1
+    dz = -1
+    for i, v in enumerate(Gan):
+        if gzStr[0]  == v:
+            tg = i
+            break
+
+    for i, v in enumerate(Zhi):
+        if  gzStr[1] == v:
+            dz = i
+            break   
+    return sxtwl.GZ(tg, dz)
+###==================================================================================
 
 # 四注反查 分别传的是年天干，月天干，日天干，时天干， 开始查询年，结束查询年  返回满足条件的儒略日数
-jds = sxtwl.siZhu2Year(yTG, mTG, dTG, sxtwl.GZ(5, 5), 2003, 2029);
+jds = sxtwl.siZhu2Year(getGZ('辛丑'), getGZ('己亥'), getGZ('丙寅'), getGZ('癸巳'), 2003, 2029);
 for jd in jds:
     t = sxtwl.JD2DD(jd )
     print("符合条件的时间:%d-%d-%d %d:%d:%d"%(t.Y, t.M, t.D, t.h, t.m, round(t.s)))

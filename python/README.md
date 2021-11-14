@@ -27,6 +27,9 @@ https://pypi.org/project/sxtwl/
 
 ### 使用方法 
 
+<font color='red'> 注:因为pip上传后不能二次修改，参考事例可能会有错误无法修改，如果发现下面例子不能用，请以为准: [传送门](https://github.com/yuangu/sxtwl_cpp/blob/master/example/main.py)  </font>
+
+
 1. 因为考虑到繁体和简体字的原因，所以本库不以硬编码的形式显示结果。下面是参考的简单索引
 ```
 Gan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
@@ -193,8 +196,26 @@ while True:
 
 9. 四柱反查 (好像还有bug，待修复)
 ```
+###==================================================================================
+# 四柱反查工具方法
+# 实际项目中不要这样子搞哈，因为汉字utf-8，GBK2312不同的编码。建议还是直接使用天干地支的数字索引 
+def getGZ(gzStr):
+    tg = -1
+    dz = -1
+    for i, v in enumerate(Gan):
+        if gzStr[0]  == v:
+            tg = i
+            break
+
+    for i, v in enumerate(Zhi):
+        if  gzStr[1] == v:
+            dz = i
+            break   
+    return sxtwl.GZ(tg, dz)
+###==================================================================================
+
 # 四注反查 分别传的是年天干，月天干，日天干，时天干， 开始查询年，结束查询年  返回满足条件的儒略日数
-jds = sxtwl.siZhu2Year(yTG, mTG, dTG, sxtwl.GZ(7, 5), 2003, 2029);
+jds = sxtwl.siZhu2Year(getGZ('辛丑'), getGZ('己亥'), getGZ('丙寅'), getGZ('癸巳'), 2003, 2029);
 for jd in jds:
     t = sxtwl.JD2DD(jd )
     print("符合条件的时间:%d-%d-%d %d:%d:%d"%(t.Y, t.M, t.D, t.h, t.m, round(t.s)))
