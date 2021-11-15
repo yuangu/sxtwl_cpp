@@ -177,3 +177,10 @@ if(SXTWL_WRAPPER_PHP7)
     # SWIG_LINK_LIBRARIES(sxtwl_php  sxtwl )
     
 endif(SXTWL_WRAPPER_PHP7)
+
+# for golang
+if(SXTWL_WRAPPER_GO)
+    include_directories("./src")
+    add_library(sxtwl_go  STATIC  "./export/golang/sxtwl_wrap.cxx") 
+    target_link_libraries(sxtwl_go sxtwl)
+endif(SXTWL_WRAPPER_GO)

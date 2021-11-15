@@ -21,6 +21,8 @@ day = sxtwl.fromSolar(2021, 11, 7)
 
 # 从农历年月日获取一天的信息
 # day = sxtwl.fromLunar(2020, 12, 1)
+# 如果是想查闰月，第四个参数加一个True即可
+# day = sxtwl.fromLunar(2020, 4, 1, True)
 
 # 公历的年月日
 s = "公历:%d年%d月%d日" % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())
@@ -32,7 +34,7 @@ print(WeekCn[day.getWeek()])
 # 这个月的第几周
 print('该日属于这个月的第%d周'%(day.getWeekIndex(),))
 
-# 星座(有bug?待修复)
+# 星座
 print("星座:", XiZ[day.getConstellation()])
 
 # 以春节为界的农历(注getLunarYear如果没有传参，或者传true，是以春节为界的)
