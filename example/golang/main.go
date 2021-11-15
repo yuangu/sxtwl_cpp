@@ -13,6 +13,9 @@ $ cd build
 $ cmake .. -G "Unix Makefiles" -DSXTWL_WRAPPER_GO=1
 $ cmake --build .
 
+编译好了，请把sxtwl.a及sxtwl_cgo.a放到lib目录下，并在sxtwl目录下的init.go加好链接路径
+
+
 注: 如果使用win系统的话，请安装mingw32, 作者推荐安装tdm-gcc
 然后cmake 命令改成 cmake -G "MinGW Makefiles" .. -DSXTWL_WRAPPER_GO=1
 */
