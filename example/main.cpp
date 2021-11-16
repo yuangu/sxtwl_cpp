@@ -32,6 +32,29 @@ static const char *rmc[] = {"初一", "初二", "初三", "初四", "初五", "�
 static const char *WeekCn[] = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
 
 
+GZ getGZ(std::string tgStr, std::string dzStr) {
+	int tg = -1;
+	int dz = -1;
+	for (size_t i = 0; i < 10; i++)
+	{
+		if (std::string(Gan[i]) == tgStr) {
+			tg = i;
+			break;
+		}
+	}
+
+	for (size_t i = 0; i < 12; i++)
+	{
+		if (std::string(Zhi[i]) == dzStr) {
+			dz = i;
+			break;
+		}
+	}
+	return GZ(tg, dz);
+}
+
+
+
 void printDay(Day& day)
 {
     
@@ -58,6 +81,11 @@ void printDay(Day& day)
 			   << std::endl;
 };
 
+int round_double(double number)
+{
+	return (number > 0.0) ? (number + 0.5) : (number - 0.5);
+}
+
 int main()
 {
 	
@@ -69,6 +97,28 @@ int main()
 	std::cout.rdbuf(&buf);
 #endif
     
+	do {
+		Day* day = sxtwl::fromSolar(2021, 11, 14);
+		auto ret = sxtwl::siZhu2Year(day->getYearGZ(), day->getMonthGZ(), day->getDayGZ(), getGZ("癸", "巳"), 2021, 2025);
+		printf("%d", ret.size());
+	} while (false);
+		
+	do {
+		Day* day = sxtwl::fromSolar(1392, 1, 1);
+		for (int i = 0; i < 365; ++i) {
+			day = day->after(1);
+			if (day->hasJieQi()) {
+				auto  jd = day->getJieQiJD();
+				auto t = sxtwl::JD2DD(jd);
+				std::cout <<jqmc[day->getJieQi()] << ": " << t.Y << "-" << t.M << "-"
+					<< t.D << " " << int(t.h) << ":" << int(t.m) << ":" << round_double(t.s)
+					<< std::endl;
+			}
+		}
+	} while (false);
+	
+
+	
 	
     // 获取一年当中的闰月
     for(auto i = 1; i <= 3000; ++i)
