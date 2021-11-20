@@ -326,6 +326,16 @@ class Day {
 		return $r;
 	}
 
+	function getHourGZ($hour) {
+		$r=Day_getHourGZ($this->_cPtr,$hour);
+		if (is_resource($r)) {
+			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
+			if (class_exists($c)) return new $c($r);
+			return new GZ($r);
+		}
+		return $r;
+	}
+
 	function isLunarLeap() {
 		return Day_isLunarLeap($this->_cPtr);
 	}

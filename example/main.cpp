@@ -99,6 +99,7 @@ int main()
     
 	do {
 		Day* day = sxtwl::fromSolar(2021, 11, 14);
+		day->getHourGZ(8);
 		auto ret = sxtwl::siZhu2Year(day->getYearGZ(), day->getMonthGZ(), day->getDayGZ(), getGZ("癸", "巳"), 2021, 2025);
 		printf("%d", ret.size());
 	} while (false);

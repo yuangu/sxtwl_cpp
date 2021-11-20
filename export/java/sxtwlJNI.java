@@ -59,6 +59,7 @@ public class sxtwlJNI {
   public final static native long Day_getYearGZ__SWIG_1(long jarg1, Day jarg1_);
   public final static native long Day_getMonthGZ(long jarg1, Day jarg1_);
   public final static native long Day_getDayGZ(long jarg1, Day jarg1_);
+  public final static native long Day_getHourGZ(long jarg1, Day jarg1_, short jarg2);
   public final static native boolean Day_isLunarLeap(long jarg1, Day jarg1_);
   public final static native int Day_getSolarYear(long jarg1, Day jarg1_);
   public final static native short Day_getSolarMonth(long jarg1, Day jarg1_);

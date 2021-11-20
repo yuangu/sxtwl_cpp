@@ -93,6 +93,10 @@ public class Day {
     return new GZ(sxtwlJNI.Day_getDayGZ(swigCPtr, this), true);
   }
 
+  public GZ getHourGZ(short hour) {
+    return new GZ(sxtwlJNI.Day_getHourGZ(swigCPtr, this, hour), true);
+  }
+
   public boolean isLunarLeap() {
     return sxtwlJNI.Day_isLunarLeap(swigCPtr, this);
   }

@@ -4619,6 +4619,37 @@ fail:
 }
 
 
+static int _wrap_Day_getHourGZ(lua_State* L) {
+  int SWIG_arg = 0;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  GZ result;
+  
+  SWIG_check_num_args("Day::getHourGZ",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Day::getHourGZ",1,"Day *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Day::getHourGZ",2,"uint8_t");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Day,0))){
+    SWIG_fail_ptr("Day_getHourGZ",1,SWIGTYPE_p_Day);
+  }
+  
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+  arg2 = (uint8_t)lua_tonumber(L, 2);
+  result = (arg1)->getHourGZ(arg2);
+  {
+    GZ * resultptr = new GZ((const GZ &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GZ,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_Day_isLunarLeap(lua_State* L) {
   int SWIG_arg = 0;
   Day *arg1 = (Day *) 0 ;
@@ -4875,6 +4906,7 @@ static swig_lua_method swig_Day_methods[]= {
     { "getYearGZ", _wrap_Day_getYearGZ},
     { "getMonthGZ", _wrap_Day_getMonthGZ},
     { "getDayGZ", _wrap_Day_getDayGZ},
+    { "getHourGZ", _wrap_Day_getHourGZ},
     { "isLunarLeap", _wrap_Day_isLunarLeap},
     { "getSolarYear", _wrap_Day_getSolarYear},
     { "getSolarMonth", _wrap_Day_getSolarMonth},

@@ -1,6 +1,11 @@
 #include "day.h"
 #include "eph.h"
 
+namespace sxtwl
+{
+	GZ  getShiGz(uint8_t dayTg, uint8_t hour);
+};
+
 void Day::checkSSQ()
 {
 	if (!SSQPtr->ZQ.size() || this->d0 < SSQPtr->ZQ[0] || this->d0 >= SSQPtr->ZQ[24])
@@ -191,6 +196,12 @@ GZ Day::getDayGZ()
 		this->Lday2 = new GZ(D % 10, D % 12);
 	}
 	return *(this->Lday2);
+}
+
+GZ Day::getHourGZ(uint8_t hour)
+{
+	GZ dayGZ = this->getDayGZ();
+	return sxtwl::getShiGz(dayGZ.tg, hour);
 }
 
 bool Day::isLunarLeap()

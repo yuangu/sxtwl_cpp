@@ -32,73 +32,74 @@ typedef long long swig_type_1;
 typedef long long swig_type_2;
 typedef long long swig_type_3;
 typedef long long swig_type_4;
-extern void _wrap_Swig_free_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_Swig_malloc_sxtwl_36456a96f054a683(swig_intgo arg1);
-extern uintptr_t _wrap_new_JDList__SWIG_0_sxtwl_36456a96f054a683(void);
-extern uintptr_t _wrap_new_JDList__SWIG_1_sxtwl_36456a96f054a683(swig_type_1 arg1);
-extern uintptr_t _wrap_new_JDList__SWIG_2_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern swig_type_2 _wrap_JDList_size_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern swig_type_3 _wrap_JDList_capacity_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_JDList_reserve_sxtwl_36456a96f054a683(uintptr_t arg1, swig_type_4 arg2);
-extern _Bool _wrap_JDList_isEmpty_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_JDList_clear_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_JDList_add_sxtwl_36456a96f054a683(uintptr_t arg1, double arg2);
-extern double _wrap_JDList_get_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern void _wrap_JDList_set_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2, double arg3);
-extern void _wrap_delete_JDList_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_Time_Y_set_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_Time_Y_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_Time_M_set_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_Time_M_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_Time_D_set_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_Time_D_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_Time_h_set_sxtwl_36456a96f054a683(uintptr_t arg1, double arg2);
-extern double _wrap_Time_h_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_Time_s_set_sxtwl_36456a96f054a683(uintptr_t arg1, double arg2);
-extern double _wrap_Time_s_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_new_Time_sxtwl_36456a96f054a683(void);
-extern void _wrap_delete_Time_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_new_GZ__SWIG_0_sxtwl_36456a96f054a683(void);
-extern uintptr_t _wrap_new_GZ__SWIG_1_sxtwl_36456a96f054a683(char arg1, char arg2);
-extern void _wrap_GZ_tg_set_sxtwl_36456a96f054a683(uintptr_t arg1, char arg2);
-extern char _wrap_GZ_tg_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_GZ_dz_set_sxtwl_36456a96f054a683(uintptr_t arg1, char arg2);
-extern char _wrap_GZ_dz_get_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_delete_GZ_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_Day_fromSolar_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3);
-extern uintptr_t _wrap_Day_fromLunar__SWIG_0_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3, _Bool arg4);
-extern uintptr_t _wrap_Day_fromLunar__SWIG_1_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3);
-extern uintptr_t _wrap_Day_after_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern uintptr_t _wrap_Day_before_sxtwl_36456a96f054a683(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_Day_getLunarDay_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getLunarMonth_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern swig_intgo _wrap_Day_getLunarYear__SWIG_0_sxtwl_36456a96f054a683(uintptr_t arg1, _Bool arg2);
-extern swig_intgo _wrap_Day_getLunarYear__SWIG_1_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_Day_getYearGZ__SWIG_0_sxtwl_36456a96f054a683(uintptr_t arg1, _Bool arg2);
-extern uintptr_t _wrap_Day_getYearGZ__SWIG_1_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_Day_getMonthGZ_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_Day_getDayGZ_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern _Bool _wrap_Day_isLunarLeap_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern swig_intgo _wrap_Day_getSolarYear_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getSolarMonth_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern swig_intgo _wrap_Day_getSolarDay_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getWeek_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getWeekIndex_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern _Bool _wrap_Day_hasJieQi_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getJieQi_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern double _wrap_Day_getJieQiJD_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern char _wrap_Day_getConstellation_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern void _wrap_delete_Day_sxtwl_36456a96f054a683(uintptr_t arg1);
-extern uintptr_t _wrap_fromSolar_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3);
-extern uintptr_t _wrap_fromLunar__SWIG_0_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3, _Bool arg4);
-extern uintptr_t _wrap_fromLunar__SWIG_1_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, swig_intgo arg3);
-extern uintptr_t _wrap_siZhu2Year_sxtwl_36456a96f054a683(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, swig_intgo arg5, swig_intgo arg6);
-extern uintptr_t _wrap_getShiGz_sxtwl_36456a96f054a683(char arg1, char arg2);
-extern char _wrap_getRunMonth_sxtwl_36456a96f054a683(swig_intgo arg1);
-extern char _wrap_getLunarMonthNum__SWIG_0_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2, _Bool arg3);
-extern char _wrap_getLunarMonthNum__SWIG_1_sxtwl_36456a96f054a683(swig_intgo arg1, char arg2);
-extern uintptr_t _wrap_JD2DD_sxtwl_36456a96f054a683(double arg1);
-extern double _wrap_toJD_sxtwl_36456a96f054a683(uintptr_t arg1);
+extern void _wrap_Swig_free_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Swig_malloc_sxtwl_258d85b6700e030a(swig_intgo arg1);
+extern uintptr_t _wrap_new_JDList__SWIG_0_sxtwl_258d85b6700e030a(void);
+extern uintptr_t _wrap_new_JDList__SWIG_1_sxtwl_258d85b6700e030a(swig_type_1 arg1);
+extern uintptr_t _wrap_new_JDList__SWIG_2_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern swig_type_2 _wrap_JDList_size_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern swig_type_3 _wrap_JDList_capacity_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_JDList_reserve_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_type_4 arg2);
+extern _Bool _wrap_JDList_isEmpty_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_JDList_clear_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_JDList_add_sxtwl_258d85b6700e030a(uintptr_t arg1, double arg2);
+extern double _wrap_JDList_get_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern void _wrap_JDList_set_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2, double arg3);
+extern void _wrap_delete_JDList_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_Time_Y_set_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_Time_Y_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_Time_M_set_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_Time_M_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_Time_D_set_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_Time_D_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_Time_h_set_sxtwl_258d85b6700e030a(uintptr_t arg1, double arg2);
+extern double _wrap_Time_h_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_Time_s_set_sxtwl_258d85b6700e030a(uintptr_t arg1, double arg2);
+extern double _wrap_Time_s_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_new_Time_sxtwl_258d85b6700e030a(void);
+extern void _wrap_delete_Time_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_new_GZ__SWIG_0_sxtwl_258d85b6700e030a(void);
+extern uintptr_t _wrap_new_GZ__SWIG_1_sxtwl_258d85b6700e030a(char arg1, char arg2);
+extern void _wrap_GZ_tg_set_sxtwl_258d85b6700e030a(uintptr_t arg1, char arg2);
+extern char _wrap_GZ_tg_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_GZ_dz_set_sxtwl_258d85b6700e030a(uintptr_t arg1, char arg2);
+extern char _wrap_GZ_dz_get_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_delete_GZ_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Day_fromSolar_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3);
+extern uintptr_t _wrap_Day_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3, _Bool arg4);
+extern uintptr_t _wrap_Day_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3);
+extern uintptr_t _wrap_Day_after_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern uintptr_t _wrap_Day_before_sxtwl_258d85b6700e030a(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_Day_getLunarDay_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getLunarMonth_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern swig_intgo _wrap_Day_getLunarYear__SWIG_0_sxtwl_258d85b6700e030a(uintptr_t arg1, _Bool arg2);
+extern swig_intgo _wrap_Day_getLunarYear__SWIG_1_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Day_getYearGZ__SWIG_0_sxtwl_258d85b6700e030a(uintptr_t arg1, _Bool arg2);
+extern uintptr_t _wrap_Day_getYearGZ__SWIG_1_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Day_getMonthGZ_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Day_getDayGZ_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_Day_getHourGZ_sxtwl_258d85b6700e030a(uintptr_t arg1, char arg2);
+extern _Bool _wrap_Day_isLunarLeap_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern swig_intgo _wrap_Day_getSolarYear_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getSolarMonth_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern swig_intgo _wrap_Day_getSolarDay_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getWeek_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getWeekIndex_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern _Bool _wrap_Day_hasJieQi_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getJieQi_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern double _wrap_Day_getJieQiJD_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern char _wrap_Day_getConstellation_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern void _wrap_delete_Day_sxtwl_258d85b6700e030a(uintptr_t arg1);
+extern uintptr_t _wrap_fromSolar_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3);
+extern uintptr_t _wrap_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3, _Bool arg4);
+extern uintptr_t _wrap_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, swig_intgo arg3);
+extern uintptr_t _wrap_siZhu2Year_sxtwl_258d85b6700e030a(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, swig_intgo arg5, swig_intgo arg6);
+extern uintptr_t _wrap_getShiGz_sxtwl_258d85b6700e030a(char arg1, char arg2);
+extern char _wrap_getRunMonth_sxtwl_258d85b6700e030a(swig_intgo arg1);
+extern char _wrap_getLunarMonthNum__SWIG_0_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2, _Bool arg3);
+extern char _wrap_getLunarMonthNum__SWIG_1_sxtwl_258d85b6700e030a(swig_intgo arg1, char arg2);
+extern uintptr_t _wrap_JD2DD_sxtwl_258d85b6700e030a(double arg1);
+extern double _wrap_toJD_sxtwl_258d85b6700e030a(uintptr_t arg1);
 #undef intgo
 */
 import "C"
@@ -124,13 +125,13 @@ type _ sync.Mutex
 
 func Swig_free(arg1 uintptr) {
 	_swig_i_0 := arg1
-	C._wrap_Swig_free_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_Swig_free_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_Swig_malloc_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0)))
+	swig_r = (uintptr)(C._wrap_Swig_malloc_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
@@ -145,21 +146,21 @@ func (p SwigcptrJDList) SwigIsJDList() {
 
 func NewJDList__SWIG_0() (_swig_ret JDList) {
 	var swig_r JDList
-	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_0_sxtwl_36456a96f054a683()))
+	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_0_sxtwl_258d85b6700e030a()))
 	return swig_r
 }
 
 func NewJDList__SWIG_1(arg1 int64) (_swig_ret JDList) {
 	var swig_r JDList
 	_swig_i_0 := arg1
-	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_1_sxtwl_36456a96f054a683(C.swig_type_1(_swig_i_0))))
+	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_1_sxtwl_258d85b6700e030a(C.swig_type_1(_swig_i_0))))
 	return swig_r
 }
 
 func NewJDList__SWIG_2(arg1 JDList) (_swig_ret JDList) {
 	var swig_r JDList
 	_swig_i_0 := arg1.Swigcptr()
-	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_2_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))))
+	swig_r = (JDList)(SwigcptrJDList(C._wrap_new_JDList__SWIG_2_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))))
 	return swig_r
 }
 
@@ -184,46 +185,46 @@ check_2:
 func (arg1 SwigcptrJDList) Size() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_JDList_size_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_JDList_size_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrJDList) Capacity() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_JDList_capacity_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_JDList_capacity_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrJDList) Reserve(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_JDList_reserve_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_type_4(_swig_i_1))
+	C._wrap_JDList_reserve_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_type_4(_swig_i_1))
 }
 
 func (arg1 SwigcptrJDList) IsEmpty() (_swig_ret bool) {
 	var swig_r bool
 	_swig_i_0 := arg1
-	swig_r = (bool)(C._wrap_JDList_isEmpty_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (bool)(C._wrap_JDList_isEmpty_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrJDList) Clear() {
 	_swig_i_0 := arg1
-	C._wrap_JDList_clear_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_JDList_clear_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 func (arg1 SwigcptrJDList) Add(arg2 float64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_JDList_add_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
+	C._wrap_JDList_add_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
 }
 
 func (arg1 SwigcptrJDList) Get(arg2 int) (_swig_ret float64) {
 	var swig_r float64
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (float64)(C._wrap_JDList_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (float64)(C._wrap_JDList_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -231,12 +232,12 @@ func (arg1 SwigcptrJDList) Set(arg2 int, arg3 float64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	C._wrap_JDList_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.double(_swig_i_2))
+	C._wrap_JDList_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.double(_swig_i_2))
 }
 
 func DeleteJDList(arg1 JDList) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_JDList_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_JDList_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 type JDList interface {
@@ -265,77 +266,77 @@ func (p SwigcptrTime) SwigIsTime() {
 func (arg1 SwigcptrTime) SetY(arg2 int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_Time_Y_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_Time_Y_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrTime) GetY() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Time_Y_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Time_Y_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrTime) SetM(arg2 int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_Time_M_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_Time_M_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrTime) GetM() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Time_M_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Time_M_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrTime) SetD(arg2 int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_Time_D_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_Time_D_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrTime) GetD() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Time_D_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Time_D_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrTime) SetH(arg2 float64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_Time_h_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
+	C._wrap_Time_h_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
 }
 
 func (arg1 SwigcptrTime) GetH() (_swig_ret float64) {
 	var swig_r float64
 	_swig_i_0 := arg1
-	swig_r = (float64)(C._wrap_Time_h_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (float64)(C._wrap_Time_h_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrTime) SetS(arg2 float64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_Time_s_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
+	C._wrap_Time_s_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.double(_swig_i_1))
 }
 
 func (arg1 SwigcptrTime) GetS() (_swig_ret float64) {
 	var swig_r float64
 	_swig_i_0 := arg1
-	swig_r = (float64)(C._wrap_Time_s_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (float64)(C._wrap_Time_s_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewTime() (_swig_ret Time) {
 	var swig_r Time
-	swig_r = (Time)(SwigcptrTime(C._wrap_new_Time_sxtwl_36456a96f054a683()))
+	swig_r = (Time)(SwigcptrTime(C._wrap_new_Time_sxtwl_258d85b6700e030a()))
 	return swig_r
 }
 
 func DeleteTime(arg1 Time) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_Time_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_Time_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 type Time interface {
@@ -364,7 +365,7 @@ func (p SwigcptrGZ) SwigIsGZ() {
 
 func NewGZ__SWIG_0() (_swig_ret GZ) {
 	var swig_r GZ
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_new_GZ__SWIG_0_sxtwl_36456a96f054a683()))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_new_GZ__SWIG_0_sxtwl_258d85b6700e030a()))
 	return swig_r
 }
 
@@ -372,7 +373,7 @@ func NewGZ__SWIG_1(arg1 byte, arg2 byte) (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_new_GZ__SWIG_1_sxtwl_36456a96f054a683(C.char(_swig_i_0), C.char(_swig_i_1))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_new_GZ__SWIG_1_sxtwl_258d85b6700e030a(C.char(_swig_i_0), C.char(_swig_i_1))))
 	return swig_r
 }
 
@@ -390,32 +391,32 @@ func NewGZ(a ...interface{}) GZ {
 func (arg1 SwigcptrGZ) SetTg(arg2 byte) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_GZ_tg_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.char(_swig_i_1))
+	C._wrap_GZ_tg_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.char(_swig_i_1))
 }
 
 func (arg1 SwigcptrGZ) GetTg() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_GZ_tg_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_GZ_tg_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrGZ) SetDz(arg2 byte) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_GZ_dz_set_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.char(_swig_i_1))
+	C._wrap_GZ_dz_set_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.char(_swig_i_1))
 }
 
 func (arg1 SwigcptrGZ) GetDz() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_GZ_dz_get_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_GZ_dz_get_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func DeleteGZ(arg1 GZ) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_GZ_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_GZ_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 type GZ interface {
@@ -441,7 +442,7 @@ func DayFromSolar(arg1 int, arg2 byte, arg3 int) (_swig_ret Day) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromSolar_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromSolar_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
 	return swig_r
 }
 
@@ -451,7 +452,7 @@ func DayFromLunar__SWIG_0(arg1 int, arg2 byte, arg3 int, arg4 bool) (_swig_ret D
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromLunar__SWIG_0_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3))))
 	return swig_r
 }
 
@@ -460,7 +461,7 @@ func DayFromLunar__SWIG_1(arg1 int, arg2 byte, arg3 int) (_swig_ret Day) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromLunar__SWIG_1_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_Day_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
 	return swig_r
 }
 
@@ -479,7 +480,7 @@ func (arg1 SwigcptrDay) After(arg2 int) (_swig_ret Day) {
 	var swig_r Day
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (Day)(SwigcptrDay(C._wrap_Day_after_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_Day_after_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
 	return swig_r
 }
 
@@ -487,21 +488,21 @@ func (arg1 SwigcptrDay) Before(arg2 int) (_swig_ret Day) {
 	var swig_r Day
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (Day)(SwigcptrDay(C._wrap_Day_before_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_Day_before_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetLunarDay() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Day_getLunarDay_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Day_getLunarDay_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetLunarMonth() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getLunarMonth_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getLunarMonth_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -509,14 +510,14 @@ func (arg1 SwigcptrDay) GetLunarYear__SWIG_0(arg2 bool) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_Day_getLunarYear__SWIG_0_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1)))
+	swig_r = (int)(C._wrap_Day_getLunarYear__SWIG_0_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetLunarYear__SWIG_1() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Day_getLunarYear__SWIG_1_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Day_getLunarYear__SWIG_1_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -535,14 +536,14 @@ func (arg1 SwigcptrDay) GetYearGZ__SWIG_0(arg2 bool) (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getYearGZ__SWIG_0_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getYearGZ__SWIG_0_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetYearGZ__SWIG_1() (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getYearGZ__SWIG_1_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getYearGZ__SWIG_1_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))))
 	return swig_r
 }
 
@@ -560,90 +561,98 @@ func (p SwigcptrDay) GetYearGZ(a ...interface{}) GZ {
 func (arg1 SwigcptrDay) GetMonthGZ() (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getMonthGZ_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getMonthGZ_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetDayGZ() (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getDayGZ_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getDayGZ_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDay) GetHourGZ(arg2 byte) (_swig_ret GZ) {
+	var swig_r GZ
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_Day_getHourGZ_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.char(_swig_i_1))))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) IsLunarLeap() (_swig_ret bool) {
 	var swig_r bool
 	_swig_i_0 := arg1
-	swig_r = (bool)(C._wrap_Day_isLunarLeap_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (bool)(C._wrap_Day_isLunarLeap_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetSolarYear() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Day_getSolarYear_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Day_getSolarYear_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetSolarMonth() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getSolarMonth_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getSolarMonth_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetSolarDay() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_Day_getSolarDay_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_Day_getSolarDay_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetWeek() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getWeek_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getWeek_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetWeekIndex() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getWeekIndex_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getWeekIndex_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) HasJieQi() (_swig_ret bool) {
 	var swig_r bool
 	_swig_i_0 := arg1
-	swig_r = (bool)(C._wrap_Day_hasJieQi_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (bool)(C._wrap_Day_hasJieQi_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetJieQi() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getJieQi_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getJieQi_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetJieQiJD() (_swig_ret float64) {
 	var swig_r float64
 	_swig_i_0 := arg1
-	swig_r = (float64)(C._wrap_Day_getJieQiJD_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (float64)(C._wrap_Day_getJieQiJD_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrDay) GetConstellation() (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_Day_getConstellation_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (byte)(C._wrap_Day_getConstellation_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func DeleteDay(arg1 Day) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_Day_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_Day_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0))
 }
 
 type Day interface {
@@ -657,6 +666,7 @@ type Day interface {
 	GetYearGZ(a ...interface{}) GZ
 	GetMonthGZ() (_swig_ret GZ)
 	GetDayGZ() (_swig_ret GZ)
+	GetHourGZ(arg2 byte) (_swig_ret GZ)
 	IsLunarLeap() (_swig_ret bool)
 	GetSolarYear() (_swig_ret int)
 	GetSolarMonth() (_swig_ret byte)
@@ -674,7 +684,7 @@ func FromSolar(arg1 int, arg2 byte, arg3 int) (_swig_ret Day) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Day)(SwigcptrDay(C._wrap_fromSolar_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_fromSolar_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
 	return swig_r
 }
 
@@ -684,7 +694,7 @@ func FromLunar__SWIG_0(arg1 int, arg2 byte, arg3 int, arg4 bool) (_swig_ret Day)
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (Day)(SwigcptrDay(C._wrap_fromLunar__SWIG_0_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3))))
 	return swig_r
 }
 
@@ -693,7 +703,7 @@ func FromLunar__SWIG_1(arg1 int, arg2 byte, arg3 int) (_swig_ret Day) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Day)(SwigcptrDay(C._wrap_fromLunar__SWIG_1_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
+	swig_r = (Day)(SwigcptrDay(C._wrap_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C.swig_intgo(_swig_i_2))))
 	return swig_r
 }
 
@@ -716,7 +726,7 @@ func SiZhu2Year(arg1 GZ, arg2 GZ, arg3 GZ, arg4 GZ, arg5 int, arg6 int) (_swig_r
 	_swig_i_3 := arg4.Swigcptr()
 	_swig_i_4 := arg5
 	_swig_i_5 := arg6
-	swig_r = (JDList)(SwigcptrJDList(C._wrap_siZhu2Year_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.swig_intgo(_swig_i_4), C.swig_intgo(_swig_i_5))))
+	swig_r = (JDList)(SwigcptrJDList(C._wrap_siZhu2Year_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.swig_intgo(_swig_i_4), C.swig_intgo(_swig_i_5))))
 	return swig_r
 }
 
@@ -724,14 +734,14 @@ func GetShiGz(arg1 byte, arg2 byte) (_swig_ret GZ) {
 	var swig_r GZ
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (GZ)(SwigcptrGZ(C._wrap_getShiGz_sxtwl_36456a96f054a683(C.char(_swig_i_0), C.char(_swig_i_1))))
+	swig_r = (GZ)(SwigcptrGZ(C._wrap_getShiGz_sxtwl_258d85b6700e030a(C.char(_swig_i_0), C.char(_swig_i_1))))
 	return swig_r
 }
 
 func GetRunMonth(arg1 int) (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
-	swig_r = (byte)(C._wrap_getRunMonth_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0)))
+	swig_r = (byte)(C._wrap_getRunMonth_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
@@ -740,7 +750,7 @@ func GetLunarMonthNum__SWIG_0(arg1 int, arg2 byte, arg3 bool) (_swig_ret byte) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (byte)(C._wrap_getLunarMonthNum__SWIG_0_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C._Bool(_swig_i_2)))
+	swig_r = (byte)(C._wrap_getLunarMonthNum__SWIG_0_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1), C._Bool(_swig_i_2)))
 	return swig_r
 }
 
@@ -748,7 +758,7 @@ func GetLunarMonthNum__SWIG_1(arg1 int, arg2 byte) (_swig_ret byte) {
 	var swig_r byte
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (byte)(C._wrap_getLunarMonthNum__SWIG_1_sxtwl_36456a96f054a683(C.swig_intgo(_swig_i_0), C.char(_swig_i_1)))
+	swig_r = (byte)(C._wrap_getLunarMonthNum__SWIG_1_sxtwl_258d85b6700e030a(C.swig_intgo(_swig_i_0), C.char(_swig_i_1)))
 	return swig_r
 }
 
@@ -766,14 +776,14 @@ func GetLunarMonthNum(a ...interface{}) byte {
 func JD2DD(arg1 float64) (_swig_ret Time) {
 	var swig_r Time
 	_swig_i_0 := arg1
-	swig_r = (Time)(SwigcptrTime(C._wrap_JD2DD_sxtwl_36456a96f054a683(C.double(_swig_i_0))))
+	swig_r = (Time)(SwigcptrTime(C._wrap_JD2DD_sxtwl_258d85b6700e030a(C.double(_swig_i_0))))
 	return swig_r
 }
 
 func ToJD(arg1 Time) (_swig_ret float64) {
 	var swig_r float64
 	_swig_i_0 := arg1.Swigcptr()
-	swig_r = (float64)(C._wrap_toJD_sxtwl_36456a96f054a683(C.uintptr_t(_swig_i_0)))
+	swig_r = (float64)(C._wrap_toJD_sxtwl_258d85b6700e030a(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 

@@ -8505,6 +8505,36 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Day_getHourGZ(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned char val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  GZ result;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Day_getHourGZ", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Day, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_getHourGZ" "', argument " "1"" of type '" "Day *""'"); 
+  }
+  arg1 = reinterpret_cast< Day * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_char(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Day_getHourGZ" "', argument " "2"" of type '" "uint8_t""'");
+  } 
+  arg2 = static_cast< uint8_t >(val2);
+  result = (arg1)->getHourGZ(arg2);
+  resultobj = SWIG_NewPointerObj((new GZ(static_cast< const GZ& >(result))), SWIGTYPE_p_GZ, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Day_isLunarLeap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Day *arg1 = (Day *) 0 ;
@@ -9359,6 +9389,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "Day_getYearGZ", _wrap_Day_getYearGZ, METH_VARARGS, NULL},
 	 { "Day_getMonthGZ", _wrap_Day_getMonthGZ, METH_O, NULL},
 	 { "Day_getDayGZ", _wrap_Day_getDayGZ, METH_O, NULL},
+	 { "Day_getHourGZ", _wrap_Day_getHourGZ, METH_VARARGS, NULL},
 	 { "Day_isLunarLeap", _wrap_Day_isLunarLeap, METH_O, NULL},
 	 { "Day_getSolarYear", _wrap_Day_getSolarYear, METH_O, NULL},
 	 { "Day_getSolarMonth", _wrap_Day_getSolarMonth, METH_O, NULL},

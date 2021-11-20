@@ -109,6 +109,7 @@ public:
     GZ getYearGZ(bool chineseNewYearBoundary = false);
     GZ getMonthGZ();
     GZ getDayGZ();
+	GZ getHourGZ(uint8_t hour);
     bool  isLunarLeap();
 
     int getSolarYear();

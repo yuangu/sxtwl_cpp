@@ -1103,6 +1103,23 @@ SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Day_1getDayGZ(JNIEnv *
 }
 
 
+SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Day_1getHourGZ(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+  jlong jresult = 0 ;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  GZ result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Day **)&jarg1; 
+  arg2 = (uint8_t)jarg2; 
+  result = (arg1)->getHourGZ(arg2);
+  *(GZ **)&jresult = new GZ((const GZ &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT jboolean JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Day_1isLunarLeap(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   Day *arg1 = (Day *) 0 ;

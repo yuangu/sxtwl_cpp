@@ -298,6 +298,9 @@ class Day(object):
     def getDayGZ(self):
         return _sxtwl.Day_getDayGZ(self)
 
+    def getHourGZ(self, hour):
+        return _sxtwl.Day_getHourGZ(self, hour)
+
     def isLunarLeap(self):
         return _sxtwl.Day_isLunarLeap(self)
 

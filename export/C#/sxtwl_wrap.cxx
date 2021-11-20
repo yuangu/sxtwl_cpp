@@ -1261,6 +1261,20 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getDayGZ(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getHourGZ(void * jarg1, unsigned char jarg2) {
+  void * jresult ;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  GZ result;
+  
+  arg1 = (Day *)jarg1; 
+  arg2 = (uint8_t)jarg2; 
+  result = (arg1)->getHourGZ(arg2);
+  jresult = new GZ((const GZ &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Day_isLunarLeap(void * jarg1) {
   unsigned int jresult ;
   Day *arg1 = (Day *) 0 ;

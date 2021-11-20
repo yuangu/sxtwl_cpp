@@ -113,6 +113,11 @@ public class Day : global::System.IDisposable {
     return ret;
   }
 
+  public GZ getHourGZ(byte hour) {
+    GZ ret = new GZ(sxtwlPINVOKE.Day_getHourGZ(swigCPtr, hour), true);
+    return ret;
+  }
+
   public bool isLunarLeap() {
     bool ret = sxtwlPINVOKE.Day_isLunarLeap(swigCPtr);
     return ret;

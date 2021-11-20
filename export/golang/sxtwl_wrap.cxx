@@ -271,7 +271,7 @@ SWIGINTERN void std_vector_Sl_double_Sg__set(std::vector< double > *self,int i,s
 extern "C" {
 #endif
 
-void _wrap_Swig_free_sxtwl_36456a96f054a683(void *_swig_go_0) {
+void _wrap_Swig_free_sxtwl_258d85b6700e030a(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -281,7 +281,7 @@ void _wrap_Swig_free_sxtwl_36456a96f054a683(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_sxtwl_36456a96f054a683(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_sxtwl_258d85b6700e030a(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -294,7 +294,7 @@ void *_wrap_Swig_malloc_sxtwl_36456a96f054a683(intgo _swig_go_0) {
 }
 
 
-std::vector< double > *_wrap_new_JDList__SWIG_0_sxtwl_36456a96f054a683() {
+std::vector< double > *_wrap_new_JDList__SWIG_0_sxtwl_258d85b6700e030a() {
   std::vector< double > *result = 0 ;
   std::vector< double > *_swig_go_result;
   
@@ -305,7 +305,7 @@ std::vector< double > *_wrap_new_JDList__SWIG_0_sxtwl_36456a96f054a683() {
 }
 
 
-std::vector< double > *_wrap_new_JDList__SWIG_1_sxtwl_36456a96f054a683(long long _swig_go_0) {
+std::vector< double > *_wrap_new_JDList__SWIG_1_sxtwl_258d85b6700e030a(long long _swig_go_0) {
   std::vector< double >::size_type arg1 ;
   std::vector< double > *result = 0 ;
   std::vector< double > *_swig_go_result;
@@ -318,7 +318,7 @@ std::vector< double > *_wrap_new_JDList__SWIG_1_sxtwl_36456a96f054a683(long long
 }
 
 
-std::vector< double > *_wrap_new_JDList__SWIG_2_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+std::vector< double > *_wrap_new_JDList__SWIG_2_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = 0 ;
   std::vector< double > *result = 0 ;
   std::vector< double > *_swig_go_result;
@@ -331,7 +331,7 @@ std::vector< double > *_wrap_new_JDList__SWIG_2_sxtwl_36456a96f054a683(std::vect
 }
 
 
-long long _wrap_JDList_size_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+long long _wrap_JDList_size_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
   long long _swig_go_result;
@@ -344,7 +344,7 @@ long long _wrap_JDList_size_sxtwl_36456a96f054a683(std::vector< double > *_swig_
 }
 
 
-long long _wrap_JDList_capacity_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+long long _wrap_JDList_capacity_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type result;
   long long _swig_go_result;
@@ -357,7 +357,7 @@ long long _wrap_JDList_capacity_sxtwl_36456a96f054a683(std::vector< double > *_s
 }
 
 
-void _wrap_JDList_reserve_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, long long _swig_go_1) {
+void _wrap_JDList_reserve_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0, long long _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::size_type arg2 ;
   
@@ -369,7 +369,7 @@ void _wrap_JDList_reserve_sxtwl_36456a96f054a683(std::vector< double > *_swig_go
 }
 
 
-bool _wrap_JDList_isEmpty_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+bool _wrap_JDList_isEmpty_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -382,7 +382,7 @@ bool _wrap_JDList_isEmpty_sxtwl_36456a96f054a683(std::vector< double > *_swig_go
 }
 
 
-void _wrap_JDList_clear_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+void _wrap_JDList_clear_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = *(std::vector< double > **)&_swig_go_0; 
@@ -392,7 +392,7 @@ void _wrap_JDList_clear_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0
 }
 
 
-void _wrap_JDList_add_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, double _swig_go_1) {
+void _wrap_JDList_add_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0, double _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   std::vector< double >::value_type *arg2 = 0 ;
   
@@ -404,7 +404,7 @@ void _wrap_JDList_add_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, 
 }
 
 
-double _wrap_JDList_get_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, intgo _swig_go_1) {
+double _wrap_JDList_get_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0, intgo _swig_go_1) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double >::value_type *result = 0 ;
@@ -425,7 +425,7 @@ double _wrap_JDList_get_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0
 }
 
 
-void _wrap_JDList_set_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, intgo _swig_go_1, double _swig_go_2) {
+void _wrap_JDList_set_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0, intgo _swig_go_1, double _swig_go_2) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   int arg2 ;
   std::vector< double >::value_type *arg3 = 0 ;
@@ -445,7 +445,7 @@ void _wrap_JDList_set_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0, 
 }
 
 
-void _wrap_delete_JDList_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_0) {
+void _wrap_delete_JDList_sxtwl_258d85b6700e030a(std::vector< double > *_swig_go_0) {
   std::vector< double > *arg1 = (std::vector< double > *) 0 ;
   
   arg1 = *(std::vector< double > **)&_swig_go_0; 
@@ -455,7 +455,7 @@ void _wrap_delete_JDList_sxtwl_36456a96f054a683(std::vector< double > *_swig_go_
 }
 
 
-void _wrap_Time_Y_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1) {
+void _wrap_Time_Y_set_sxtwl_258d85b6700e030a(Time *_swig_go_0, intgo _swig_go_1) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
@@ -467,7 +467,7 @@ void _wrap_Time_Y_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1)
 }
 
 
-intgo _wrap_Time_Y_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+intgo _wrap_Time_Y_get_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -480,7 +480,7 @@ intgo _wrap_Time_Y_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-void _wrap_Time_M_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1) {
+void _wrap_Time_M_set_sxtwl_258d85b6700e030a(Time *_swig_go_0, intgo _swig_go_1) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
@@ -492,7 +492,7 @@ void _wrap_Time_M_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1)
 }
 
 
-intgo _wrap_Time_M_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+intgo _wrap_Time_M_get_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -505,7 +505,7 @@ intgo _wrap_Time_M_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-void _wrap_Time_D_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1) {
+void _wrap_Time_D_set_sxtwl_258d85b6700e030a(Time *_swig_go_0, intgo _swig_go_1) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
@@ -517,7 +517,7 @@ void _wrap_Time_D_set_sxtwl_36456a96f054a683(Time *_swig_go_0, intgo _swig_go_1)
 }
 
 
-intgo _wrap_Time_D_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+intgo _wrap_Time_D_get_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -530,7 +530,7 @@ intgo _wrap_Time_D_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-void _wrap_Time_h_set_sxtwl_36456a96f054a683(Time *_swig_go_0, double _swig_go_1) {
+void _wrap_Time_h_set_sxtwl_258d85b6700e030a(Time *_swig_go_0, double _swig_go_1) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
@@ -542,7 +542,7 @@ void _wrap_Time_h_set_sxtwl_36456a96f054a683(Time *_swig_go_0, double _swig_go_1
 }
 
 
-double _wrap_Time_h_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+double _wrap_Time_h_get_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   double result;
   double _swig_go_result;
@@ -555,7 +555,7 @@ double _wrap_Time_h_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-void _wrap_Time_s_set_sxtwl_36456a96f054a683(Time *_swig_go_0, double _swig_go_1) {
+void _wrap_Time_s_set_sxtwl_258d85b6700e030a(Time *_swig_go_0, double _swig_go_1) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
@@ -567,7 +567,7 @@ void _wrap_Time_s_set_sxtwl_36456a96f054a683(Time *_swig_go_0, double _swig_go_1
 }
 
 
-double _wrap_Time_s_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+double _wrap_Time_s_get_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   double result;
   double _swig_go_result;
@@ -580,7 +580,7 @@ double _wrap_Time_s_get_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-Time *_wrap_new_Time_sxtwl_36456a96f054a683() {
+Time *_wrap_new_Time_sxtwl_258d85b6700e030a() {
   Time *result = 0 ;
   Time *_swig_go_result;
   
@@ -591,7 +591,7 @@ Time *_wrap_new_Time_sxtwl_36456a96f054a683() {
 }
 
 
-void _wrap_delete_Time_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+void _wrap_delete_Time_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = (Time *) 0 ;
   
   arg1 = *(Time **)&_swig_go_0; 
@@ -601,7 +601,7 @@ void _wrap_delete_Time_sxtwl_36456a96f054a683(Time *_swig_go_0) {
 }
 
 
-GZ *_wrap_new_GZ__SWIG_0_sxtwl_36456a96f054a683() {
+GZ *_wrap_new_GZ__SWIG_0_sxtwl_258d85b6700e030a() {
   GZ *result = 0 ;
   GZ *_swig_go_result;
   
@@ -612,7 +612,7 @@ GZ *_wrap_new_GZ__SWIG_0_sxtwl_36456a96f054a683() {
 }
 
 
-GZ *_wrap_new_GZ__SWIG_1_sxtwl_36456a96f054a683(char _swig_go_0, char _swig_go_1) {
+GZ *_wrap_new_GZ__SWIG_1_sxtwl_258d85b6700e030a(char _swig_go_0, char _swig_go_1) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   GZ *result = 0 ;
@@ -627,7 +627,7 @@ GZ *_wrap_new_GZ__SWIG_1_sxtwl_36456a96f054a683(char _swig_go_0, char _swig_go_1
 }
 
 
-void _wrap_GZ_tg_set_sxtwl_36456a96f054a683(GZ *_swig_go_0, char _swig_go_1) {
+void _wrap_GZ_tg_set_sxtwl_258d85b6700e030a(GZ *_swig_go_0, char _swig_go_1) {
   GZ *arg1 = (GZ *) 0 ;
   uint8_t arg2 ;
   
@@ -639,7 +639,7 @@ void _wrap_GZ_tg_set_sxtwl_36456a96f054a683(GZ *_swig_go_0, char _swig_go_1) {
 }
 
 
-char _wrap_GZ_tg_get_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
+char _wrap_GZ_tg_get_sxtwl_258d85b6700e030a(GZ *_swig_go_0) {
   GZ *arg1 = (GZ *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -652,7 +652,7 @@ char _wrap_GZ_tg_get_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
 }
 
 
-void _wrap_GZ_dz_set_sxtwl_36456a96f054a683(GZ *_swig_go_0, char _swig_go_1) {
+void _wrap_GZ_dz_set_sxtwl_258d85b6700e030a(GZ *_swig_go_0, char _swig_go_1) {
   GZ *arg1 = (GZ *) 0 ;
   uint8_t arg2 ;
   
@@ -664,7 +664,7 @@ void _wrap_GZ_dz_set_sxtwl_36456a96f054a683(GZ *_swig_go_0, char _swig_go_1) {
 }
 
 
-char _wrap_GZ_dz_get_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
+char _wrap_GZ_dz_get_sxtwl_258d85b6700e030a(GZ *_swig_go_0) {
   GZ *arg1 = (GZ *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -677,7 +677,7 @@ char _wrap_GZ_dz_get_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
 }
 
 
-void _wrap_delete_GZ_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
+void _wrap_delete_GZ_sxtwl_258d85b6700e030a(GZ *_swig_go_0) {
   GZ *arg1 = (GZ *) 0 ;
   
   arg1 = *(GZ **)&_swig_go_0; 
@@ -687,7 +687,7 @@ void _wrap_delete_GZ_sxtwl_36456a96f054a683(GZ *_swig_go_0) {
 }
 
 
-Day *_wrap_Day_fromSolar_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
+Day *_wrap_Day_fromSolar_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -704,7 +704,7 @@ Day *_wrap_Day_fromSolar_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_
 }
 
 
-Day *_wrap_Day_fromLunar__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2, bool _swig_go_3) {
+Day *_wrap_Day_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2, bool _swig_go_3) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -723,7 +723,7 @@ Day *_wrap_Day_fromLunar__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, char _
 }
 
 
-Day *_wrap_Day_fromLunar__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
+Day *_wrap_Day_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -740,7 +740,7 @@ Day *_wrap_Day_fromLunar__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, char _
 }
 
 
-Day *_wrap_Day_after_sxtwl_36456a96f054a683(Day *_swig_go_0, intgo _swig_go_1) {
+Day *_wrap_Day_after_sxtwl_258d85b6700e030a(Day *_swig_go_0, intgo _swig_go_1) {
   Day *arg1 = (Day *) 0 ;
   int arg2 ;
   Day *result = 0 ;
@@ -755,7 +755,7 @@ Day *_wrap_Day_after_sxtwl_36456a96f054a683(Day *_swig_go_0, intgo _swig_go_1) {
 }
 
 
-Day *_wrap_Day_before_sxtwl_36456a96f054a683(Day *_swig_go_0, intgo _swig_go_1) {
+Day *_wrap_Day_before_sxtwl_258d85b6700e030a(Day *_swig_go_0, intgo _swig_go_1) {
   Day *arg1 = (Day *) 0 ;
   int arg2 ;
   Day *result = 0 ;
@@ -770,7 +770,7 @@ Day *_wrap_Day_before_sxtwl_36456a96f054a683(Day *_swig_go_0, intgo _swig_go_1) 
 }
 
 
-intgo _wrap_Day_getLunarDay_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+intgo _wrap_Day_getLunarDay_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -783,7 +783,7 @@ intgo _wrap_Day_getLunarDay_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getLunarMonth_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getLunarMonth_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -796,7 +796,7 @@ char _wrap_Day_getLunarMonth_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-intgo _wrap_Day_getLunarYear__SWIG_0_sxtwl_36456a96f054a683(Day *_swig_go_0, bool _swig_go_1) {
+intgo _wrap_Day_getLunarYear__SWIG_0_sxtwl_258d85b6700e030a(Day *_swig_go_0, bool _swig_go_1) {
   Day *arg1 = (Day *) 0 ;
   bool arg2 ;
   int result;
@@ -811,7 +811,7 @@ intgo _wrap_Day_getLunarYear__SWIG_0_sxtwl_36456a96f054a683(Day *_swig_go_0, boo
 }
 
 
-intgo _wrap_Day_getLunarYear__SWIG_1_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+intgo _wrap_Day_getLunarYear__SWIG_1_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -824,7 +824,7 @@ intgo _wrap_Day_getLunarYear__SWIG_1_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-GZ *_wrap_Day_getYearGZ__SWIG_0_sxtwl_36456a96f054a683(Day *_swig_go_0, bool _swig_go_1) {
+GZ *_wrap_Day_getYearGZ__SWIG_0_sxtwl_258d85b6700e030a(Day *_swig_go_0, bool _swig_go_1) {
   Day *arg1 = (Day *) 0 ;
   bool arg2 ;
   GZ result;
@@ -839,7 +839,7 @@ GZ *_wrap_Day_getYearGZ__SWIG_0_sxtwl_36456a96f054a683(Day *_swig_go_0, bool _sw
 }
 
 
-GZ *_wrap_Day_getYearGZ__SWIG_1_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+GZ *_wrap_Day_getYearGZ__SWIG_1_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   GZ result;
   GZ *_swig_go_result;
@@ -852,7 +852,7 @@ GZ *_wrap_Day_getYearGZ__SWIG_1_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-GZ *_wrap_Day_getMonthGZ_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+GZ *_wrap_Day_getMonthGZ_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   GZ result;
   GZ *_swig_go_result;
@@ -865,7 +865,7 @@ GZ *_wrap_Day_getMonthGZ_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-GZ *_wrap_Day_getDayGZ_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+GZ *_wrap_Day_getDayGZ_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   GZ result;
   GZ *_swig_go_result;
@@ -878,7 +878,22 @@ GZ *_wrap_Day_getDayGZ_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-bool _wrap_Day_isLunarLeap_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+GZ *_wrap_Day_getHourGZ_sxtwl_258d85b6700e030a(Day *_swig_go_0, char _swig_go_1) {
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  GZ result;
+  GZ *_swig_go_result;
+  
+  arg1 = *(Day **)&_swig_go_0; 
+  arg2 = (uint8_t)_swig_go_1; 
+  
+  result = (arg1)->getHourGZ(arg2);
+  *(GZ **)&_swig_go_result = new GZ(result); 
+  return _swig_go_result;
+}
+
+
+bool _wrap_Day_isLunarLeap_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -891,7 +906,7 @@ bool _wrap_Day_isLunarLeap_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-intgo _wrap_Day_getSolarYear_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+intgo _wrap_Day_getSolarYear_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -904,7 +919,7 @@ intgo _wrap_Day_getSolarYear_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getSolarMonth_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getSolarMonth_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -917,7 +932,7 @@ char _wrap_Day_getSolarMonth_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-intgo _wrap_Day_getSolarDay_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+intgo _wrap_Day_getSolarDay_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -930,7 +945,7 @@ intgo _wrap_Day_getSolarDay_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getWeek_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getWeek_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -943,7 +958,7 @@ char _wrap_Day_getWeek_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getWeekIndex_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getWeekIndex_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -956,7 +971,7 @@ char _wrap_Day_getWeekIndex_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-bool _wrap_Day_hasJieQi_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+bool _wrap_Day_hasJieQi_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -969,7 +984,7 @@ bool _wrap_Day_hasJieQi_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getJieQi_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getJieQi_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -982,7 +997,7 @@ char _wrap_Day_getJieQi_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-double _wrap_Day_getJieQiJD_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+double _wrap_Day_getJieQiJD_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   double result;
   double _swig_go_result;
@@ -995,7 +1010,7 @@ double _wrap_Day_getJieQiJD_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-char _wrap_Day_getConstellation_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+char _wrap_Day_getConstellation_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   uint8_t result;
   char _swig_go_result;
@@ -1008,7 +1023,7 @@ char _wrap_Day_getConstellation_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-void _wrap_delete_Day_sxtwl_36456a96f054a683(Day *_swig_go_0) {
+void _wrap_delete_Day_sxtwl_258d85b6700e030a(Day *_swig_go_0) {
   Day *arg1 = (Day *) 0 ;
   
   arg1 = *(Day **)&_swig_go_0; 
@@ -1018,7 +1033,7 @@ void _wrap_delete_Day_sxtwl_36456a96f054a683(Day *_swig_go_0) {
 }
 
 
-Day *_wrap_fromSolar_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
+Day *_wrap_fromSolar_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -1035,7 +1050,7 @@ Day *_wrap_fromSolar_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, i
 }
 
 
-Day *_wrap_fromLunar__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2, bool _swig_go_3) {
+Day *_wrap_fromLunar__SWIG_0_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2, bool _swig_go_3) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -1054,7 +1069,7 @@ Day *_wrap_fromLunar__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig
 }
 
 
-Day *_wrap_fromLunar__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
+Day *_wrap_fromLunar__SWIG_1_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, intgo _swig_go_2) {
   int arg1 ;
   uint8_t arg2 ;
   int arg3 ;
@@ -1071,7 +1086,7 @@ Day *_wrap_fromLunar__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig
 }
 
 
-std::vector< double > *_wrap_siZhu2Year_sxtwl_36456a96f054a683(GZ *_swig_go_0, GZ *_swig_go_1, GZ *_swig_go_2, GZ *_swig_go_3, intgo _swig_go_4, intgo _swig_go_5) {
+std::vector< double > *_wrap_siZhu2Year_sxtwl_258d85b6700e030a(GZ *_swig_go_0, GZ *_swig_go_1, GZ *_swig_go_2, GZ *_swig_go_3, intgo _swig_go_4, intgo _swig_go_5) {
   GZ arg1 ;
   GZ arg2 ;
   GZ arg3 ;
@@ -1122,7 +1137,7 @@ std::vector< double > *_wrap_siZhu2Year_sxtwl_36456a96f054a683(GZ *_swig_go_0, G
 }
 
 
-GZ *_wrap_getShiGz_sxtwl_36456a96f054a683(char _swig_go_0, char _swig_go_1) {
+GZ *_wrap_getShiGz_sxtwl_258d85b6700e030a(char _swig_go_0, char _swig_go_1) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   GZ result;
@@ -1137,7 +1152,7 @@ GZ *_wrap_getShiGz_sxtwl_36456a96f054a683(char _swig_go_0, char _swig_go_1) {
 }
 
 
-char _wrap_getRunMonth_sxtwl_36456a96f054a683(intgo _swig_go_0) {
+char _wrap_getRunMonth_sxtwl_258d85b6700e030a(intgo _swig_go_0) {
   int arg1 ;
   uint8_t result;
   char _swig_go_result;
@@ -1150,7 +1165,7 @@ char _wrap_getRunMonth_sxtwl_36456a96f054a683(intgo _swig_go_0) {
 }
 
 
-char _wrap_getLunarMonthNum__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1, bool _swig_go_2) {
+char _wrap_getLunarMonthNum__SWIG_0_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1, bool _swig_go_2) {
   int arg1 ;
   uint8_t arg2 ;
   bool arg3 ;
@@ -1167,7 +1182,7 @@ char _wrap_getLunarMonthNum__SWIG_0_sxtwl_36456a96f054a683(intgo _swig_go_0, cha
 }
 
 
-char _wrap_getLunarMonthNum__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, char _swig_go_1) {
+char _wrap_getLunarMonthNum__SWIG_1_sxtwl_258d85b6700e030a(intgo _swig_go_0, char _swig_go_1) {
   int arg1 ;
   uint8_t arg2 ;
   uint8_t result;
@@ -1182,7 +1197,7 @@ char _wrap_getLunarMonthNum__SWIG_1_sxtwl_36456a96f054a683(intgo _swig_go_0, cha
 }
 
 
-Time *_wrap_JD2DD_sxtwl_36456a96f054a683(double _swig_go_0) {
+Time *_wrap_JD2DD_sxtwl_258d85b6700e030a(double _swig_go_0) {
   double arg1 ;
   Time result;
   Time *_swig_go_result;
@@ -1195,7 +1210,7 @@ Time *_wrap_JD2DD_sxtwl_36456a96f054a683(double _swig_go_0) {
 }
 
 
-double _wrap_toJD_sxtwl_36456a96f054a683(Time *_swig_go_0) {
+double _wrap_toJD_sxtwl_258d85b6700e030a(Time *_swig_go_0) {
   Time *arg1 = 0 ;
   double result;
   double _swig_go_result;

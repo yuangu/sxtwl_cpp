@@ -103,6 +103,13 @@ print("月干支", Gan[mTG.tg] + Zhi[mTG.dz])
 dTG  = day.getDayGZ()
 print("日干支", Gan[dTG.tg] + Zhi[dTG.dz]) 
 
+
+#时干支,传24小时制的时间，分早晚子时
+hour = 18
+sTG = day.getHourGZ(hour)
+print("%d时的干支"%(hour, ), Gan[sTG.tg] + Zhi[sTG.dz]) 
+
+
 #时干支
 for hour in range(24):
     # 第一个参数为该天的天干，第二个参数为小时

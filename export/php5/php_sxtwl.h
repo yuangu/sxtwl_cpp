@@ -58,6 +58,7 @@ ZEND_NAMED_FUNCTION(_wrap_Day_getLunarYear);
 ZEND_NAMED_FUNCTION(_wrap_Day_getYearGZ);
 ZEND_NAMED_FUNCTION(_wrap_Day_getMonthGZ);
 ZEND_NAMED_FUNCTION(_wrap_Day_getDayGZ);
+ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ);
 ZEND_NAMED_FUNCTION(_wrap_Day_isLunarLeap);
 ZEND_NAMED_FUNCTION(_wrap_Day_getSolarYear);
 ZEND_NAMED_FUNCTION(_wrap_Day_getSolarMonth);

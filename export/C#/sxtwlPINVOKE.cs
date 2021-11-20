@@ -375,6 +375,9 @@ class sxtwlPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getDayGZ")]
   public static extern global::System.IntPtr Day_getDayGZ(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getHourGZ")]
+  public static extern global::System.IntPtr Day_getHourGZ(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_isLunarLeap")]
   public static extern bool Day_isLunarLeap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
