@@ -2,9 +2,8 @@
 #include <sstream>
 #include <vector>
 #include "const.h"
-#include "lunar.h"
-#include "JD.h"
-#include "day.h"
+#include "sxtwl.h"
+
 
 //===============================================================
 #ifdef _WIN32
@@ -19,6 +18,8 @@ class MBuf : public std::stringbuf
 	}
 };
 #endif
+
+
 //===============================================================
 
 static const char *Gan[] = {"甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"};
@@ -26,116 +27,145 @@ static const char *Zhi[] = {"子", "丑", "寅", "卯", "辰", "巳", "午", "�
 static const char *ShX[] = {"鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"};
 static const char *numCn[] = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"}; //中文数字
 static const char *jqmc[] = {"冬至", "小寒", "大寒", "立春", "雨水", "惊蛰", "春分", "清明", "谷雨", "立夏", "小满", "芒种", "夏至", "小暑", "大暑", "立秋", "处暑", "白露", "秋分", "寒露", "霜降", "立冬", "小雪", "大雪"};
-static const char *ymc[] = {"十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十"}; //月名称,建寅
+static const char *ymc[] = { "正", "二", "三", "四", "五", "六", "七", "八", "九", "十","十一", "十二"}; //月名称,建寅
 static const char *rmc[] = {"初一", "初二", "初三", "初四", "初五", "初六", "初七", "初八", "初九", "初十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十", "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三十", "卅一"};
+static const char *WeekCn[] = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
 
-void printDay(Day &day)
+
+GZ getGZ(std::string tgStr, std::string dzStr) {
+	int tg = -1;
+	int dz = -1;
+	for (size_t i = 0; i < 10; i++)
+	{
+		if (std::string(Gan[i]) == tgStr) {
+			tg = i;
+			break;
+		}
+	}
+
+	for (size_t i = 0; i < 12; i++)
+	{
+		if (std::string(Zhi[i]) == dzStr) {
+			dz = i;
+			break;
+		}
+	}
+	return GZ(tg, dz);
+}
+
+
+
+void printDay(Day& day)
 {
+    
 	std::cout << "\n===================================================" << std::endl;
-	;
-	std::cout << "公历：" << day.y << "年" << (int)day.m << "月" << day.d << "日" << std::endl;
-	if (day.Lleap)
-	{
-		std::cout << "润" << ymc[day.Lmc] << "月" << rmc[day.Ldi] << "日" << std::endl;
-	}
-	else
-	{
-		std::cout << ymc[day.Lmc] << "月" << rmc[day.Ldi] << "日" << std::endl;
-	}
+	
+    // 公历
+	std::cout << "公历：" << day.getSolarYear() << "年"
+                << (int)day.getSolarMonth() << "月"
+                << day.getSolarDay() << "日" << std::endl;
+        
+    // 农历
+    std::cout << "农历：" << (day.isLunarLeap()? "闰":"")
+                << ymc[day.getLunarMonth() - 1] << "月"
+                << rmc[day.getLunarDay() - 1] << "日" << std::endl;
 
-	std::cout << "儒略历:JD" << J2000 + day.d0 << std::endl;
-	std::cout << "星期" << numCn[day.week] << std::endl;
-
-	std::cout << Gan[day.Lyear2.tg] << Zhi[day.Lyear2.dz] << "年"
-			  << Gan[day.Lmonth2.tg] << Zhi[day.Lmonth2.dz] << "月"
-			  << Gan[day.Lday2.tg] << Zhi[day.Lday2.dz] << "日"
-			  << std::endl;
-
-	std::cout << "距冬至" << day.cur_dz << "天" << std::endl;
-	std::cout << "距夏至" << day.cur_xz << "天" << std::endl;
-	std::cout << "距立秋" << day.cur_lq << "天" << std::endl;
-	std::cout << "距芒种" << day.cur_mz << "天" << std::endl;
-	std::cout << "距小暑" << day.cur_xs << "天" << std::endl;
+	// 星期几
+	std::cout << "星期:" << WeekCn[day.getWeek()] << std::endl;
+    
+    //年天二地支
+	std::cout  << "天干:"
+               << Gan[day.getYearGZ().tg] << Zhi[day.getYearGZ().dz] << "年"
+			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "月"
+			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "日"
+			   << std::endl;
 };
+
+int round_double(double number)
+{
+	return (number > 0.0) ? (number + 0.5) : (number - 0.5);
+}
 
 int main()
 {
 	
-	SXDay day;
-	for (auto i = 1; i < 20; ++i)
-	{
-		Lunar lunar;
-		Day day2 = lunar.getDayBySolar(2017, 5, i);
-		day.initBySolar(2017, 5, i);
-		auto day1 = day.getDay();
-		auto year = day.getYear();
-		auto month = day.getMonth();
-
-		auto lday = day.getLDay();
-		auto lmonth = day.getLMonth();
-		auto lyear = day.getLYear();
-		auto isLun = day.isRun();
-
-		auto jqIndex = day.getJQIndex();
-		auto jqJd = day.getJQJD();
-		auto time = JD::JD2DD(jqJd + J2000);
-		printf("");
-	}
+#ifdef _WIN32
+	////http://m.blog.csdn.net/article/details?id=52789570
+	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
+	setvbuf(stdout, nullptr, _IONBF, 0);
+	MBuf buf;
+	std::cout.rdbuf(&buf);
+#endif
+    
+	do {
+		Day* day = sxtwl::fromSolar(2021, 11, 14);
+		day->getHourGZ(8);
+		auto ret = sxtwl::siZhu2Year(day->getYearGZ(), day->getMonthGZ(), day->getDayGZ(), getGZ("癸", "巳"), 2021, 2025);
+		printf("%d", ret.size());
+	} while (false);
+		
+	do {
+		Day* day = sxtwl::fromSolar(1392, 1, 1);
+		for (int i = 0; i < 365; ++i) {
+			day = day->after(1);
+			if (day->hasJieQi()) {
+				auto  jd = day->getJieQiJD();
+				auto t = sxtwl::JD2DD(jd);
+				std::cout <<jqmc[day->getJieQi()] << ": " << t.Y << "-" << t.M << "-"
+					<< t.D << " " << int(t.h) << ":" << int(t.m) << ":" << round_double(t.s)
+					<< std::endl;
+			}
+		}
+	} while (false);
 	
 
-//#ifdef _WIN32
-//	////http://m.blog.csdn.net/article/details?id=52789570
-//	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
-//	setvbuf(stdout, nullptr, _IONBF, 0);
-//	MBuf buf;
-//	std::cout.rdbuf(&buf);
-//#endif
-//	Lunar lunar;
-//
-//
-//	// 根据天干地支反查
-//	///1990-6-15 庚午年 壬午月 辛亥日
-//
-//	GZ yearGz(6, 6);
-//	GZ yueGz(8, 6);
-//	GZ riGz(7, 11);
-//	GZ shiGz(2, 8);
-//	lunar.siZhu2Year(yearGz, yueGz, riGz, shiGz, 1990, 2100);
-//
-//
-//	//=============================================================================================================
-//	//获取年的润月
-//	int run_month = lunar.getRunMonth(1990);
-//	//============================================================================================================
-//	int month_num = lunar.getLunarMonthNum(1990, 5);
-//	//=============================================================================================================
-//	//通过阳历获取当天的信息。（可以用于阳历转阴历,获取当天星期几等功能）
-//	try
-//	{
-//		Day day = lunar.getDayBySolar(2010, 13, 10);
-//		printDay(day);
-//	}
-//	catch (LunarException e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-//
-//	//=============================================================================================================
-//	//通过阴历获取当天的信息。（可以用于阴历转阳历等,获取当天星期几等功能）
-//	Day day2 = lunar.getDayByLunar(1995, 12, 10);
-//	printDay(day2);
-//	//=============================================================================================================
-//	Month month = lunar.yueLiCalc(1990, 7);
-//
-//	std::cout << month.y << "年" << (int)month.m << "月" << std::endl;
-//	std::cout << Gan[month.yearGan] << Zhi[month.yearZhi] << "年" << std::endl;
-//	std::cout << "生肖：" << ShX[month.ShX] << std::endl;
-//
-//	std::vector<Day> &days = month.days;
-//	for (auto it = days.begin(); it != days.end(); ++it)
-//	{
-//		printDay((*it));
-//	}
-//	//=============================================================================================================
-//	return 0;
+	
+	
+    // 获取一年当中的闰月
+    for(auto i = 1; i <= 3000; ++i)
+    {
+        auto lunMonth = (int)sxtwl::getRunMonth(i);
+        if(lunMonth <= 0) continue;
+        printf("%d年 闰%d月\n", i, lunMonth);
+    }
+    
+    //从阳历获取一个day对像
+    Day* day = sxtwl::fromSolar(118, 10, 3);
+    printDay(*day);
+    for(auto i = 0; i < 100; ++i){
+        day =  day->after(1);
+        printDay(*day);
+    }
+    
+    // 阳历转阴历
+    {
+        Day* day = sxtwl::fromSolar(2021, 11, 7);
+        std::cout  << "农历:" << day->getLunarYear() << "年" << (int)day->getLunarMonth() << "月" << day-> getLunarDay() << "日"  << std::endl;
+    
+    
+        day = sxtwl::fromLunar( day->getLunarYear(), day->getLunarMonth(), day-> getLunarDay(), day->isLunarLeap());
+        std::cout  << "公历:" << day->getSolarYear() << "年" << (int)day->getSolarMonth() << "月" << day-> getSolarDay() << "日"  << std::endl;
+        
+        sxtwl::getShiGz(day->getDayGZ().tg, 0);
+        
+       auto c =  day->getConstellation();
+       printf("%c", c);
+        
+        if( day->hasJieQi()){
+            auto  jd = day->getJieQiJD();
+            auto t = sxtwl::JD2DD(jd);
+            jd = sxtwl::toJD(t);
+        }
+        
+       auto ret = sxtwl::siZhu2Year(day->getYearGZ(), day->getMonthGZ(), day->getDayGZ(),
+                          GZ(0, 0)
+                          , 2003, 2029);
+        
+        printf("finish");
+        
+    }
+    
+   
+    
+    return 0;
 }

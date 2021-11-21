@@ -156,3 +156,17 @@ namespace XL
 
 //=================================deltat T计算=====================================
 long double dt_T(long double t);
+
+
+//精气
+inline long double qi_accurate(long double W)
+{
+	long double t = XL::S_aLon_t(W) * 36525;
+	return t - dt_T(t) + 8.0f / 24.f;
+}
+
+inline long double so_accurate(long double W)
+{
+	long double t = XL::MS_aLon_t(W) * 36525;
+	return t - dt_T(t) + 8.0f / 24.0f;
+} //精朔

@@ -1,401 +1,320 @@
 #include "day.h"
-#include "JD.h"
-#include "const.h"
 #include "eph.h"
 
-//精气
-inline long double qi_accurate(long double W);
-
-//精朔
-inline long double so_accurate(long double W);
-
-
-void SXDay::initBySolar(int _year, uint8_t _month, uint8_t _day)
+namespace sxtwl
 {
-	reset();
-    //公元记年法没有0年，公元从1年开始，公元前从-1开始
-    if(_year == 0)
-    {
-        throw LunarException(ErrorCode_DateError);
-    }
+	GZ  getShiGz(uint8_t dayTg, uint8_t hour);
+};
 
-    if ((_month > 12 || _month <= 0))
-    {
-        throw LunarException(ErrorCode_DateError);
-    }
-
-    static int num[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    if (_day <= 0 || _day > num[_month])
-    {
-        int year = _year;
-
-        //公元前润年
-        if (year < 0)
-        {
-             year++;     
-        }
-                                                       
-        if (!(year % 4 == 0 && _month == 2 && _day == 29) ) 
-        {
-            throw LunarException(ErrorCode_DateError);
-        }
-    }
-
-	mDayInfo.y = _year;
-	mDayInfo.m = _month;
-	mDayInfo.d = _day;
-
-    //公历月首的儒略日,中午;
-    Time t;
-	t.h = 12, t.m = 0, t.s = 0.1;
-	t.Y = _year; t.M = _month; t.D = 1;
-    
-    mDayInfo.d0 = int2(JD::toJD(t)) - J2000;
-    mDayInfo.di =  mDayInfo.d0 + _day - 1;
-    // //计算公历月的时长
-    // ++t.M;
-    // if (t.M > 12)
-    // {
-    //     ++t.Y;
-    //     t.M = 1;
-    // }
-
-	// //本月天数(公历);
-	// int Bdn = int2(JD::toJD(t)) - J2000 - mDayInfo.d0;
-    int Bdn = num[_month];
-
-    if (mSSQ.ZQ.size() <= 0 || mDayInfo.di < mSSQ.ZQ[0] || mDayInfo.di >= mSSQ.ZQ[24])
+void Day::checkSSQ()
+{
+	if (!SSQPtr->ZQ.size() || this->d0 < SSQPtr->ZQ[0] || this->d0 >= SSQPtr->ZQ[24])
 	{
-		mSSQ.calcY(mDayInfo.di);
+		SSQPtr->calcY(this->d0);
 	}
 }
 
-void SXDay::initByLunar(int year, uint8_t month, uint8_t day, bool isRun)
+/**
+	 * 确定已经计算过阴历信息
+	 */
+void Day::checkLunarData()
 {
-	reset();
-    if (month > 10)
-    {
-        year = year + 1;
-    }
-
-    if (month > 12 || month < 0)
-    {
-        throw LunarException(ErrorCode_DateError);
-    }
-
-    //计算1月1号的信息
-    Time t;
-    t.h = 12, t.m = 0, t.s = 0.1;
-    t.Y = year;
-    t.M = 1;
-    t.D = 1;
-
-    //公历月首的儒略日,中午;
-    int Bd0 = int2(JD::toJD(t)) - J2000;
-
-    if (!mSSQ.ZQ.size() || Bd0 < mSSQ.ZQ[0] || Bd0 >= mSSQ.ZQ[24])
-    {
-        mSSQ.calcY(Bd0);
-    }
-
-    //{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
-    // static int mkIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
-    static int yueIndex[] = {11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-    int yue = 0;
-
-    for (int i = 0; i < sizeof(yueIndex); ++i)
-    {
-        if (*(yueIndex + i) == month)
-        {
-            yue = i;
-            break;
-        }
-    }
-
-    int mk = 0;
-    int leap = mSSQ.leap - 1;
-
-    if (isRun && ((leap < 0) || (leap >= 0 && month != yueIndex[leap])))
-    {
-        throw LunarException(ErrorCode_NotRun);
-    }
-
-    for (auto it = mSSQ.ym.begin(); it != mSSQ.ym.end(); ++it)
-    {
-
-        if (leap < 0)
-        {
-            if (*it == yue)
-            {
-                break;
-            }
-        }
-        else
-        {
-            if (yue < leap && *it == yue)
-            {
-                break;
-            }
-
-            if (yue == leap && *it == yue && isRun)
-            {
-                ++mk;
-                break;
-            }
-
-            if (yue == leap && *it == yue && !isRun)
-            {
-                break;
-            }
-
-            if (yue > leap && *it == yue)
-            {
-                break;
-            }
-        }
-        ++mk;
-    }
-
-    //阴历首月的儒略日
-    int bdi = mSSQ.HS[mk];
-
-    //mk会不会超出超出预期？
-    if (mSSQ.HS[mk + 1] - mSSQ.HS[mk] < day || day <= 0)
-    {
-        throw LunarException(ErrorCode_DateError);
-    }
-
-    int jd = bdi + day - 1;
-
-    t = JD::JD2DD(J2000 + jd);
-
-    initBySolar(t.Y, t.M, t.D);
-}
-
-void SXDay::reset()
-{
-	hasLunar = false;
-	hasLunarYear = false;
-	hasCheckJQ = false;
-	hasGetJQJd = false;
-	hasGetJQIndex = false;
-}
-
-int SXDay::getYear()
-{
-    return mDayInfo.y;
-}
-
-int SXDay::getMonth()
-{
-    return mDayInfo.m;
-}
-
-int SXDay::getDay()
-{
-    return mDayInfo.d;
-}
-
-int SXDay::getLYear()
-{
-	if (!hasLunarYear)
+	// 已经计算过了
+	if (this->Ldn != 0)
 	{
-		lunarYear();
+		return;
 	}
-	return mDayInfo.ly;
-}
+	this->checkSSQ();
 
-int SXDay::getLMonth()
-{
-	if (!hasLunar)
+	int mk = int2((this->d0 - SSQPtr->HS[0]) / 30);
+	if (mk < 13 && SSQPtr->HS[mk + 1] <= this->d0)
 	{
-		lunar(mDayInfo.di);
-	}
-	return mDayInfo.lm;
-}
-
-int SXDay::getLDay()
-{
-	if (!hasLunar)
-	{
-		lunar(mDayInfo.di);
-	}
-	return mDayInfo.ld;
-}
-
-bool SXDay::isRun()
-{
-	if (hasLunar)
-	{
-		lunar(mDayInfo.di);
-	}
-	return mDayInfo.isRun;
-}
-
-int SXDay::getWeek()
-{
-    int w0 = (mDayInfo.d0 + J2000 + 1 + 7000000) % 7;
-    return (w0 + mDayInfo.d) % 7; 
-}
-
-int SXDay::getJQIndex()
-{
-	if (hasGetJQIndex)
-	{
-		return mDayInfo.jqIndex;
-	}
-	hasGetJQIndex = true;
-	if (!hasQJ())
-	{
-		mDayInfo.jqIndex = -1;
-		return -1;
+		mk++; //农历所在月的序数
 	}
 
-	int D = 0;
-	auto di = mDayInfo.di;
-	long double d, jd2 = di + dt_T(di) - (8.0 / 24.0);
-	auto w = XL::S_aLon(jd2 / 36525, 3);
-	w = int2((w - 0.13) / pi2 * 24) *pi2 / 24;
-	do {
-		d = qi_accurate(w);
-		D = int2(d + 0.5);
-		int xn = int2(w / pi2 * 24 + 24000006.01) % 24;
-		w += pi2 / 24;
-		if (D > di) break;
-		if (D < di) continue;
-		
-		//auto jqmc = xn; //取得节气名称
-		//auto  jqjd = d; 
-		//auto jqsj = JD::JD2DD(d);
-		mDayInfo.jqIndex = xn;
-		return mDayInfo.jqIndex;
-	} while (D + 12 < di);
-	
-	mDayInfo.jqIndex = -1;
-	return mDayInfo.jqIndex;
+	//if (this.d0 == SSQPtr->HS[mk]) { //月的信息
+	this->Lmc = SSQPtr->ym[mk];                              //月名称
+	this->Ldn = SSQPtr->dx[mk];                              //月大小
+	this->Lleap = (SSQPtr->leap != 0 && SSQPtr->leap == mk); //闰状况
+	//}
+
+	// 阴历所处的日
+	this->Ldi = this->d0 - SSQPtr->HS[mk];
 }
 
-double SXDay::getJQJD()
+void Day::checkSolarData()
 {
-	if (hasGetJQJd)
+	if (this->m != 0)
 	{
-		return mDayInfo.jqjd;
-	}
-	hasGetJQJd = true;
-	if (!hasQJ())
-	{
-		mDayInfo.jqjd = -1;
-		return mDayInfo.jqjd;
+		return;
 	}
 
-	auto jqIndex = getJQIndex();
+	Time t = JD::JD2DD(this->d0 + J2000);
+	this->y = t.Y;
+	this->d = t.D;
+	this->m = t.M;
+}
 
-	long double d, xn, jd2 ;
-	jd2 = mSSQ.ZQ[jqIndex] + dt_T(mSSQ.ZQ[jqIndex]) - (8.0 / 24.0);
-	auto  w = XL::S_aLon(jd2 / 36525, 3);
-	w = int2((w - 0.13) / pi2 * 24) *pi2 / 24;
+/**
+ * 计算节气数据
+ */
+void Day::checkJQData()
+{
+	if (this->qk != -2)
+	{
+		return;
+	}
 
-	int D = 0;
-	
-		while (true)
+	this->qk = -1;
+	this->getJieQiJD();
+
+	//this->checkSSQ();
+
+	//int qk = int2((this->d0 - SSQPtr->ZQ[0] - 7) / 15.2184);
+	//////节气的取值范围是0-23
+	//if (qk < 23 && this->d0 >= SSQPtr->ZQ[qk + 1])
+	//{
+	//    qk++;
+	//}
+
+	//this->qk = -1;
+	//if (this->d0 == SSQPtr->ZQ[qk])
+	//{
+	//    this->qk = qk;
+	//}
+}
+
+Day *Day::after(int day)
+{
+	return new Day(this->d0 + day);
+}
+
+Day *Day::before(int day)
+{
+	return new Day(this->d0 - day);
+}
+
+/**
+ * 获取阴历日期
+ */
+int Day::getLunarDay()
+{
+	this->checkLunarData();
+	return this->Ldi + 1;
+}
+
+/**
+	 * 获取阴历月
+	 */
+uint8_t Day::getLunarMonth()
+{
+	this->checkLunarData();
+	static const int yueIndex[12] = { 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	return yueIndex[this->Lmc];
+}
+
+int Day::getLunarYear(bool chineseNewYearBoundary)
+{
+	// 以立春为界
+	if (chineseNewYearBoundary == false)
+	{
+		if (this->Lyear == 0)
 		{
-			d = qi_accurate(w);
-			D = int2(d + 0.5);
-			xn = int2(w / pi2 * 24 + 24000006.01) % 24;
-			w += pi2 / 24;
-			if (D < mSSQ.ZQ[jqIndex]) continue;
-			break;
-
+			this->checkSSQ();
+			long double D = SSQPtr->ZQ[3] + (this->d0 < SSQPtr->ZQ[3] ? -365 : 0) + 365.25 * 16 - 35; //以立春为界定纪年
+			this->Lyear = int2(D / 365.2422 + 0.5);
 		}
-		Time t1 = JD::JD2DD(d);
-		Time t2 = JD::JD2DD(mSSQ.ZQ[jqIndex]);
-
-		t2.h = t1.h;
-		t2.m = t1.m;
-		t2.s = t1.s;
-
-		//Time t3 = JD::JD2DD(jd + J2000);
-
-		mDayInfo.jqjd = JD::toJD(t2);
-		return mDayInfo.jqjd;
+		return this->Lyear + 1984;
+	}
+	// 以春节为界
+	if (this->Lyear0 == 0)
+	{
+		this->checkSSQ();
+		int D = SSQPtr->HS[2]; //一般第3个月为春节
+		for (int j = 0; j < 14; j++)
+		{ //找春节
+			if (SSQPtr->ym[j] != 2 || SSQPtr->leap == j && j)
+				continue;
+			D = SSQPtr->HS[j];
+			if (this->d0 < D)
+			{
+				D -= 365;
+				break;
+			} //无需再找下一个正月
+		}
+		D = D + 5810; //计算该年春节与1984年平均春节(立春附近)相差天数估计
+		this->Lyear0 = int2(D / 365.2422 + 0.5);
+	}
+	return this->Lyear0 + 1984;
 }
 
-
-
-bool SXDay::hasQJ()
+GZ Day::getYearGZ(bool chineseNewYearBoundary)
 {
-	if (hasCheckJQ)
+	//以春节为界
+	if (chineseNewYearBoundary)
 	{
-		return mDayInfo.hasJq;
-	}
-	hasCheckJQ = true;
-	auto di = mDayInfo.di;
-	int qk = int2((di - mSSQ.ZQ[0] - 7) / 15.2184);
-
-	//节气的取值范围是0-23
-	if (qk < 23 && di >= mSSQ.ZQ[qk + 1])
-	{
-		qk++;
+		if (this->Lyear3 == NULL)
+		{
+			int year = this->getLunarYear(chineseNewYearBoundary) - 1984;
+			int D = year + 12000;
+			this->Lyear3 = new GZ(D % 10, D % 12);
+		}
+		return *(this->Lyear3);
 	}
 
-	if (di == mSSQ.ZQ[qk])
+	// 以立春为界
+	if (this->Lyear2 == NULL)
 	{
-		mDayInfo.hasJq = true;
+		int year = this->getLunarYear(false) - 1984;
+		int D = year + 12000;
+		this->Lyear2 = new GZ(D % 10, D % 12);
+	}
+	return *(this->Lyear2);
+}
+
+GZ Day::getMonthGZ()
+{
+	if (this->Lmonth2 == NULL)
+	{
+		this->checkSSQ();
+		int mk = int2((this->d0 - SSQPtr->ZQ[0]) / 30.43685);
+		//相对大雪的月数计算,mk的取值范围0-12
+		if (mk < 12 && this->d0 >= SSQPtr->ZQ[2 * mk + 1])
+			mk++;
+		//相对于1998年12月7(大雪)的月数,900000为正数基数
+		int D = mk + int2((SSQPtr->ZQ[12] + 390) / 365.2422) * 12 + 900000;
+		this->Lmonth2 = new GZ(D % 10, D % 12);
+	}
+	return *(this->Lmonth2);
+}
+
+GZ Day::getDayGZ()
+{
+	if (this->Lday2 == NULL)
+	{
+		int D = this->d0 - 6 + 9000000;
+		this->Lday2 = new GZ(D % 10, D % 12);
+	}
+	return *(this->Lday2);
+}
+
+GZ Day::getHourGZ(uint8_t hour)
+{
+	GZ dayGZ = this->getDayGZ();
+	return sxtwl::getShiGz(dayGZ.tg, hour);
+}
+
+bool Day::isLunarLeap()
+{
+	this->checkLunarData();
+	return this->Lleap;
+}
+
+int Day::getSolarYear()
+{
+	this->checkSolarData();
+	return this->y;
+}
+
+uint8_t Day::getSolarMonth()
+{
+	this->checkSolarData();
+	return this->m;
+}
+
+int Day::getSolarDay()
+{
+	this->checkSolarData();
+	return this->d;
+}
+
+uint8_t Day::getWeek()
+{
+	if (this->week == 0xFF)
+	{
+		this->week = (this->d0 + J2000 + 1 + 7000000) % 7;
+	}
+	return this->week;
+}
+
+// 处于该月的第几周
+uint8_t Day::getWeekIndex()
+{
+	int i = (this->getSolarDay() - 1) % 7;
+
+	int w0 = 0;
+	if (this->getWeek() >= i)
+	{
+		w0 = this->getWeek() - i;
 	}
 	else
 	{
-		mDayInfo.hasJq = false;
+		w0 = this->getWeek() + 7 - i;
 	}
-	
-	return mDayInfo.hasJq;
+	return int2((w0 + this->getSolarDay() - 1) / 7) + 1;
+}
+//是否有节气
+bool Day::hasJieQi()
+{
+	this->checkJQData();
+	return this->qk != -1;
+}
+// 获取节气
+uint8_t Day::getJieQi()
+{
+	this->checkJQData();
+	return this->qk;
 }
 
-void SXDay::lunar(int di)
-{
-    //auto di = mDayInfo.di;
-    int mk = int2((di - mSSQ.HS[0]) / 30);
-    //农历所在月的序数;
-    if (mk < 13 && mSSQ.HS[mk + 1] <= di)
-    {
-        mk++;
-    }
 
-	mDayInfo.ld = di - mSSQ.HS[mk] + 1;   //距农历月首的编移量,0对应初一
-	
-	  mk = int2((mDayInfo.d0 - mSSQ.HS[0]) / 30);
-	//农历所在月的序数;
-	if (mk < 13 && mSSQ.HS[mk + 1] <= di)
+
+double Day::getJieQiJD()
+{
+	if (this->jqjd != 0)
 	{
-		mk++;
+		return this->jqjd + J2000;
 	}
-	mDayInfo.lm = mSSQ.ym[mk]; //月名称
-	mDayInfo.isRun = (mSSQ.leap&&mSSQ.leap == mk);
- //   if (di == mSSQ.HS[mk] || di == mDayInfo.d0) { //月的信息
-	//	mDayInfo.lm = mSSQ.ym[mk]; //月名称
-	//	mDayInfo.isRun   = (mSSQ.leap&&mSSQ.leap == mk); 
- //       //day.Lmc2 = mk < 13 ? mk + 1 : -1; //下个月名称,判断除夕时要用到
-	//}
-	//else 
- //   {
-	//	Time t;
-	//	t.Y = mDayInfo.y;
-	//	t.D = mDayInfo.d - 1;
-	//	t.M = mDayInfo.m;
-	//	t.h = 12, t.m = 0, t.s = 0.1;
-	//	lunar(di - 1);
-	//}
-	hasLunar = true;
-		//int qk = int2((day.d0 - mSSQ.ZQ[0] - 7) / 15.2184);
+
+	long double d, xn, jd2 = this->d0 + dt_T(this->d0) - 8 / 24;
+	long double w = XL::S_aLon(jd2 / 36525, 3);
+	w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
+	int D = 0;
+
+	do
+	{
+		d = qi_accurate(w);
+		D = int2(d + 0.5);
+		// 计算出的节令值
+		xn = int2(w / pi2 * 24 + 24000006.01) % 24;
+		w += pi2 / 24;
+		if (D > this->d0)
+			break;
+		if (D < this->d0)
+			continue;
+		if (D == this->d0)
+		{
+			this->jqjd = d;
+			this->qk = xn;
+			break;
+		}
+	} while (D + 12 < this->d0);
+
+	return this->jqjd + J2000;
 }
 
-void SXDay::lunarYear()
+// 获取星座
+uint8_t Day::getConstellation()
 {
-    auto di = mDayInfo.di;
-
-    auto D = mSSQ.ZQ[3] + (di < mSSQ.ZQ[3] ? -365 : 0) + 365.25 * 16 - 35; //以立春为界定纪年
-	mDayInfo.ly = 1984 + floor(D / 365.2422 + 0.5); //农历纪年(10进制,1984年起算)
-
-	
-	hasLunarYear = true;
+	if (this->XiZ == 0xFF)
+	{
+		this->checkSSQ();
+		int mk = int2((this->d0 - SSQPtr->ZQ[0] - 15) / 30.43685);
+		//星座所在月的序数,(如果j=13,ob.d0不会超过第14号中气)
+		if (mk < 11 && this->d0 >= SSQPtr->ZQ[2 * mk + 2])
+		{
+			mk++;
+		}
+		this->XiZ = (mk + 12) % 12;
+	}
+	return this->XiZ;
 }

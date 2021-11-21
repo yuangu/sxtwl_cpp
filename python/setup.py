@@ -7,6 +7,7 @@ import os,sys
 import shutil,os
 import platform
 import io 
+import os
 
 long_description  = ""
 
@@ -66,12 +67,13 @@ else:
 
 
 sxtwl_module = setuptools.Extension('_sxtwl',
-                         include_dirs=['src'],
+                         include_dirs=[os.path.abspath("./src"),],
                          sources=['sxtwl_wrap.cxx',
                           'src/eph.cpp', 
                           'src/JD.cpp',
                           'src/SSQ.cpp',
-                          'src/lunar.cpp',                      
+                          'src/sxtwl.cpp',  
+                          'src/day.cpp',                     
                           ], 
                           extra_compile_args=extra_compile_args, 
 )
@@ -79,9 +81,9 @@ sxtwl_module = setuptools.Extension('_sxtwl',
 
 setuptools.setup(
     name="sxtwl",
-    version="1.0.9",
+    version="2.0.4",
     author="yuangu",
-    author_email="lifulinghan@aol.com",
+    author_email="seantone@126.com",
     description="sxtwl_cpp warpper for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
