@@ -43,67 +43,70 @@ public class Time : global::System.IDisposable {
     }
   }
 
-  public int Y {
+  public Time() : this(sxtwlPINVOKE.new_Time__SWIG_0(), true) {
+  }
+
+  public Time(int year, int month, int day, double hour, double min, double sec) : this(sxtwlPINVOKE.new_Time__SWIG_1(year, month, day, hour, min, sec), true) {
+  }
+
+  public int year {
     set {
-      sxtwlPINVOKE.Time_Y_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_year_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_Y_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_year_get(swigCPtr);
       return ret;
     } 
   }
 
-  public int M {
+  public int month {
     set {
-      sxtwlPINVOKE.Time_M_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_month_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_M_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_month_get(swigCPtr);
       return ret;
     } 
   }
 
-  public int D {
+  public int day {
     set {
-      sxtwlPINVOKE.Time_D_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_day_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_D_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_day_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double h {
+  public double hour {
     set {
-      sxtwlPINVOKE.Time_h_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_hour_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_h_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_hour_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double m {
+  public double min {
     set {
-      sxtwlPINVOKE.Time_m_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_min_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_m_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_min_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double s {
+  public double sec {
     set {
-      sxtwlPINVOKE.Time_s_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_sec_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_s_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_sec_get(swigCPtr);
       return ret;
     } 
-  }
-
-  public Time() : this(sxtwlPINVOKE.new_Time(), true) {
   }
 
 }

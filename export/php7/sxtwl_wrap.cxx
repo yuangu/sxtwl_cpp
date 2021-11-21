@@ -1668,349 +1668,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_Y_set) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_Y_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (int) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->Y = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_Y_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  int result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_Y_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->Y);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_M_set) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_M_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (int) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->M = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_M_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  int result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_M_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->M);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_D_set) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_D_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (int) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->D = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_D_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  int result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_D_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->D);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_h_set) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_h_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
-  arg2 = (double) zval_get_double(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->h = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_h_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  double result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_h_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->h);
-  
-  RETVAL_DOUBLE(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_m_set) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_m_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
-  arg2 = (double) zval_get_double(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->m = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_m_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  double result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_m_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->m);
-  
-  RETVAL_DOUBLE(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_s_set) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_s_set. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  
-  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
-  arg2 = (double) zval_get_double(&args[1]);
-  /*@SWIG@*/;
-  
-  if (arg1) (arg1)->s = arg2;
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_Time_s_get) {
-  Time *arg1 = (Time *) 0 ;
-  zval args[1];
-  double result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_s_get. Expected SWIGTYPE_p_Time");
-  }
-  
-  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->s);
-  
-  RETVAL_DOUBLE(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_new_Time) {
+ZEND_NAMED_FUNCTION(_wrap_new_Time__SWIG_0) {
   Time *result = 0 ;
   
   SWIG_ResetError();
@@ -2021,6 +1679,442 @@ ZEND_NAMED_FUNCTION(_wrap_new_Time) {
   result = (Time *)new Time();
   
   SWIG_SetPointerZval(return_value, (void *)result, SWIGTYPE_p_Time, 1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_new_Time__SWIG_1) {
+  int arg1 ;
+  int arg2 ;
+  int arg3 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  zval args[6];
+  Time *result = 0 ;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 6 || zend_get_parameters_array_ex(6, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg1 = (int) zval_get_long(&args[0]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg3 = (int) zval_get_long(&args[2]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg4 = (double) zval_get_double(&args[3]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg5 = (double) zval_get_double(&args[4]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg6 = (double) zval_get_double(&args[5]);
+  /*@SWIG@*/;
+  
+  result = (Time *)new Time(arg1,arg2,arg3,arg4,arg5,arg6);
+  
+  SWIG_SetPointerZval(return_value, (void *)result, SWIGTYPE_p_Time, 1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_new_Time) {
+  int argc;
+  zval argv[6];
+  
+  argc = ZEND_NUM_ARGS();
+  zend_get_parameters_array_ex(argc, argv);
+  if (argc == 0) {
+    _wrap_new_Time__SWIG_0(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+  }
+  if (argc == 6) {
+    int _v;
+    _v = (Z_TYPE(argv[0]) == IS_LONG);
+    if (_v) {
+      _v = (Z_TYPE(argv[1]) == IS_LONG);
+      if (_v) {
+        _v = (Z_TYPE(argv[2]) == IS_LONG);
+        if (_v) {
+          _v = (Z_TYPE(argv[3]) == IS_DOUBLE);
+          if (_v) {
+            _v = (Z_TYPE(argv[4]) == IS_DOUBLE);
+            if (_v) {
+              _v = (Z_TYPE(argv[5]) == IS_DOUBLE);
+              if (_v) {
+                _wrap_new_Time__SWIG_1(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  SWIG_ErrorCode() = E_ERROR;
+  SWIG_ErrorMsg() = "No matching function for overloaded 'new_Time'";
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_year_set) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_year_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->year = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_year_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_year_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int) ((arg1)->year);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_month_set) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_month_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->month = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_month_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_month_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int) ((arg1)->month);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_day_set) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_day_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->day = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_day_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_day_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int) ((arg1)->day);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_hour_set) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_hour_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->hour = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_hour_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_hour_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double) ((arg1)->hour);
+  
+  RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_min_set) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_min_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->min = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_min_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_min_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double) ((arg1)->min);
+  
+  RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_sec_set) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_sec_set. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  if (arg1) (arg1)->sec = arg2;
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_sec_get) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_sec_get. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double) ((arg1)->sec);
+  
+  RETVAL_DOUBLE(result);
   
 thrown:
   return;
@@ -3593,8 +3687,6 @@ ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_000, 0, 0, 0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
 ZEND_END_ARG_INFO()
-ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_, 0, 0, 0)
-ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_000000, 0, 0, 0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
@@ -3618,19 +3710,19 @@ static zend_function_entry sxtwl_functions[] = {
  SWIG_ZEND_NAMED_FE(jdlist_pop,_wrap_JDList_pop,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(jdlist_get,_wrap_JDList_get,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(jdlist_set,_wrap_JDList_set,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(time_y_set,_wrap_Time_Y_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_y_get,_wrap_Time_Y_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_m_set,_wrap_Time_M_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_m_get,_wrap_Time_M_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_d_set,_wrap_Time_D_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_d_get,_wrap_Time_D_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_h_set,_wrap_Time_h_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_h_get,_wrap_Time_h_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_m_set,_wrap_Time_m_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_m_get,_wrap_Time_m_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_s_set,_wrap_Time_s_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_s_get,_wrap_Time_s_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(new_time,_wrap_new_Time,swig_arginfo_)
+ SWIG_ZEND_NAMED_FE(new_time,_wrap_new_Time,swig_arginfo_000000)
+ SWIG_ZEND_NAMED_FE(time_year_set,_wrap_Time_year_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_year_get,_wrap_Time_year_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_month_set,_wrap_Time_month_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_month_get,_wrap_Time_month_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_day_set,_wrap_Time_day_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_day_get,_wrap_Time_day_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_hour_set,_wrap_Time_hour_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_hour_get,_wrap_Time_hour_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_min_set,_wrap_Time_min_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_min_get,_wrap_Time_min_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_sec_set,_wrap_Time_sec_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_sec_get,_wrap_Time_sec_get,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(new_gz,_wrap_new_GZ,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(gz_tg_set,_wrap_GZ_tg_set,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(gz_tg_get,_wrap_GZ_tg_get,swig_arginfo_0)

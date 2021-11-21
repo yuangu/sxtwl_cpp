@@ -605,175 +605,7 @@ SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_J2000_1get(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1Y_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->Y = arg2;
-}
-
-
-SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1Y_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (int) ((arg1)->Y);
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1M_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->M = arg2;
-}
-
-
-SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1M_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (int) ((arg1)->M);
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1D_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  int arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->D = arg2;
-}
-
-
-SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1D_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (int) ((arg1)->D);
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1h_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->h = arg2;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1h_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (double) ((arg1)->h);
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1m_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->m = arg2;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1m_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (double) ((arg1)->m);
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1s_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  Time *arg1 = (Time *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  arg2 = (double)jarg2; 
-  if (arg1) (arg1)->s = arg2;
-}
-
-
-SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1s_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jdouble jresult = 0 ;
-  Time *arg1 = (Time *) 0 ;
-  double result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Time **)&jarg1; 
-  result = (double) ((arg1)->s);
-  jresult = (jdouble)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_new_1Time(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_new_1Time_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Time *result = 0 ;
   
@@ -781,6 +613,198 @@ SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_new_1Time(JNIEnv *jenv
   (void)jcls;
   result = (Time *)new Time();
   *(Time **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_com_seantone_sxtwl_sxtwlJNI_new_1Time_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2, jint jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6) {
+  jlong jresult = 0 ;
+  int arg1 ;
+  int arg2 ;
+  int arg3 ;
+  double arg4 ;
+  double arg5 ;
+  double arg6 ;
+  Time *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (int)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  arg4 = (double)jarg4; 
+  arg5 = (double)jarg5; 
+  arg6 = (double)jarg6; 
+  result = (Time *)new Time(arg1,arg2,arg3,arg4,arg5,arg6);
+  *(Time **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1year_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->year = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1year_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (int) ((arg1)->year);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1month_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->month = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1month_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (int) ((arg1)->month);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1day_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->day = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1day_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (int) ((arg1)->day);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1hour_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->hour = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1hour_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (double) ((arg1)->hour);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1min_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->min = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1min_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (double) ((arg1)->min);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1sec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->sec = arg2;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_com_seantone_sxtwl_sxtwlJNI_Time_1sec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Time **)&jarg1; 
+  result = (double) ((arg1)->sec);
+  jresult = (jdouble)result; 
   return jresult;
 }
 

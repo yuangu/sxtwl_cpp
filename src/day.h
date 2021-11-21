@@ -129,10 +129,10 @@ public:
     static Day *fromSolar(int _year, uint8_t _month, int _day)
     {
         Time *t = new Time();
-        t->h = 12, t->m = 0, t->s = 0.1;
-        t->Y = _year;
-        t->M = _month;
-        t->D = _day;
+        t->hour = 12, t->min = 0, t->sec = 0.1;
+        t->year = _year;
+        t->month = _month;
+        t->day = _day;
         int d0 = int2(JD::toJD(*t)) - J2000;
         return new Day(d0);
     }
@@ -140,13 +140,13 @@ public:
     static Day *fromLunar(int year, uint8_t month, int day, bool isRun = false)
     {
         Time *t = new Time();
-        t->h = 12, t->m = 0, t->s = 0.1;
-        t->Y = year;
-        t->M = 1;
-        t->D = 1;
+        t->hour = 12, t->min = 0, t->sec = 0.1;
+        t->year = year;
+        t->month = 1;
+        t->day = 1;
         if (month > 10)
         {
-            t->Y = year + 1;
+            t->year = year + 1;
         }
 
         int Bd0 = int2(JD::toJD(*t)) - J2000;

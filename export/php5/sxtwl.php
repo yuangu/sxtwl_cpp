@@ -180,12 +180,20 @@ class Time {
 		return array_key_exists($var, $this->_pData);
 	}
 
-	function __construct($res=null) {
-		if (is_resource($res) && get_resource_type($res) === '_p_Time') {
-			$this->_cPtr=$res;
+	function __construct($year=null,$month=null,$day=null,$hour=null,$min=null,$sec=null) {
+		if (is_resource($year) && get_resource_type($year) === '_p_Time') {
+			$this->_cPtr=$year;
 			return;
 		}
-		$this->_cPtr=new_Time();
+		switch (func_num_args()) {
+		case 0: $this->_cPtr=new_Time(); break;
+		case 1: $this->_cPtr=new_Time($year); break;
+		case 2: $this->_cPtr=new_Time($year,$month); break;
+		case 3: $this->_cPtr=new_Time($year,$month,$day); break;
+		case 4: $this->_cPtr=new_Time($year,$month,$day,$hour); break;
+		case 5: $this->_cPtr=new_Time($year,$month,$day,$hour,$min); break;
+		default: $this->_cPtr=new_Time($year,$month,$day,$hour,$min,$sec);
+		}
 	}
 }
 

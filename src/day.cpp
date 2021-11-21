@@ -50,9 +50,9 @@ void Day::checkSolarData()
 	}
 
 	Time t = JD::JD2DD(this->d0 + J2000);
-	this->y = t.Y;
-	this->d = t.D;
-	this->m = t.M;
+	this->y = t.year;
+	this->d = t.day;
+	this->m = t.month;
 }
 
 /**

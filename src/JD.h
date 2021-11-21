@@ -5,8 +5,15 @@
 
 struct Time
 {
-	int Y, M, D;
-	double h, m, s;
+	// int Y, M, D;
+	// double h, m, s;
+	Time(){};
+	Time(int year, int month, int day, double hour, double min, double sec){
+		this->year = year; this->month = month; this->day = day;
+		this->hour = hour; this-> min = min; this->sec = sec;
+	}
+	int year, month, day;
+	double hour, min, sec;
 };
 
 

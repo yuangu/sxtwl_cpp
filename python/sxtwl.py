@@ -232,15 +232,15 @@ J2000 = _sxtwl.J2000
 class Time(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
-    Y = property(_sxtwl.Time_Y_get, _sxtwl.Time_Y_set)
-    M = property(_sxtwl.Time_M_get, _sxtwl.Time_M_set)
-    D = property(_sxtwl.Time_D_get, _sxtwl.Time_D_set)
-    h = property(_sxtwl.Time_h_get, _sxtwl.Time_h_set)
-    m = property(_sxtwl.Time_m_get, _sxtwl.Time_m_set)
-    s = property(_sxtwl.Time_s_get, _sxtwl.Time_s_set)
 
-    def __init__(self):
-        _sxtwl.Time_swiginit(self, _sxtwl.new_Time())
+    def __init__(self, *args):
+        _sxtwl.Time_swiginit(self, _sxtwl.new_Time(*args))
+    year = property(_sxtwl.Time_year_get, _sxtwl.Time_year_set)
+    month = property(_sxtwl.Time_month_get, _sxtwl.Time_month_set)
+    day = property(_sxtwl.Time_day_get, _sxtwl.Time_day_set)
+    hour = property(_sxtwl.Time_hour_get, _sxtwl.Time_hour_set)
+    min = property(_sxtwl.Time_min_get, _sxtwl.Time_min_set)
+    sec = property(_sxtwl.Time_sec_get, _sxtwl.Time_sec_set)
     __swig_destroy__ = _sxtwl.delete_Time
 
 # Register Time in _sxtwl:

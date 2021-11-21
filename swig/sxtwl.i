@@ -22,8 +22,10 @@ namespace std{
 
 struct Time
 {
-	int Y, M, D;
-	double h, m, s;
+    Time();
+	Time(int year, int month, int day, double hour, double min, double sec);
+	int year, month, day;
+	double hour, min, sec;
 };
 
 
