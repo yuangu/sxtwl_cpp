@@ -7,16 +7,7 @@
 
 //===============================================================
 #ifdef _WIN32
-class MBuf : public std::stringbuf
-{
-  public:
-	int sync()
-	{
-		fputs(str().c_str(), stdout);
-		str("");
-		return 0;
-	}
-};
+#include <windows.h>
 #endif
 
 
@@ -77,7 +68,7 @@ void printDay(Day& day)
 	std::cout  << "天干:"
                << Gan[day.getYearGZ().tg] << Zhi[day.getYearGZ().dz] << "年"
 			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "月"
-			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "日"
+			   << Gan[day.getDayGZ().tg] << Zhi[day.getDayGZ().dz] << "日"
 			   << std::endl;
 };
 
@@ -92,9 +83,7 @@ int main()
 #ifdef _WIN32
 	////http://m.blog.csdn.net/article/details?id=52789570
 	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
-	setvbuf(stdout, nullptr, _IONBF, 0);
-	MBuf buf;
-	std::cout.rdbuf(&buf);
+	SetConsoleOutputCP(65001);
 #endif
     
 	do {
