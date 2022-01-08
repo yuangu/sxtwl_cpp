@@ -229,41 +229,41 @@ namespace sxtwl
 				//定节气范围
 				if (i == 1 && jiqiIndex == 23)
 				{
-					if (!SSQPtr->ZQ.size() || Bd0 + 360 < SSQPtr->ZQ[0] || Bd0 + 360 >= SSQPtr->ZQ[24])
+					if (!SSQPtr.ZQ.size() || Bd0 + 360 < SSQPtr.ZQ[0] || Bd0 + 360 >= SSQPtr.ZQ[24])
 					{
-						SSQPtr->calcY(Bd0 + 360);
+						SSQPtr.calcY(Bd0 + 360);
 					}
 					index = 1;
 				}
 				else
 				{
-					if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
+					if (!SSQPtr.ZQ.size() || Bd0 < SSQPtr.ZQ[0] || Bd0 >= SSQPtr.ZQ[24])
 					{
-						SSQPtr->calcY(Bd0);
+						SSQPtr.calcY(Bd0);
 					}
 				}
 
-				int mk = int2((SSQPtr->ZQ[index] - SSQPtr->ZQ[0]) / 30.43685);
+				int mk = int2((SSQPtr.ZQ[index] - SSQPtr.ZQ[0]) / 30.43685);
 				//相对大雪的月数计算,mk的取值范围0-12
-				if (mk < 12 && SSQPtr->ZQ[index] >= SSQPtr->ZQ[2 * mk + 1])
+				if (mk < 12 && SSQPtr.ZQ[index] >= SSQPtr.ZQ[2 * mk + 1])
 				{
 					mk++;
 				}
 
-				int D = mk + int2((SSQPtr->ZQ[12] + 390) / 365.2422) * 12 + 900000; //相对于1998年12月7(大雪)的月数,900000为正数基数
+				int D = mk + int2((SSQPtr.ZQ[12] + 390) / 365.2422) * 12 + 900000; //相对于1998年12月7(大雪)的月数,900000为正数基数
 
 				////纪日,2000年1月7日起算
-				D = SSQPtr->ZQ[index] - 6 + 9000000;
+				D = SSQPtr.ZQ[index] - 6 + 9000000;
 
 				if (i == 0)
 				{
-					startJD = SSQPtr->ZQ[index];
+					startJD = SSQPtr.ZQ[index];
 					startT = JD::JD2DD(startJD + J2000);
 					startGz.tg = D % 10;
 					startGz.dz = D % 12;
 
 					//获取准确节气的时间
-					auto jd2 = SSQPtr->ZQ[0] + dt_T(SSQPtr->ZQ[0]) - (8.0 / 24.0);
+					auto jd2 = SSQPtr.ZQ[0] + dt_T(SSQPtr.ZQ[0]) - (8.0 / 24.0);
 					auto w = XL::S_aLon(jd2 / 36525, 3);
 					w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
 
@@ -276,7 +276,7 @@ namespace sxtwl
 							D = int2(d + 0.5);
 							auto xn = int2(w / pi2 * 24 + 24000006.01) % 24;
 							w += pi2 / 24;
-							if (D < SSQPtr->ZQ[i])
+							if (D < SSQPtr.ZQ[i])
 								continue;
 							break;
 						}
@@ -292,13 +292,13 @@ namespace sxtwl
 				}
 				else
 				{
-					endJD = SSQPtr->ZQ[index];
+					endJD = SSQPtr.ZQ[index];
 					endT = JD::JD2DD(endJD + J2000);
 					endGz.tg = D % 10;
 					endGz.dz = D % 12;
 
 					//获取准确节气的时间
-					auto jd2 = SSQPtr->ZQ[0] + dt_T(SSQPtr->ZQ[0]) - (8.0 / 24.0);
+					auto jd2 = SSQPtr.ZQ[0] + dt_T(SSQPtr.ZQ[0]) - (8.0 / 24.0);
 					auto w = XL::S_aLon(jd2 / 36525, 3);
 					w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
 
@@ -311,7 +311,7 @@ namespace sxtwl
 							D = int2(d + 0.5);
 							auto xn = int2(w / pi2 * 24 + 24000006.01) % 24;
 							w += pi2 / 24;
-							if (D < SSQPtr->ZQ[i])
+							if (D < SSQPtr.ZQ[i])
 								continue;
 							break;
 						}
@@ -476,9 +476,9 @@ namespace sxtwl
 		//公历月首的儒略日,中午;
 		int Bd0 = int2(JD::toJD(t)) - J2000;
 
-		if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
+		if (!SSQPtr.ZQ.size() || Bd0 < SSQPtr.ZQ[0] || Bd0 >= SSQPtr.ZQ[24])
 		{
-			SSQPtr->calcY(Bd0);
+			SSQPtr.calcY(Bd0);
 		}
 
 		//{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
@@ -486,7 +486,7 @@ namespace sxtwl
 		static int yueIndex[] = {11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 		//需要排除11月和12月的，这个可能属于上一个月的信息
-		int leap = SSQPtr->leap - 1;
+		int leap = SSQPtr.leap - 1;
 		if (leap > 1)
 		{
 			return yueIndex[leap];
@@ -495,11 +495,11 @@ namespace sxtwl
 		//看看11月和12月是否有闰
 		t.Y = By + 1;
 		Bd0 = int2(JD::toJD(t)) - J2000;
-		if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
+		if (!SSQPtr.ZQ.size() || Bd0 < SSQPtr.ZQ[0] || Bd0 >= SSQPtr.ZQ[24])
 		{
-			SSQPtr->calcY(Bd0);
+			SSQPtr.calcY(Bd0);
 		}
-		leap = SSQPtr->leap - 1;
+		leap = SSQPtr.leap - 1;
 		if (leap > 1 || leap < 0)
 		{
 			return 0;
@@ -524,9 +524,9 @@ namespace sxtwl
 		//公历月首的儒略日,中午;
 		int Bd0 = int2(JD::toJD(t)) - J2000;
 
-		if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
+		if (!SSQPtr.ZQ.size() || Bd0 < SSQPtr.ZQ[0] || Bd0 >= SSQPtr.ZQ[24])
 		{
-			SSQPtr->calcY(Bd0);
+			SSQPtr.calcY(Bd0);
 		}
 
 		//{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
@@ -545,14 +545,14 @@ namespace sxtwl
 		}
 
 		int mk = 0;
-		int leap = SSQPtr->leap - 1;
+		int leap = SSQPtr.leap - 1;
 
 		if (isRun && ((leap < 0) || (leap >= 0 && month != yueIndex[leap])))
 		{
 			//throw CalendarException(ErrorCode_NotRun);
 		}
 
-		for (auto it = SSQPtr->ym.begin(); it != SSQPtr->ym.end(); ++it)
+		for (auto it = SSQPtr.ym.begin(); it != SSQPtr.ym.end(); ++it)
 		{
 
 			if (leap < 0)
@@ -589,9 +589,9 @@ namespace sxtwl
 		}
 
 		//阴历首月的儒略日
-		int bdi = SSQPtr->HS[mk];
+		int bdi = SSQPtr.HS[mk];
 
-		return SSQPtr->HS[mk + 1] - SSQPtr->HS[mk];
+		return SSQPtr.HS[mk + 1] - SSQPtr.HS[mk];
 	}
 	
 	//儒略日数转公历
