@@ -67,7 +67,6 @@ else:
 
 
 sxtwl_module = setuptools.Extension('_sxtwl',
-                         include_dirs=[os.path.abspath("./src"),],
                          sources=[
                           'sxtwl_wrap.cxx',
                           'src/eph.cpp', 
@@ -75,22 +74,16 @@ sxtwl_module = setuptools.Extension('_sxtwl',
                           'src/SSQ.cpp',
                           'src/sxtwl.cpp',  
                           'src/day.cpp', 
-
-                          'src/const.h',
-                           'src/day.h',
-                           'src/eph.h',
-                           'src/JD.h',
-                           'src/SSQ.h',
-                           'src/sxtwl.h',
-                           'src/XL.h'
                           ], 
-                          extra_compile_args=extra_compile_args, 
+                           include_dirs=["./src"],
+                          extra_compile_args=extra_compile_args
+                       
 )
 
 
 setuptools.setup(
     name="sxtwl",
-    version="2.0.4",
+    version="2.0.5",
     author="yuangu",
     author_email="seantone@126.com",
     description="sxtwl_cpp warpper for python",

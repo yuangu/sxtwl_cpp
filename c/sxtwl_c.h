@@ -55,6 +55,7 @@ extern "C"
 	} sxtwl_Day;
 
 
+	// 注意返回的sxtwl_Day指针，需要使用sxtwl_freeDay释放
 	CC_EX_DLL sxtwl_Day* sxtwl_after(sxtwl_Day* day, sxtwl_Day* ret, int day_num);
 	CC_EX_DLL sxtwl_Day* sxtwl_before(sxtwl_Day* day, sxtwl_Day* ret, int day_num);
 
