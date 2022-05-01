@@ -7542,7 +7542,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_year_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_Y_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
@@ -7552,18 +7552,18 @@ SWIGINTERN PyObject *_wrap_Time_year_set(PyObject *SWIGUNUSEDPARM(self), PyObjec
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_year_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_Y_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_year_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_Y_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_year_set" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_Y_set" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->year = arg2;
+  if (arg1) (arg1)->Y = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7571,7 +7571,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_year_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_Y_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7583,10 +7583,10 @@ SWIGINTERN PyObject *_wrap_Time_year_get(PyObject *SWIGUNUSEDPARM(self), PyObjec
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_year_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_Y_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (int) ((arg1)->year);
+  result = (int) ((arg1)->Y);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -7594,7 +7594,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_month_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_M_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
@@ -7604,18 +7604,18 @@ SWIGINTERN PyObject *_wrap_Time_month_set(PyObject *SWIGUNUSEDPARM(self), PyObje
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_month_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_M_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_month_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_M_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_month_set" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_M_set" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->month = arg2;
+  if (arg1) (arg1)->M = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7623,7 +7623,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_month_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_M_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7635,10 +7635,10 @@ SWIGINTERN PyObject *_wrap_Time_month_get(PyObject *SWIGUNUSEDPARM(self), PyObje
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_month_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_M_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (int) ((arg1)->month);
+  result = (int) ((arg1)->M);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -7646,7 +7646,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_day_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_D_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
@@ -7656,18 +7656,18 @@ SWIGINTERN PyObject *_wrap_Time_day_set(PyObject *SWIGUNUSEDPARM(self), PyObject
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_day_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_D_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_day_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_D_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_day_set" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_D_set" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
-  if (arg1) (arg1)->day = arg2;
+  if (arg1) (arg1)->D = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7675,7 +7675,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_day_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_D_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7687,10 +7687,10 @@ SWIGINTERN PyObject *_wrap_Time_day_get(PyObject *SWIGUNUSEDPARM(self), PyObject
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_day_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_D_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (int) ((arg1)->day);
+  result = (int) ((arg1)->D);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -7698,7 +7698,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_hour_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_h_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
@@ -7708,18 +7708,18 @@ SWIGINTERN PyObject *_wrap_Time_hour_set(PyObject *SWIGUNUSEDPARM(self), PyObjec
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_hour_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_h_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_hour_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_h_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_hour_set" "', argument " "2"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_h_set" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
-  if (arg1) (arg1)->hour = arg2;
+  if (arg1) (arg1)->h = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7727,7 +7727,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_hour_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_h_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7739,10 +7739,10 @@ SWIGINTERN PyObject *_wrap_Time_hour_get(PyObject *SWIGUNUSEDPARM(self), PyObjec
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_hour_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_h_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (double) ((arg1)->hour);
+  result = (double) ((arg1)->h);
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -7750,7 +7750,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_min_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_m_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
@@ -7760,18 +7760,18 @@ SWIGINTERN PyObject *_wrap_Time_min_set(PyObject *SWIGUNUSEDPARM(self), PyObject
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_min_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_m_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_min_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_m_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_min_set" "', argument " "2"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_m_set" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
-  if (arg1) (arg1)->min = arg2;
+  if (arg1) (arg1)->m = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7779,7 +7779,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_min_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_m_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7791,10 +7791,10 @@ SWIGINTERN PyObject *_wrap_Time_min_get(PyObject *SWIGUNUSEDPARM(self), PyObject
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_min_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_m_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (double) ((arg1)->min);
+  result = (double) ((arg1)->m);
   resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
@@ -7802,7 +7802,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_sec_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_s_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
@@ -7812,18 +7812,18 @@ SWIGINTERN PyObject *_wrap_Time_sec_set(PyObject *SWIGUNUSEDPARM(self), PyObject
   int ecode2 = 0 ;
   PyObject *swig_obj[2] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Time_sec_set", 2, 2, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "Time_s_set", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_sec_set" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_s_set" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
   ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_sec_set" "', argument " "2"" of type '" "double""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_s_set" "', argument " "2"" of type '" "double""'");
   } 
   arg2 = static_cast< double >(val2);
-  if (arg1) (arg1)->sec = arg2;
+  if (arg1) (arg1)->s = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7831,7 +7831,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Time_sec_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Time_s_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Time *arg1 = (Time *) 0 ;
   void *argp1 = 0 ;
@@ -7843,11 +7843,323 @@ SWIGINTERN PyObject *_wrap_Time_sec_get(PyObject *SWIGUNUSEDPARM(self), PyObject
   swig_obj[0] = args;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_sec_get" "', argument " "1"" of type '" "Time *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_s_get" "', argument " "1"" of type '" "Time *""'"); 
   }
   arg1 = reinterpret_cast< Time * >(argp1);
-  result = (double) ((arg1)->sec);
+  result = (double) ((arg1)->s);
   resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getYear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  int result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getYear" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (int)(arg1)->getYear();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setYear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setYear", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setYear" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setYear" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setYear(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setMonth(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setMonth", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setMonth" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setMonth" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setMonth(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getMonth(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  int result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getMonth" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (int)(arg1)->getMonth();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getDay(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  int result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getDay" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (int)(arg1)->getDay();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setDay(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setDay", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setDay" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setDay" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setDay(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getHour(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getHour" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (double)(arg1)->getHour();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setHour(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setHour", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setHour" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setHour" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  (arg1)->setHour(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getMin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getMin" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (double)(arg1)->getMin();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setMour(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setMour", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setMour" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setMour" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  (arg1)->setMour(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_getSec(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_getSec" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  result = (double)(arg1)->getSec();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Time_setSec(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Time_setSec", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Time, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Time_setSec" "', argument " "1"" of type '" "Time *""'"); 
+  }
+  arg1 = reinterpret_cast< Time * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Time_setSec" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  (arg1)->setSec(arg2);
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -8627,7 +8939,44 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Day_getHourGZ(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Day_getHourGZ__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned char val2 ;
+  int ecode2 = 0 ;
+  bool val3 ;
+  int ecode3 = 0 ;
+  GZ result;
+  
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Day, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_getHourGZ" "', argument " "1"" of type '" "Day *""'"); 
+  }
+  arg1 = reinterpret_cast< Day * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_char(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Day_getHourGZ" "', argument " "2"" of type '" "uint8_t""'");
+  } 
+  arg2 = static_cast< uint8_t >(val2);
+  ecode3 = SWIG_AsVal_bool(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Day_getHourGZ" "', argument " "3"" of type '" "bool""'");
+  } 
+  arg3 = static_cast< bool >(val3);
+  result = (arg1)->getHourGZ(arg2,arg3);
+  resultobj = SWIG_NewPointerObj((new GZ(static_cast< const GZ& >(result))), SWIGTYPE_p_GZ, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Day_getHourGZ__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   Day *arg1 = (Day *) 0 ;
   uint8_t arg2 ;
@@ -8635,10 +8984,9 @@ SWIGINTERN PyObject *_wrap_Day_getHourGZ(PyObject *SWIGUNUSEDPARM(self), PyObjec
   int res1 = 0 ;
   unsigned char val2 ;
   int ecode2 = 0 ;
-  PyObject *swig_obj[2] ;
   GZ result;
   
-  if (!SWIG_Python_UnpackTuple(args, "Day_getHourGZ", 2, 2, swig_obj)) SWIG_fail;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Day, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Day_getHourGZ" "', argument " "1"" of type '" "Day *""'"); 
@@ -8654,6 +9002,60 @@ SWIGINTERN PyObject *_wrap_Day_getHourGZ(PyObject *SWIGUNUSEDPARM(self), PyObjec
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Day_getHourGZ(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "Day_getHourGZ", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_Day, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_char(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_Day_getHourGZ__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_Day, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_char(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Day_getHourGZ__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'Day_getHourGZ'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Day::getHourGZ(uint8_t,bool)\n"
+    "    Day::getHourGZ(uint8_t)\n");
+  return 0;
 }
 
 
@@ -9198,7 +9600,44 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_getShiGz(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_getShiGz__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  uint8_t arg1 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  unsigned char val1 ;
+  int ecode1 = 0 ;
+  unsigned char val2 ;
+  int ecode2 = 0 ;
+  bool val3 ;
+  int ecode3 = 0 ;
+  GZ result;
+  
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  ecode1 = SWIG_AsVal_unsigned_SS_char(swig_obj[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "getShiGz" "', argument " "1"" of type '" "uint8_t""'");
+  } 
+  arg1 = static_cast< uint8_t >(val1);
+  ecode2 = SWIG_AsVal_unsigned_SS_char(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "getShiGz" "', argument " "2"" of type '" "uint8_t""'");
+  } 
+  arg2 = static_cast< uint8_t >(val2);
+  ecode3 = SWIG_AsVal_bool(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "getShiGz" "', argument " "3"" of type '" "bool""'");
+  } 
+  arg3 = static_cast< bool >(val3);
+  result = sxtwl::getShiGz(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj((new GZ(static_cast< const GZ& >(result))), SWIGTYPE_p_GZ, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_getShiGz__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   uint8_t arg1 ;
   uint8_t arg2 ;
@@ -9206,10 +9645,9 @@ SWIGINTERN PyObject *_wrap_getShiGz(PyObject *SWIGUNUSEDPARM(self), PyObject *ar
   int ecode1 = 0 ;
   unsigned char val2 ;
   int ecode2 = 0 ;
-  PyObject *swig_obj[2] ;
   GZ result;
   
-  if (!SWIG_Python_UnpackTuple(args, "getShiGz", 2, 2, swig_obj)) SWIG_fail;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_char(swig_obj[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "getShiGz" "', argument " "1"" of type '" "uint8_t""'");
@@ -9225,6 +9663,62 @@ SWIGINTERN PyObject *_wrap_getShiGz(PyObject *SWIGUNUSEDPARM(self), PyObject *ar
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_getShiGz(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "getShiGz", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_char(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_char(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_getShiGz__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_char(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_char(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_bool(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_getShiGz__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'getShiGz'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    sxtwl::getShiGz(uint8_t,uint8_t,bool)\n"
+    "    sxtwl::getShiGz(uint8_t,uint8_t)\n");
+  return 0;
 }
 
 
@@ -9478,18 +9972,30 @@ static PyMethodDef SwigMethods[] = {
 	 { "JDList_swigregister", JDList_swigregister, METH_O, NULL},
 	 { "JDList_swiginit", JDList_swiginit, METH_VARARGS, NULL},
 	 { "new_Time", _wrap_new_Time, METH_VARARGS, NULL},
-	 { "Time_year_set", _wrap_Time_year_set, METH_VARARGS, NULL},
-	 { "Time_year_get", _wrap_Time_year_get, METH_O, NULL},
-	 { "Time_month_set", _wrap_Time_month_set, METH_VARARGS, NULL},
-	 { "Time_month_get", _wrap_Time_month_get, METH_O, NULL},
-	 { "Time_day_set", _wrap_Time_day_set, METH_VARARGS, NULL},
-	 { "Time_day_get", _wrap_Time_day_get, METH_O, NULL},
-	 { "Time_hour_set", _wrap_Time_hour_set, METH_VARARGS, NULL},
-	 { "Time_hour_get", _wrap_Time_hour_get, METH_O, NULL},
-	 { "Time_min_set", _wrap_Time_min_set, METH_VARARGS, NULL},
-	 { "Time_min_get", _wrap_Time_min_get, METH_O, NULL},
-	 { "Time_sec_set", _wrap_Time_sec_set, METH_VARARGS, NULL},
-	 { "Time_sec_get", _wrap_Time_sec_get, METH_O, NULL},
+	 { "Time_Y_set", _wrap_Time_Y_set, METH_VARARGS, NULL},
+	 { "Time_Y_get", _wrap_Time_Y_get, METH_O, NULL},
+	 { "Time_M_set", _wrap_Time_M_set, METH_VARARGS, NULL},
+	 { "Time_M_get", _wrap_Time_M_get, METH_O, NULL},
+	 { "Time_D_set", _wrap_Time_D_set, METH_VARARGS, NULL},
+	 { "Time_D_get", _wrap_Time_D_get, METH_O, NULL},
+	 { "Time_h_set", _wrap_Time_h_set, METH_VARARGS, NULL},
+	 { "Time_h_get", _wrap_Time_h_get, METH_O, NULL},
+	 { "Time_m_set", _wrap_Time_m_set, METH_VARARGS, NULL},
+	 { "Time_m_get", _wrap_Time_m_get, METH_O, NULL},
+	 { "Time_s_set", _wrap_Time_s_set, METH_VARARGS, NULL},
+	 { "Time_s_get", _wrap_Time_s_get, METH_O, NULL},
+	 { "Time_getYear", _wrap_Time_getYear, METH_O, NULL},
+	 { "Time_setYear", _wrap_Time_setYear, METH_VARARGS, NULL},
+	 { "Time_setMonth", _wrap_Time_setMonth, METH_VARARGS, NULL},
+	 { "Time_getMonth", _wrap_Time_getMonth, METH_O, NULL},
+	 { "Time_getDay", _wrap_Time_getDay, METH_O, NULL},
+	 { "Time_setDay", _wrap_Time_setDay, METH_VARARGS, NULL},
+	 { "Time_getHour", _wrap_Time_getHour, METH_O, NULL},
+	 { "Time_setHour", _wrap_Time_setHour, METH_VARARGS, NULL},
+	 { "Time_getMin", _wrap_Time_getMin, METH_O, NULL},
+	 { "Time_setMour", _wrap_Time_setMour, METH_VARARGS, NULL},
+	 { "Time_getSec", _wrap_Time_getSec, METH_O, NULL},
+	 { "Time_setSec", _wrap_Time_setSec, METH_VARARGS, NULL},
 	 { "delete_Time", _wrap_delete_Time, METH_O, NULL},
 	 { "Time_swigregister", Time_swigregister, METH_O, NULL},
 	 { "Time_swiginit", Time_swiginit, METH_VARARGS, NULL},

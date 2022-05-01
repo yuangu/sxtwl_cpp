@@ -38,27 +38,27 @@ Time JD::JD2DD(double jd)
 	{
 		c = int((D - 1867216.25) / 36524.25), D += 1 + c - int2(c / 4);
 	}
-	D += 1524;               r.year = int2((D - 122.1) / 365.25);//年数
-	D -= int2(365.25*r.year);   r.month = int2(D / 30.601); //月数
-	D -= int2(30.601*r.month);   r.day = D; //日数
-	if (r.month > 13)
+	D += 1524;               r.Y = int2((D - 122.1) / 365.25);//年数
+	D -= int2(365.25*r.Y);   r.M = int2(D / 30.601); //月数
+	D -= int2(30.601*r.M);   r.D = D; //日数
+	if (r.M > 13)
 	{
-		r.month -= 13, r.year -= 4715;
+		r.M -= 13, r.Y -= 4715;
 	}
 	else
 	{
-		r.month -= 1, r.year -= 4716;
+		r.M -= 1, r.Y -= 4716;
 	}
 	//日的小数转为时分秒
-	F *= 24; r.hour = int2(F); F -= r.hour;
-	F *= 60; r.min = int2(F); F -= r.min;
-	F *= 60; r.sec = F;
+	F *= 24; r.h = int2(F); F -= r.h;
+	F *= 60; r.m = int2(F); F -= r.m;
+	F *= 60; r.s = F;
 	return r;
 }
 
 double JD::toJD(Time& time)
 {
-	return JD::DD2JD(time.year, time.month, time.day + ((time.sec / 60 + time.min) / 60 + time.hour) / 24);
+	return JD::DD2JD(time.Y, time.M, time.D + ((time.s / 60 + time.m) / 60 + time.h) / 24);
 }
 
 //提取jd中的时间(去除日期);

@@ -24,8 +24,24 @@ struct Time
 {
     Time();
 	Time(int year, int month, int day, double hour, double min, double sec);
-	int year, month, day;
-	double hour, min, sec;
+	int Y, M, D;
+	double h, m, s;
+
+//=========================================================
+//time的操作方法
+    int getYear();
+	void setYear(int year);
+	void setMonth(int month) ;
+	int getMonth() ;
+	int getDay() ;
+	void setDay(int day);
+	double getHour();
+	void setHour(double hour);
+	double getMin() ;
+	void setMour(double  min);
+	double getSec();
+	void setSec(double  sec);
+//=========================================================
 };
 
 
@@ -59,7 +75,7 @@ public:
     GZ getYearGZ(bool chineseNewYearBoundary = false);
     GZ getMonthGZ();
     GZ getDayGZ();
-    GZ getHourGZ(uint8_t hour);
+    GZ getHourGZ(uint8_t hour, bool isZaoWanZiShi = true);
     bool  isLunarLeap();
 
     int getSolarYear();
@@ -79,13 +95,12 @@ public:
 
 namespace sxtwl
 {
-
 	Day *fromSolar(int year, uint8_t month, int day);
 	Day *fromLunar(int year, uint8_t month, int day, bool isRun = false);
 	//通过四柱获取年月日
 	std::vector<double> siZhu2Year(GZ year, GZ  yue, GZ  ri, GZ  shi, int fromYear, int  toYear);
 	//获取时辰上的那个天干
-    GZ  getShiGz(uint8_t dayTg,  uint8_t hour);
+    GZ  getShiGz(uint8_t dayTg,  uint8_t hour, bool isZaoWanZiShi = true);
 	//获取一年中的润月(不存，则返回0)
 	uint8_t getRunMonth(int By);
 	//获取一月中的阴日数量 

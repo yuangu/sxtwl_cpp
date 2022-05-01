@@ -49,64 +49,118 @@ public class Time : global::System.IDisposable {
   public Time(int year, int month, int day, double hour, double min, double sec) : this(sxtwlPINVOKE.new_Time__SWIG_1(year, month, day, hour, min, sec), true) {
   }
 
-  public int year {
+  public int Y {
     set {
-      sxtwlPINVOKE.Time_year_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_Y_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_year_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_Y_get(swigCPtr);
       return ret;
     } 
   }
 
-  public int month {
+  public int M {
     set {
-      sxtwlPINVOKE.Time_month_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_M_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_month_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_M_get(swigCPtr);
       return ret;
     } 
   }
 
-  public int day {
+  public int D {
     set {
-      sxtwlPINVOKE.Time_day_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_D_set(swigCPtr, value);
     } 
     get {
-      int ret = sxtwlPINVOKE.Time_day_get(swigCPtr);
+      int ret = sxtwlPINVOKE.Time_D_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double hour {
+  public double h {
     set {
-      sxtwlPINVOKE.Time_hour_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_h_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_hour_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_h_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double min {
+  public double m {
     set {
-      sxtwlPINVOKE.Time_min_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_m_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_min_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_m_get(swigCPtr);
       return ret;
     } 
   }
 
-  public double sec {
+  public double s {
     set {
-      sxtwlPINVOKE.Time_sec_set(swigCPtr, value);
+      sxtwlPINVOKE.Time_s_set(swigCPtr, value);
     } 
     get {
-      double ret = sxtwlPINVOKE.Time_sec_get(swigCPtr);
+      double ret = sxtwlPINVOKE.Time_s_get(swigCPtr);
       return ret;
     } 
+  }
+
+  public int getYear() {
+    int ret = sxtwlPINVOKE.Time_getYear(swigCPtr);
+    return ret;
+  }
+
+  public void setYear(int year) {
+    sxtwlPINVOKE.Time_setYear(swigCPtr, year);
+  }
+
+  public void setMonth(int month) {
+    sxtwlPINVOKE.Time_setMonth(swigCPtr, month);
+  }
+
+  public int getMonth() {
+    int ret = sxtwlPINVOKE.Time_getMonth(swigCPtr);
+    return ret;
+  }
+
+  public int getDay() {
+    int ret = sxtwlPINVOKE.Time_getDay(swigCPtr);
+    return ret;
+  }
+
+  public void setDay(int day) {
+    sxtwlPINVOKE.Time_setDay(swigCPtr, day);
+  }
+
+  public double getHour() {
+    double ret = sxtwlPINVOKE.Time_getHour(swigCPtr);
+    return ret;
+  }
+
+  public void setHour(double hour) {
+    sxtwlPINVOKE.Time_setHour(swigCPtr, hour);
+  }
+
+  public double getMin() {
+    double ret = sxtwlPINVOKE.Time_getMin(swigCPtr);
+    return ret;
+  }
+
+  public void setMour(double min) {
+    sxtwlPINVOKE.Time_setMour(swigCPtr, min);
+  }
+
+  public double getSec() {
+    double ret = sxtwlPINVOKE.Time_getSec(swigCPtr);
+    return ret;
+  }
+
+  public void setSec(double sec) {
+    sxtwlPINVOKE.Time_setSec(swigCPtr, sec);
   }
 
 }

@@ -97,6 +97,8 @@ int main()
 	std::cout.rdbuf(&buf);
 #endif
     
+    GZ hourGZ =  sxtwl::getShiGz(0, 23, false);
+
 	do {
 		Day* day = sxtwl::fromSolar(2021, 11, 14);
 		day->getHourGZ(8);
@@ -111,8 +113,8 @@ int main()
 			if (day->hasJieQi()) {
 				auto  jd = day->getJieQiJD();
 				auto t = sxtwl::JD2DD(jd);
-				std::cout <<jqmc[day->getJieQi()] << ": " << t.Y << "-" << t.M << "-"
-					<< t.D << " " << int(t.h) << ":" << int(t.m) << ":" << round_double(t.s)
+				std::cout <<jqmc[day->getJieQi()] << ": " << t.getYear() << "-" << t.getMonth() << "-"
+					<< t.getDay() << " " << int(t.getHour()) << ":" << int(t.getMin()) << ":" << round_double(t.getSec())
 					<< std::endl;
 			}
 		}
@@ -164,8 +166,6 @@ int main()
         printf("finish");
         
     }
-    
-   
     
     return 0;
 }

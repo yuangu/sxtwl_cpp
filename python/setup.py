@@ -68,12 +68,21 @@ else:
 
 sxtwl_module = setuptools.Extension('_sxtwl',
                          include_dirs=[os.path.abspath("./src"),],
-                         sources=['sxtwl_wrap.cxx',
+                         sources=[
+                          'sxtwl_wrap.cxx',
                           'src/eph.cpp', 
                           'src/JD.cpp',
                           'src/SSQ.cpp',
                           'src/sxtwl.cpp',  
-                          'src/day.cpp',                     
+                          'src/day.cpp', 
+
+                          'src/const.h',
+                           'src/day.h',
+                           'src/eph.h',
+                           'src/JD.h',
+                           'src/SSQ.h',
+                           'src/sxtwl.h',
+                           'src/XL.h'
                           ], 
                           extra_compile_args=extra_compile_args, 
 )

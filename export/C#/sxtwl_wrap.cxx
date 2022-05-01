@@ -889,135 +889,267 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Time__SWIG_1(int jarg1, int jarg2, int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_year_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_Y_set(void * jarg1, int jarg2) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (int)jarg2; 
-  if (arg1) (arg1)->year = arg2;
+  if (arg1) (arg1)->Y = arg2;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Time_year_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_Y_get(void * jarg1) {
   int jresult ;
   Time *arg1 = (Time *) 0 ;
   int result;
   
   arg1 = (Time *)jarg1; 
-  result = (int) ((arg1)->year);
+  result = (int) ((arg1)->Y);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_month_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_M_set(void * jarg1, int jarg2) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (int)jarg2; 
-  if (arg1) (arg1)->month = arg2;
+  if (arg1) (arg1)->M = arg2;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Time_month_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_M_get(void * jarg1) {
   int jresult ;
   Time *arg1 = (Time *) 0 ;
   int result;
   
   arg1 = (Time *)jarg1; 
-  result = (int) ((arg1)->month);
+  result = (int) ((arg1)->M);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_day_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_D_set(void * jarg1, int jarg2) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (int)jarg2; 
-  if (arg1) (arg1)->day = arg2;
+  if (arg1) (arg1)->D = arg2;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Time_day_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_D_get(void * jarg1) {
   int jresult ;
   Time *arg1 = (Time *) 0 ;
   int result;
   
   arg1 = (Time *)jarg1; 
-  result = (int) ((arg1)->day);
+  result = (int) ((arg1)->D);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_hour_set(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_h_set(void * jarg1, double jarg2) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (double)jarg2; 
-  if (arg1) (arg1)->hour = arg2;
+  if (arg1) (arg1)->h = arg2;
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Time_hour_get(void * jarg1) {
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_h_get(void * jarg1) {
   double jresult ;
   Time *arg1 = (Time *) 0 ;
   double result;
   
   arg1 = (Time *)jarg1; 
-  result = (double) ((arg1)->hour);
+  result = (double) ((arg1)->h);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_min_set(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_m_set(void * jarg1, double jarg2) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (double)jarg2; 
-  if (arg1) (arg1)->min = arg2;
+  if (arg1) (arg1)->m = arg2;
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Time_min_get(void * jarg1) {
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_m_get(void * jarg1) {
   double jresult ;
   Time *arg1 = (Time *) 0 ;
   double result;
   
   arg1 = (Time *)jarg1; 
-  result = (double) ((arg1)->min);
+  result = (double) ((arg1)->m);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Time_sec_set(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_s_set(void * jarg1, double jarg2) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
   arg1 = (Time *)jarg1; 
   arg2 = (double)jarg2; 
-  if (arg1) (arg1)->sec = arg2;
+  if (arg1) (arg1)->s = arg2;
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Time_sec_get(void * jarg1) {
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_s_get(void * jarg1) {
   double jresult ;
   Time *arg1 = (Time *) 0 ;
   double result;
   
   arg1 = (Time *)jarg1; 
-  result = (double) ((arg1)->sec);
+  result = (double) ((arg1)->s);
   jresult = result; 
   return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_getYear(void * jarg1) {
+  int jresult ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (int)(arg1)->getYear();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setYear(void * jarg1, int jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (int)jarg2; 
+  (arg1)->setYear(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setMonth(void * jarg1, int jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (int)jarg2; 
+  (arg1)->setMonth(arg2);
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_getMonth(void * jarg1) {
+  int jresult ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (int)(arg1)->getMonth();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Time_getDay(void * jarg1) {
+  int jresult ;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (int)(arg1)->getDay();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setDay(void * jarg1, int jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (int)jarg2; 
+  (arg1)->setDay(arg2);
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_getHour(void * jarg1) {
+  double jresult ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (double)(arg1)->getHour();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setHour(void * jarg1, double jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setHour(arg2);
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_getMin(void * jarg1) {
+  double jresult ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (double)(arg1)->getMin();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setMour(void * jarg1, double jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setMour(arg2);
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_Time_getSec(void * jarg1) {
+  double jresult ;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  arg1 = (Time *)jarg1; 
+  result = (double)(arg1)->getSec();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Time_setSec(void * jarg1, double jarg2) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  arg1 = (Time *)jarg1; 
+  arg2 = (double)jarg2; 
+  (arg1)->setSec(arg2);
 }
 
 
@@ -1283,7 +1415,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getDayGZ(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getHourGZ(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getHourGZ__SWIG_0(void * jarg1, unsigned char jarg2, unsigned int jarg3) {
+  void * jresult ;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  GZ result;
+  
+  arg1 = (Day *)jarg1; 
+  arg2 = (uint8_t)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = (arg1)->getHourGZ(arg2,arg3);
+  jresult = new GZ((const GZ &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Day_getHourGZ__SWIG_1(void * jarg1, unsigned char jarg2) {
   void * jresult ;
   Day *arg1 = (Day *) 0 ;
   uint8_t arg2 ;
@@ -1521,7 +1669,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_siZhu2Year(void * jarg1, void * jarg2, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_getShiGz(unsigned char jarg1, unsigned char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_getShiGz__SWIG_0(unsigned char jarg1, unsigned char jarg2, unsigned int jarg3) {
+  void * jresult ;
+  uint8_t arg1 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  GZ result;
+  
+  arg1 = (uint8_t)jarg1; 
+  arg2 = (uint8_t)jarg2; 
+  arg3 = jarg3 ? true : false; 
+  result = sxtwl::getShiGz(arg1,arg2,arg3);
+  jresult = new GZ((const GZ &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_getShiGz__SWIG_1(unsigned char jarg1, unsigned char jarg2) {
   void * jresult ;
   uint8_t arg1 ;
   uint8_t arg2 ;

@@ -279,41 +279,77 @@ class sxtwlPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_new_Time__SWIG_1")]
   public static extern global::System.IntPtr new_Time__SWIG_1(int jarg1, int jarg2, int jarg3, double jarg4, double jarg5, double jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_year_set")]
-  public static extern void Time_year_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_Y_set")]
+  public static extern void Time_Y_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_year_get")]
-  public static extern int Time_year_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_Y_get")]
+  public static extern int Time_Y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_month_set")]
-  public static extern void Time_month_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_M_set")]
+  public static extern void Time_M_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_month_get")]
-  public static extern int Time_month_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_M_get")]
+  public static extern int Time_M_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_day_set")]
-  public static extern void Time_day_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_D_set")]
+  public static extern void Time_D_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_day_get")]
-  public static extern int Time_day_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_D_get")]
+  public static extern int Time_D_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_hour_set")]
-  public static extern void Time_hour_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_h_set")]
+  public static extern void Time_h_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_hour_get")]
-  public static extern double Time_hour_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_h_get")]
+  public static extern double Time_h_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_min_set")]
-  public static extern void Time_min_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_m_set")]
+  public static extern void Time_m_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_min_get")]
-  public static extern double Time_min_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_m_get")]
+  public static extern double Time_m_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_sec_set")]
-  public static extern void Time_sec_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_s_set")]
+  public static extern void Time_s_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_sec_get")]
-  public static extern double Time_sec_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_s_get")]
+  public static extern double Time_s_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getYear")]
+  public static extern int Time_getYear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setYear")]
+  public static extern void Time_setYear(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setMonth")]
+  public static extern void Time_setMonth(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getMonth")]
+  public static extern int Time_getMonth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getDay")]
+  public static extern int Time_getDay(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setDay")]
+  public static extern void Time_setDay(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getHour")]
+  public static extern double Time_getHour(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setHour")]
+  public static extern void Time_setHour(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getMin")]
+  public static extern double Time_getMin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setMour")]
+  public static extern void Time_setMour(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_getSec")]
+  public static extern double Time_getSec(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Time_setSec")]
+  public static extern void Time_setSec(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_delete_Time")]
   public static extern void delete_Time(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -378,8 +414,11 @@ class sxtwlPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getDayGZ")]
   public static extern global::System.IntPtr Day_getDayGZ(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getHourGZ")]
-  public static extern global::System.IntPtr Day_getHourGZ(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getHourGZ__SWIG_0")]
+  public static extern global::System.IntPtr Day_getHourGZ__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_getHourGZ__SWIG_1")]
+  public static extern global::System.IntPtr Day_getHourGZ__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_Day_isLunarLeap")]
   public static extern bool Day_isLunarLeap(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -426,8 +465,11 @@ class sxtwlPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_siZhu2Year")]
   public static extern global::System.IntPtr siZhu2Year(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_getShiGz")]
-  public static extern global::System.IntPtr getShiGz(byte jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_getShiGz__SWIG_0")]
+  public static extern global::System.IntPtr getShiGz__SWIG_0(byte jarg1, byte jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_getShiGz__SWIG_1")]
+  public static extern global::System.IntPtr getShiGz__SWIG_1(byte jarg1, byte jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("sxtwl", EntryPoint="CSharp_getRunMonth")]
   public static extern byte getRunMonth(int jarg1);

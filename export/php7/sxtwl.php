@@ -55,8 +55,8 @@ abstract class sxtwl {
 		return $r;
 	}
 
-	static function getShiGz($dayTg,$hour) {
-		$r=getShiGz($dayTg,$hour);
+	static function getShiGz($dayTg,$hour,$isZaoWanZiShi=true) {
+		$r=getShiGz($dayTg,$hour,$isZaoWanZiShi);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);
@@ -194,6 +194,54 @@ class Time {
 		case 5: $this->_cPtr=new_Time($year,$month,$day,$hour,$min); break;
 		default: $this->_cPtr=new_Time($year,$month,$day,$hour,$min,$sec);
 		}
+	}
+
+	function getYear() {
+		return Time_getYear($this->_cPtr);
+	}
+
+	function setYear($year) {
+		Time_setYear($this->_cPtr,$year);
+	}
+
+	function setMonth($month) {
+		Time_setMonth($this->_cPtr,$month);
+	}
+
+	function getMonth() {
+		return Time_getMonth($this->_cPtr);
+	}
+
+	function getDay() {
+		return Time_getDay($this->_cPtr);
+	}
+
+	function setDay($day) {
+		Time_setDay($this->_cPtr,$day);
+	}
+
+	function getHour() {
+		return Time_getHour($this->_cPtr);
+	}
+
+	function setHour($hour) {
+		Time_setHour($this->_cPtr,$hour);
+	}
+
+	function getMin() {
+		return Time_getMin($this->_cPtr);
+	}
+
+	function setMour($min) {
+		Time_setMour($this->_cPtr,$min);
+	}
+
+	function getSec() {
+		return Time_getSec($this->_cPtr);
+	}
+
+	function setSec($sec) {
+		Time_setSec($this->_cPtr,$sec);
 	}
 }
 
@@ -334,8 +382,8 @@ class Day {
 		return $r;
 	}
 
-	function getHourGZ($hour) {
-		$r=Day_getHourGZ($this->_cPtr,$hour);
+	function getHourGZ($hour,$isZaoWanZiShi=true) {
+		$r=Day_getHourGZ($this->_cPtr,$hour,$isZaoWanZiShi);
 		if (is_resource($r)) {
 			$c=substr(get_resource_type($r), (strpos(get_resource_type($r), '__') ? strpos(get_resource_type($r), '__') + 2 : 3));
 			if (class_exists($c)) return new $c($r);

@@ -207,10 +207,10 @@ namespace sxtwl
 
 			//计算1月1号的信息
 			Time t;
-			t.hour = 12, t.min = 0, t.sec = 0.1;
-			t.year = year;
-			t.month = 9;
-			t.day = 1;
+			t.h = 12, t.m = 0, t.s = 0.1;
+			t.Y = year;
+			t.M = 9;
+			t.D = 1;
 
 			//公历月首的儒略日,中午;
 			int Bd0 = int2(JD::toJD(t)) - J2000;
@@ -284,9 +284,9 @@ namespace sxtwl
 						if (index != i)
 							continue;
 						Time t1 = JD::JD2DD(d);
-						startT.hour = t1.hour;
-						startT.min = t1.min;
-						startT.sec = t1.sec;
+						startT.h = t1.h;
+						startT.m = t1.m;
+						startT.s = t1.s;
 						break;
 					}
 				}
@@ -319,9 +319,9 @@ namespace sxtwl
 						if (index != i)
 							continue;
 						Time t1 = JD::JD2DD(d);
-						endT.hour = t1.hour;
-						endT.min = t1.min;
-						endT.sec = t1.sec;
+						endT.h = t1.h;
+						endT.m = t1.m;
+						endT.s = t1.s;
 						break;
 					}
 				}
@@ -344,16 +344,16 @@ namespace sxtwl
 			{
 
 				Time mayBet = JD::JD2DD(startDay + J2000);
-				mayBet.hour = hour;
-				mayBet.min = 0;
-				mayBet.sec = 0;
+				mayBet.h = hour;
+				mayBet.m = 0;
+				mayBet.s = 0;
 
 				if (diff == 0)
 				{
 					bool isMatch = false;
 
 					//此时算上一个月的
-					if (hour > t.hour)
+					if (hour > t.h)
 					{
 						isMatch = true;
 					}
@@ -361,18 +361,18 @@ namespace sxtwl
 					{
 						if (hour != 0 || hour != 23)
 						{
-							mayBet.hour = hour;
-							mayBet.min = 59;
-							mayBet.sec = 0;
+							mayBet.h = hour;
+							mayBet.m = 59;
+							mayBet.s = 0;
 						}
 						else
 						{
-							mayBet.hour = hour;
-							mayBet.min = 59;
-							mayBet.sec = 0;
+							mayBet.h = hour;
+							mayBet.m = 59;
+							mayBet.s = 0;
 						}
 
-						if (mayBet.hour >= t.hour && t.min < 59)
+						if (mayBet.h >= t.h && t.m < 59)
 						{
 							isMatch = true;
 						}
@@ -389,13 +389,13 @@ namespace sxtwl
 					bool isMatch = false;
 
 					//此时算上一个月的
-					if (hour < endT.hour)
+					if (hour < endT.h)
 					{
 						isMatch = true;
 					}
 					else
 					{
-						if (mayBet.hour == endT.hour && endT.min > 0)
+						if (mayBet.h == endT.h && endT.m > 0)
 						{
 							isMatch = true;
 						}
@@ -418,7 +418,7 @@ namespace sxtwl
 		return ret;
 	}
 
-	GZ getShiGz(uint8_t dayTg, uint8_t hour)
+	GZ getShiGz(uint8_t dayTg, uint8_t hour, bool isZaoWanZiShi)
 	{
 		GZ ret;
 		//    甲己日起甲子时
@@ -433,27 +433,33 @@ namespace sxtwl
 			ret.dz = 0;
 		}
 
+		// 如果非早晚子时，以及时间为23点，则算第二日的起始子时
+		if (!isZaoWanZiShi && hour == 23)
+		{
+			step = 0;
+		}
+
 		switch (dayTg)
 		{
-		case 0:
-		case 5:
+		case 0: //甲
+		case 5: //己
 			ret.tg = 0 + step;
 			break;
-		case 1:
-		case 6:
+		case 1: //乙
+		case 6: //庚
 			ret.tg = 2 + step;
 			break;
 
-		case 2:
-		case 7:
+		case 2: //丙
+		case 7: //辛
 			ret.tg = 4 + step;
 			break;
-		case 3:
-		case 8:
+		case 3: //丁
+		case 8: //壬
 			ret.tg = 6 + step;
 			break;
-		case 4:
-		case 9:
+		case 4: //戊
+		case 9: //葵
 			ret.tg = 8 + step;
 			break;
 		default:
@@ -468,10 +474,10 @@ namespace sxtwl
 	{
 		//计算1月1号的信息
 		Time t;
-		t.hour = 12, t.min = 0, t.sec = 0.1;
-		t.year = By;
-		t.month = 1;
-		t.day = 1;
+		t.h = 12, t.m = 0, t.s = 0.1;
+		t.Y = By;
+		t.M = 1;
+		t.D = 1;
 
 		//公历月首的儒略日,中午;
 		int Bd0 = int2(JD::toJD(t)) - J2000;
@@ -493,7 +499,7 @@ namespace sxtwl
 		}
 
 		//看看11月和12月是否有闰
-		t.year = By + 1;
+		t.Y = By + 1;
 		Bd0 = int2(JD::toJD(t)) - J2000;
 		if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
 		{
@@ -516,10 +522,10 @@ namespace sxtwl
 
 		//计算1月1号的信息
 		Time t;
-		t.hour = 12, t.min = 0, t.sec = 0.1;
-		t.year = year;
-		t.month = 1;
-		t.day = 1;
+		t.h = 12, t.m = 0, t.s = 0.1;
+		t.Y = year;
+		t.M = 1;
+		t.D = 1;
 
 		//公历月首的儒略日,中午;
 		int Bd0 = int2(JD::toJD(t)) - J2000;

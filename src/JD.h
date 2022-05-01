@@ -5,15 +5,62 @@
 
 struct Time
 {
-	// int Y, M, D;
-	// double h, m, s;
+	 int Y, M, D;
+	 double h, m, s;
 	Time(){};
 	Time(int year, int month, int day, double hour, double min, double sec){
-		this->year = year; this->month = month; this->day = day;
-		this->hour = hour; this-> min = min; this->sec = sec;
+		this->Y = year; this->M = month; this->D = day;
+		this->h = hour; this->m = min; this->s = sec;
 	}
-	int year, month, day;
-	double hour, min, sec;
+
+	int getYear() {
+		return Y;
+	}
+
+	void setYear(int year) {
+		Y = year;
+	}
+
+	void setMonth(int month) {
+		M = month;
+	}
+
+	int getMonth() {
+		return M;
+	}
+
+	int getDay() {
+		return D;
+	}
+
+	void setDay(int day) {
+		D = day;
+	}
+
+	double getHour() {
+		return h;
+	}
+
+	void setHour(double hour) {
+		h = hour;
+	}
+
+	double getMin() {
+		return m;
+	}
+
+	void setMour(double  min) {
+		m = min;
+	}
+
+
+	double getSec() {
+		return s;
+	}
+
+	void setSec(double  sec) {
+		s = sec;
+	}
 };
 
 

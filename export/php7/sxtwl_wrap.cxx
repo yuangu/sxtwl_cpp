@@ -1781,7 +1781,7 @@ ZEND_NAMED_FUNCTION(_wrap_new_Time) {
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_year_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_Y_set) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   zval args[2];
@@ -1793,7 +1793,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_year_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_year_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_Y_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -1802,7 +1802,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_year_set) {
   arg2 = (int) zval_get_long(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->year = arg2;
+  if (arg1) (arg1)->Y = arg2;
   
 thrown:
   return;
@@ -1811,7 +1811,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_year_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_Y_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   int result;
@@ -1823,11 +1823,11 @@ ZEND_NAMED_FUNCTION(_wrap_Time_year_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_year_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_Y_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->year);
+  result = (int) ((arg1)->Y);
   
   RETVAL_LONG(result);
   
@@ -1838,7 +1838,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_month_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_M_set) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   zval args[2];
@@ -1850,7 +1850,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_month_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_month_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_M_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -1859,7 +1859,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_month_set) {
   arg2 = (int) zval_get_long(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->month = arg2;
+  if (arg1) (arg1)->M = arg2;
   
 thrown:
   return;
@@ -1868,7 +1868,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_month_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_M_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   int result;
@@ -1880,11 +1880,11 @@ ZEND_NAMED_FUNCTION(_wrap_Time_month_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_month_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_M_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->month);
+  result = (int) ((arg1)->M);
   
   RETVAL_LONG(result);
   
@@ -1895,7 +1895,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_day_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_D_set) {
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   zval args[2];
@@ -1907,7 +1907,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_day_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_day_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_D_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -1916,7 +1916,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_day_set) {
   arg2 = (int) zval_get_long(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->day = arg2;
+  if (arg1) (arg1)->D = arg2;
   
 thrown:
   return;
@@ -1925,7 +1925,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_day_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_D_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   int result;
@@ -1937,11 +1937,11 @@ ZEND_NAMED_FUNCTION(_wrap_Time_day_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_day_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_D_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (int) ((arg1)->day);
+  result = (int) ((arg1)->D);
   
   RETVAL_LONG(result);
   
@@ -1952,7 +1952,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_hour_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_h_set) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   zval args[2];
@@ -1964,7 +1964,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_hour_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_hour_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_h_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -1973,7 +1973,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_hour_set) {
   arg2 = (double) zval_get_double(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->hour = arg2;
+  if (arg1) (arg1)->h = arg2;
   
 thrown:
   return;
@@ -1982,7 +1982,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_hour_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_h_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   double result;
@@ -1994,11 +1994,11 @@ ZEND_NAMED_FUNCTION(_wrap_Time_hour_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_hour_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_h_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->hour);
+  result = (double) ((arg1)->h);
   
   RETVAL_DOUBLE(result);
   
@@ -2009,7 +2009,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_min_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_m_set) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   zval args[2];
@@ -2021,7 +2021,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_min_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_min_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_m_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -2030,7 +2030,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_min_set) {
   arg2 = (double) zval_get_double(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->min = arg2;
+  if (arg1) (arg1)->m = arg2;
   
 thrown:
   return;
@@ -2039,7 +2039,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_min_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_m_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   double result;
@@ -2051,11 +2051,11 @@ ZEND_NAMED_FUNCTION(_wrap_Time_min_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_min_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_m_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->min);
+  result = (double) ((arg1)->m);
   
   RETVAL_DOUBLE(result);
   
@@ -2066,7 +2066,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_sec_set) {
+ZEND_NAMED_FUNCTION(_wrap_Time_s_set) {
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   zval args[2];
@@ -2078,7 +2078,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_sec_set) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_sec_set. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_s_set. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
@@ -2087,7 +2087,7 @@ ZEND_NAMED_FUNCTION(_wrap_Time_sec_set) {
   arg2 = (double) zval_get_double(&args[1]);
   /*@SWIG@*/;
   
-  if (arg1) (arg1)->sec = arg2;
+  if (arg1) (arg1)->s = arg2;
   
 thrown:
   return;
@@ -2096,7 +2096,7 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Time_sec_get) {
+ZEND_NAMED_FUNCTION(_wrap_Time_s_get) {
   Time *arg1 = (Time *) 0 ;
   zval args[1];
   double result;
@@ -2108,13 +2108,355 @@ ZEND_NAMED_FUNCTION(_wrap_Time_sec_get) {
   
   
   if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_sec_get. Expected SWIGTYPE_p_Time");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_s_get. Expected SWIGTYPE_p_Time");
   }
   
   if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
-  result = (double) ((arg1)->sec);
+  result = (double) ((arg1)->s);
   
   RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getYear) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getYear. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int)(arg1)->getYear();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setYear) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setYear. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setYear(arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setMonth) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setMonth. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setMonth(arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getMonth) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getMonth. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int)(arg1)->getMonth();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getDay) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  int result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getDay. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (int)(arg1)->getDay();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setDay) {
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setDay. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (int) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setDay(arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getHour) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getHour. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double)(arg1)->getHour();
+  
+  RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setHour) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setHour. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setHour(arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getMin) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getMin. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double)(arg1)->getMin();
+  
+  RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setMour) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setMour. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setMour(arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_getSec) {
+  Time *arg1 = (Time *) 0 ;
+  zval args[1];
+  double result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_getSec. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  result = (double)(arg1)->getSec();
+  
+  RETVAL_DOUBLE(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Time_setSec) {
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Time, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Time_setSec. Expected SWIGTYPE_p_Time");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,48,CONVERT_FLOAT_IN@*/
+  arg2 = (double) zval_get_double(&args[1]);
+  /*@SWIG@*/;
+  
+  (arg1)->setSec(arg2);
   
 thrown:
   return;
@@ -2886,7 +3228,47 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ) {
+ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ__SWIG_0) {
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  zval args[3];
+  GZ result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_Day, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of Day_getHourGZ. Expected SWIGTYPE_p_Day");
+  }
+  
+  if(!arg1) SWIG_PHP_Error(E_ERROR, "this pointer is NULL");
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (uint8_t) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,2,CONVERT_BOOL_IN@*/
+  arg3 = (bool) zval_is_true(&args[2]);
+  /*@SWIG@*/;
+  
+  result = (arg1)->getHourGZ(arg2,arg3);
+  {
+    GZ * resultobj = new GZ((const GZ &) result);
+    SWIG_SetPointerZval(return_value, (void *)resultobj, SWIGTYPE_p_GZ, 1);
+  }
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ__SWIG_1) {
   Day *arg1 = (Day *) 0 ;
   uint8_t arg2 ;
   zval args[2];
@@ -2916,6 +3298,48 @@ ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ) {
 thrown:
   return;
 fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_Day_getHourGZ) {
+  int argc;
+  zval argv[3];
+  
+  argc = ZEND_NUM_ARGS();
+  zend_get_parameters_array_ex(argc, argv);
+  if (argc == 2) {
+    int _v;
+    {
+      void *tmp;
+      _v = (SWIG_ConvertPtr(&argv[0], (void**)&tmp, SWIGTYPE_p_Day, 0) >= 0);
+    }
+    if (_v) {
+      _v = (Z_TYPE(argv[1]) == IS_LONG);
+      if (_v) {
+        _wrap_Day_getHourGZ__SWIG_1(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *tmp;
+      _v = (SWIG_ConvertPtr(&argv[0], (void**)&tmp, SWIGTYPE_p_Day, 0) >= 0);
+    }
+    if (_v) {
+      _v = (Z_TYPE(argv[1]) == IS_LONG);
+      if (_v) {
+        _v = (Z_TYPE(argv[2]) == IS_TRUE || Z_TYPE(argv[2]) == IS_FALSE);
+        if (_v) {
+          _wrap_Day_getHourGZ__SWIG_0(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+        }
+      }
+    }
+  }
+  
+  SWIG_ErrorCode() = E_ERROR;
+  SWIG_ErrorMsg() = "No matching function for overloaded 'Day_getHourGZ'";
   SWIG_FAIL();
 }
 
@@ -3437,7 +3861,46 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_getShiGz) {
+ZEND_NAMED_FUNCTION(_wrap_getShiGz__SWIG_0) {
+  uint8_t arg1 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  zval args[3];
+  GZ result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg1 = (uint8_t) zval_get_long(&args[0]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (uint8_t) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:D:\swigwin-4.0.2\Lib\php\utils.i,2,CONVERT_BOOL_IN@*/
+  arg3 = (bool) zval_is_true(&args[2]);
+  /*@SWIG@*/;
+  
+  result = sxtwl::getShiGz(arg1,arg2,arg3);
+  {
+    GZ * resultobj = new GZ((const GZ &) result);
+    SWIG_SetPointerZval(return_value, (void *)resultobj, SWIGTYPE_p_GZ, 1);
+  }
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_getShiGz__SWIG_1) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   zval args[2];
@@ -3466,6 +3929,42 @@ ZEND_NAMED_FUNCTION(_wrap_getShiGz) {
 thrown:
   return;
 fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_getShiGz) {
+  int argc;
+  zval argv[3];
+  
+  argc = ZEND_NUM_ARGS();
+  zend_get_parameters_array_ex(argc, argv);
+  if (argc == 2) {
+    int _v;
+    _v = (Z_TYPE(argv[0]) == IS_LONG);
+    if (_v) {
+      _v = (Z_TYPE(argv[1]) == IS_LONG);
+      if (_v) {
+        _wrap_getShiGz__SWIG_1(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    _v = (Z_TYPE(argv[0]) == IS_LONG);
+    if (_v) {
+      _v = (Z_TYPE(argv[1]) == IS_LONG);
+      if (_v) {
+        _v = (Z_TYPE(argv[2]) == IS_TRUE || Z_TYPE(argv[2]) == IS_FALSE);
+        if (_v) {
+          _wrap_getShiGz__SWIG_0(INTERNAL_FUNCTION_PARAM_PASSTHRU); return;
+        }
+      }
+    }
+  }
+  
+  SWIG_ErrorCode() = E_ERROR;
+  SWIG_ErrorMsg() = "No matching function for overloaded 'getShiGz'";
   SWIG_FAIL();
 }
 
@@ -3711,18 +4210,30 @@ static zend_function_entry sxtwl_functions[] = {
  SWIG_ZEND_NAMED_FE(jdlist_get,_wrap_JDList_get,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(jdlist_set,_wrap_JDList_set,swig_arginfo_000)
  SWIG_ZEND_NAMED_FE(new_time,_wrap_new_Time,swig_arginfo_000000)
- SWIG_ZEND_NAMED_FE(time_year_set,_wrap_Time_year_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_year_get,_wrap_Time_year_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_month_set,_wrap_Time_month_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_month_get,_wrap_Time_month_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_day_set,_wrap_Time_day_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_day_get,_wrap_Time_day_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_hour_set,_wrap_Time_hour_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_hour_get,_wrap_Time_hour_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_min_set,_wrap_Time_min_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_min_get,_wrap_Time_min_get,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(time_sec_set,_wrap_Time_sec_set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(time_sec_get,_wrap_Time_sec_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_y_set,_wrap_Time_Y_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_y_get,_wrap_Time_Y_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_m_set,_wrap_Time_M_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_m_get,_wrap_Time_M_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_d_set,_wrap_Time_D_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_d_get,_wrap_Time_D_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_h_set,_wrap_Time_h_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_h_get,_wrap_Time_h_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_m_set,_wrap_Time_m_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_m_get,_wrap_Time_m_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_s_set,_wrap_Time_s_set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_s_get,_wrap_Time_s_get,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_getyear,_wrap_Time_getYear,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_setyear,_wrap_Time_setYear,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_setmonth,_wrap_Time_setMonth,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_getmonth,_wrap_Time_getMonth,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_getday,_wrap_Time_getDay,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_setday,_wrap_Time_setDay,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_gethour,_wrap_Time_getHour,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_sethour,_wrap_Time_setHour,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_getmin,_wrap_Time_getMin,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_setmour,_wrap_Time_setMour,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(time_getsec,_wrap_Time_getSec,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(time_setsec,_wrap_Time_setSec,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(new_gz,_wrap_new_GZ,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(gz_tg_set,_wrap_GZ_tg_set,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(gz_tg_get,_wrap_GZ_tg_get,swig_arginfo_0)

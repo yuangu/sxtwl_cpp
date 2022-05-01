@@ -184,3 +184,8 @@ if(SXTWL_WRAPPER_GO)
     add_library(sxtwl_go  STATIC  "./export/golang/sxtwl_wrap.cxx") 
     target_link_libraries(sxtwl_go sxtwl)
 endif(SXTWL_WRAPPER_GO)
+
+# for c
+if(SXTWL_WRAPPER_C)
+    add_subdirectory(c)
+endif(SXTWL_WRAPPER_C)

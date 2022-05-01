@@ -3,7 +3,7 @@
 
 namespace sxtwl
 {
-	GZ  getShiGz(uint8_t dayTg, uint8_t hour);
+	GZ  getShiGz(uint8_t dayTg, uint8_t hour, bool isZaoWanZiShi = true);
 };
 
 void Day::checkSSQ()
@@ -50,9 +50,9 @@ void Day::checkSolarData()
 	}
 
 	Time t = JD::JD2DD(this->d0 + J2000);
-	this->y = t.year;
-	this->d = t.day;
-	this->m = t.month;
+	this->y = t.Y;
+	this->d = t.D;
+	this->m = t.M;
 }
 
 /**
@@ -198,10 +198,10 @@ GZ Day::getDayGZ()
 	return *(this->Lday2);
 }
 
-GZ Day::getHourGZ(uint8_t hour)
+GZ Day::getHourGZ(uint8_t hour, bool isZaoWanZiShi)
 {
 	GZ dayGZ = this->getDayGZ();
-	return sxtwl::getShiGz(dayGZ.tg, hour);
+	return sxtwl::getShiGz(dayGZ.tg, hour, isZaoWanZiShi);
 }
 
 bool Day::isLunarLeap()

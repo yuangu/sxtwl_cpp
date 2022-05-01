@@ -235,12 +235,48 @@ class Time(object):
 
     def __init__(self, *args):
         _sxtwl.Time_swiginit(self, _sxtwl.new_Time(*args))
-    year = property(_sxtwl.Time_year_get, _sxtwl.Time_year_set)
-    month = property(_sxtwl.Time_month_get, _sxtwl.Time_month_set)
-    day = property(_sxtwl.Time_day_get, _sxtwl.Time_day_set)
-    hour = property(_sxtwl.Time_hour_get, _sxtwl.Time_hour_set)
-    min = property(_sxtwl.Time_min_get, _sxtwl.Time_min_set)
-    sec = property(_sxtwl.Time_sec_get, _sxtwl.Time_sec_set)
+    Y = property(_sxtwl.Time_Y_get, _sxtwl.Time_Y_set)
+    M = property(_sxtwl.Time_M_get, _sxtwl.Time_M_set)
+    D = property(_sxtwl.Time_D_get, _sxtwl.Time_D_set)
+    h = property(_sxtwl.Time_h_get, _sxtwl.Time_h_set)
+    m = property(_sxtwl.Time_m_get, _sxtwl.Time_m_set)
+    s = property(_sxtwl.Time_s_get, _sxtwl.Time_s_set)
+
+    def getYear(self):
+        return _sxtwl.Time_getYear(self)
+
+    def setYear(self, year):
+        return _sxtwl.Time_setYear(self, year)
+
+    def setMonth(self, month):
+        return _sxtwl.Time_setMonth(self, month)
+
+    def getMonth(self):
+        return _sxtwl.Time_getMonth(self)
+
+    def getDay(self):
+        return _sxtwl.Time_getDay(self)
+
+    def setDay(self, day):
+        return _sxtwl.Time_setDay(self, day)
+
+    def getHour(self):
+        return _sxtwl.Time_getHour(self)
+
+    def setHour(self, hour):
+        return _sxtwl.Time_setHour(self, hour)
+
+    def getMin(self):
+        return _sxtwl.Time_getMin(self)
+
+    def setMour(self, min):
+        return _sxtwl.Time_setMour(self, min)
+
+    def getSec(self):
+        return _sxtwl.Time_getSec(self)
+
+    def setSec(self, sec):
+        return _sxtwl.Time_setSec(self, sec)
     __swig_destroy__ = _sxtwl.delete_Time
 
 # Register Time in _sxtwl:
@@ -298,8 +334,8 @@ class Day(object):
     def getDayGZ(self):
         return _sxtwl.Day_getDayGZ(self)
 
-    def getHourGZ(self, hour):
-        return _sxtwl.Day_getHourGZ(self, hour)
+    def getHourGZ(self, hour, isZaoWanZiShi=True):
+        return _sxtwl.Day_getHourGZ(self, hour, isZaoWanZiShi)
 
     def isLunarLeap(self):
         return _sxtwl.Day_isLunarLeap(self)
@@ -351,8 +387,8 @@ def fromLunar(year, month, day, isRun=False):
 def siZhu2Year(year, yue, ri, shi, fromYear, toYear):
     return _sxtwl.siZhu2Year(year, yue, ri, shi, fromYear, toYear)
 
-def getShiGz(dayTg, hour):
-    return _sxtwl.getShiGz(dayTg, hour)
+def getShiGz(dayTg, hour, isZaoWanZiShi=True):
+    return _sxtwl.getShiGz(dayTg, hour, isZaoWanZiShi)
 
 def getRunMonth(By):
     return _sxtwl.getRunMonth(By)

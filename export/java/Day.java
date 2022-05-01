@@ -93,8 +93,12 @@ public class Day {
     return new GZ(sxtwlJNI.Day_getDayGZ(swigCPtr, this), true);
   }
 
+  public GZ getHourGZ(short hour, boolean isZaoWanZiShi) {
+    return new GZ(sxtwlJNI.Day_getHourGZ__SWIG_0(swigCPtr, this, hour, isZaoWanZiShi), true);
+  }
+
   public GZ getHourGZ(short hour) {
-    return new GZ(sxtwlJNI.Day_getHourGZ(swigCPtr, this, hour), true);
+    return new GZ(sxtwlJNI.Day_getHourGZ__SWIG_1(swigCPtr, this, hour), true);
   }
 
   public boolean isLunarLeap() {

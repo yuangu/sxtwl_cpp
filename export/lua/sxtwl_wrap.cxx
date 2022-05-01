@@ -3623,21 +3623,21 @@ static int _wrap_new_Time(lua_State* L) {
 }
 
 
-static int _wrap_Time_year_set(lua_State* L) {
+static int _wrap_Time_Y_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
-  SWIG_check_num_args("Time::year",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::year",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::year",2,"int");
+  SWIG_check_num_args("Time::Y",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::Y",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::Y",2,"int");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_year_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_Y_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (int)lua_tonumber(L, 2);
-  if (arg1) (arg1)->year = arg2;
+  if (arg1) (arg1)->Y = arg2;
   
   return SWIG_arg;
   
@@ -3649,19 +3649,19 @@ fail:
 }
 
 
-static int _wrap_Time_year_get(lua_State* L) {
+static int _wrap_Time_Y_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int result;
   
-  SWIG_check_num_args("Time::year",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::year",1,"Time *");
+  SWIG_check_num_args("Time::Y",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::Y",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_year_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_Y_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (int) ((arg1)->year);
+  result = (int) ((arg1)->Y);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -3673,21 +3673,21 @@ fail:
 }
 
 
-static int _wrap_Time_month_set(lua_State* L) {
+static int _wrap_Time_M_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
-  SWIG_check_num_args("Time::month",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::month",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::month",2,"int");
+  SWIG_check_num_args("Time::M",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::M",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::M",2,"int");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_month_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_M_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (int)lua_tonumber(L, 2);
-  if (arg1) (arg1)->month = arg2;
+  if (arg1) (arg1)->M = arg2;
   
   return SWIG_arg;
   
@@ -3699,19 +3699,19 @@ fail:
 }
 
 
-static int _wrap_Time_month_get(lua_State* L) {
+static int _wrap_Time_M_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int result;
   
-  SWIG_check_num_args("Time::month",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::month",1,"Time *");
+  SWIG_check_num_args("Time::M",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::M",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_month_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_M_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (int) ((arg1)->month);
+  result = (int) ((arg1)->M);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -3723,21 +3723,21 @@ fail:
 }
 
 
-static int _wrap_Time_day_set(lua_State* L) {
+static int _wrap_Time_D_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int arg2 ;
   
-  SWIG_check_num_args("Time::day",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::day",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::day",2,"int");
+  SWIG_check_num_args("Time::D",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::D",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::D",2,"int");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_day_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_D_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (int)lua_tonumber(L, 2);
-  if (arg1) (arg1)->day = arg2;
+  if (arg1) (arg1)->D = arg2;
   
   return SWIG_arg;
   
@@ -3749,19 +3749,19 @@ fail:
 }
 
 
-static int _wrap_Time_day_get(lua_State* L) {
+static int _wrap_Time_D_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   int result;
   
-  SWIG_check_num_args("Time::day",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::day",1,"Time *");
+  SWIG_check_num_args("Time::D",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::D",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_day_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_D_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (int) ((arg1)->day);
+  result = (int) ((arg1)->D);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -3773,21 +3773,21 @@ fail:
 }
 
 
-static int _wrap_Time_hour_set(lua_State* L) {
+static int _wrap_Time_h_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
-  SWIG_check_num_args("Time::hour",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::hour",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::hour",2,"double");
+  SWIG_check_num_args("Time::h",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::h",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::h",2,"double");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_hour_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_h_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (double)lua_tonumber(L, 2);
-  if (arg1) (arg1)->hour = arg2;
+  if (arg1) (arg1)->h = arg2;
   
   return SWIG_arg;
   
@@ -3799,19 +3799,19 @@ fail:
 }
 
 
-static int _wrap_Time_hour_get(lua_State* L) {
+static int _wrap_Time_h_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double result;
   
-  SWIG_check_num_args("Time::hour",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::hour",1,"Time *");
+  SWIG_check_num_args("Time::h",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::h",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_hour_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_h_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (double) ((arg1)->hour);
+  result = (double) ((arg1)->h);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -3823,21 +3823,21 @@ fail:
 }
 
 
-static int _wrap_Time_min_set(lua_State* L) {
+static int _wrap_Time_m_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
-  SWIG_check_num_args("Time::min",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::min",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::min",2,"double");
+  SWIG_check_num_args("Time::m",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::m",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::m",2,"double");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_min_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_m_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (double)lua_tonumber(L, 2);
-  if (arg1) (arg1)->min = arg2;
+  if (arg1) (arg1)->m = arg2;
   
   return SWIG_arg;
   
@@ -3849,19 +3849,19 @@ fail:
 }
 
 
-static int _wrap_Time_min_get(lua_State* L) {
+static int _wrap_Time_m_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double result;
   
-  SWIG_check_num_args("Time::min",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::min",1,"Time *");
+  SWIG_check_num_args("Time::m",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::m",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_min_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_m_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (double) ((arg1)->min);
+  result = (double) ((arg1)->m);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
   
@@ -3873,21 +3873,21 @@ fail:
 }
 
 
-static int _wrap_Time_sec_set(lua_State* L) {
+static int _wrap_Time_s_set(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double arg2 ;
   
-  SWIG_check_num_args("Time::sec",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::sec",1,"Time *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::sec",2,"double");
+  SWIG_check_num_args("Time::s",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::s",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::s",2,"double");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_sec_set",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_s_set",1,SWIGTYPE_p_Time);
   }
   
   arg2 = (double)lua_tonumber(L, 2);
-  if (arg1) (arg1)->sec = arg2;
+  if (arg1) (arg1)->s = arg2;
   
   return SWIG_arg;
   
@@ -3899,20 +3899,320 @@ fail:
 }
 
 
-static int _wrap_Time_sec_get(lua_State* L) {
+static int _wrap_Time_s_get(lua_State* L) {
   int SWIG_arg = 0;
   Time *arg1 = (Time *) 0 ;
   double result;
   
-  SWIG_check_num_args("Time::sec",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::sec",1,"Time *");
+  SWIG_check_num_args("Time::s",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::s",1,"Time *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
-    SWIG_fail_ptr("Time_sec_get",1,SWIGTYPE_p_Time);
+    SWIG_fail_ptr("Time_s_get",1,SWIGTYPE_p_Time);
   }
   
-  result = (double) ((arg1)->sec);
+  result = (double) ((arg1)->s);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getYear(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("Time::getYear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getYear",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getYear",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (int)(arg1)->getYear();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setYear(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("Time::setYear",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setYear",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setYear",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setYear",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->setYear(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setMonth(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("Time::setMonth",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setMonth",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setMonth",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setMonth",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->setMonth(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getMonth(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("Time::getMonth",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getMonth",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getMonth",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (int)(arg1)->getMonth();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getDay(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("Time::getDay",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getDay",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getDay",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (int)(arg1)->getDay();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setDay(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("Time::setDay",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setDay",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setDay",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setDay",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->setDay(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getHour(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("Time::getHour",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getHour",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getHour",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (double)(arg1)->getHour();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setHour(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  SWIG_check_num_args("Time::setHour",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setHour",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setHour",2,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setHour",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (double)lua_tonumber(L, 2);
+  (arg1)->setHour(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getMin(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("Time::getMin",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getMin",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getMin",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (double)(arg1)->getMin();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setMour(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  SWIG_check_num_args("Time::setMour",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setMour",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setMour",2,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setMour",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (double)lua_tonumber(L, 2);
+  (arg1)->setMour(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_getSec(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("Time::getSec",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::getSec",1,"Time *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_getSec",1,SWIGTYPE_p_Time);
+  }
+  
+  result = (double)(arg1)->getSec();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Time_setSec(lua_State* L) {
+  int SWIG_arg = 0;
+  Time *arg1 = (Time *) 0 ;
+  double arg2 ;
+  
+  SWIG_check_num_args("Time::setSec",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Time::setSec",1,"Time *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Time::setSec",2,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Time,0))){
+    SWIG_fail_ptr("Time_setSec",1,SWIGTYPE_p_Time);
+  }
+  
+  arg2 = (double)lua_tonumber(L, 2);
+  (arg1)->setSec(arg2);
+  
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -3936,15 +4236,27 @@ static int _proxy__wrap_new_Time(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Time_attributes[] = {
-    { "year", _wrap_Time_year_get, _wrap_Time_year_set },
-    { "month", _wrap_Time_month_get, _wrap_Time_month_set },
-    { "day", _wrap_Time_day_get, _wrap_Time_day_set },
-    { "hour", _wrap_Time_hour_get, _wrap_Time_hour_set },
-    { "min", _wrap_Time_min_get, _wrap_Time_min_set },
-    { "sec", _wrap_Time_sec_get, _wrap_Time_sec_set },
+    { "Y", _wrap_Time_Y_get, _wrap_Time_Y_set },
+    { "M", _wrap_Time_M_get, _wrap_Time_M_set },
+    { "D", _wrap_Time_D_get, _wrap_Time_D_set },
+    { "h", _wrap_Time_h_get, _wrap_Time_h_set },
+    { "m", _wrap_Time_m_get, _wrap_Time_m_set },
+    { "s", _wrap_Time_s_get, _wrap_Time_s_set },
     {0,0,0}
 };
 static swig_lua_method swig_Time_methods[]= {
+    { "getYear", _wrap_Time_getYear},
+    { "setYear", _wrap_Time_setYear},
+    { "setMonth", _wrap_Time_setMonth},
+    { "getMonth", _wrap_Time_getMonth},
+    { "getDay", _wrap_Time_getDay},
+    { "setDay", _wrap_Time_setDay},
+    { "getHour", _wrap_Time_getHour},
+    { "setHour", _wrap_Time_setHour},
+    { "getMin", _wrap_Time_getMin},
+    { "setMour", _wrap_Time_setMour},
+    { "getSec", _wrap_Time_getSec},
+    { "setSec", _wrap_Time_setSec},
     {0,0}
 };
 static swig_lua_method swig_Time_meta[] = {
@@ -4707,7 +5019,41 @@ fail:
 }
 
 
-static int _wrap_Day_getHourGZ(lua_State* L) {
+static int _wrap_Day_getHourGZ__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  Day *arg1 = (Day *) 0 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  GZ result;
+  
+  SWIG_check_num_args("Day::getHourGZ",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Day::getHourGZ",1,"Day *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("Day::getHourGZ",2,"uint8_t");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("Day::getHourGZ",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Day,0))){
+    SWIG_fail_ptr("Day_getHourGZ",1,SWIGTYPE_p_Day);
+  }
+  
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+  arg2 = (uint8_t)lua_tonumber(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (arg1)->getHourGZ(arg2,arg3);
+  {
+    GZ * resultptr = new GZ((const GZ &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GZ,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Day_getHourGZ__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
   Day *arg1 = (Day *) 0 ;
   uint8_t arg2 ;
@@ -4735,6 +5081,65 @@ static int _wrap_Day_getHourGZ(lua_State* L) {
 fail:
   lua_error(L);
   return SWIG_arg;
+}
+
+
+static int _wrap_Day_getHourGZ(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Day, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Day_getHourGZ__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_Day, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Day_getHourGZ__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Day_getHourGZ'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    Day::getHourGZ(uint8_t,bool)\n"
+    "    Day::getHourGZ(uint8_t)\n");
+  lua_error(L);return 0;
 }
 
 
@@ -5243,7 +5648,38 @@ fail:
 }
 
 
-static int _wrap_getShiGz(lua_State* L) {
+static int _wrap_getShiGz__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  uint8_t arg1 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  GZ result;
+  
+  SWIG_check_num_args("sxtwl::getShiGz",3,3)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("sxtwl::getShiGz",1,"uint8_t");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("sxtwl::getShiGz",2,"uint8_t");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("sxtwl::getShiGz",3,"bool");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
+  arg1 = (uint8_t)lua_tonumber(L, 1);
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+  arg2 = (uint8_t)lua_tonumber(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = sxtwl::getShiGz(arg1,arg2,arg3);
+  {
+    GZ * resultptr = new GZ((const GZ &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GZ,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_getShiGz__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
   uint8_t arg1 ;
   uint8_t arg2 ;
@@ -5268,6 +5704,55 @@ static int _wrap_getShiGz(lua_State* L) {
 fail:
   lua_error(L);
   return SWIG_arg;
+}
+
+
+static int _wrap_getShiGz(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isnumber(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_getShiGz__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = lua_isnumber(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_getShiGz__SWIG_0(L);
+        }
+      }
+    }
+  }
+  
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'getShiGz'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    sxtwl::getShiGz(uint8_t,uint8_t,bool)\n"
+    "    sxtwl::getShiGz(uint8_t,uint8_t)\n");
+  lua_error(L);return 0;
 }
 
 
