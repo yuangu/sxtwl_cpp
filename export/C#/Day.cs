@@ -113,8 +113,13 @@ public class Day : global::System.IDisposable {
     return ret;
   }
 
+  public GZ getHourGZ(byte hour, bool isZaoWanZiShi) {
+    GZ ret = new GZ(sxtwlPINVOKE.Day_getHourGZ__SWIG_0(swigCPtr, hour, isZaoWanZiShi), true);
+    return ret;
+  }
+
   public GZ getHourGZ(byte hour) {
-    GZ ret = new GZ(sxtwlPINVOKE.Day_getHourGZ(swigCPtr, hour), true);
+    GZ ret = new GZ(sxtwlPINVOKE.Day_getHourGZ__SWIG_1(swigCPtr, hour), true);
     return ret;
   }
 

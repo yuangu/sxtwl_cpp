@@ -43,6 +43,12 @@ public class Time : global::System.IDisposable {
     }
   }
 
+  public Time() : this(sxtwlPINVOKE.new_Time__SWIG_0(), true) {
+  }
+
+  public Time(int year, int month, int day, double hour, double min, double sec) : this(sxtwlPINVOKE.new_Time__SWIG_1(year, month, day, hour, min, sec), true) {
+  }
+
   public int Y {
     set {
       sxtwlPINVOKE.Time_Y_set(swigCPtr, value);
@@ -103,7 +109,58 @@ public class Time : global::System.IDisposable {
     } 
   }
 
-  public Time() : this(sxtwlPINVOKE.new_Time(), true) {
+  public int getYear() {
+    int ret = sxtwlPINVOKE.Time_getYear(swigCPtr);
+    return ret;
+  }
+
+  public void setYear(int year) {
+    sxtwlPINVOKE.Time_setYear(swigCPtr, year);
+  }
+
+  public void setMonth(int month) {
+    sxtwlPINVOKE.Time_setMonth(swigCPtr, month);
+  }
+
+  public int getMonth() {
+    int ret = sxtwlPINVOKE.Time_getMonth(swigCPtr);
+    return ret;
+  }
+
+  public int getDay() {
+    int ret = sxtwlPINVOKE.Time_getDay(swigCPtr);
+    return ret;
+  }
+
+  public void setDay(int day) {
+    sxtwlPINVOKE.Time_setDay(swigCPtr, day);
+  }
+
+  public double getHour() {
+    double ret = sxtwlPINVOKE.Time_getHour(swigCPtr);
+    return ret;
+  }
+
+  public void setHour(double hour) {
+    sxtwlPINVOKE.Time_setHour(swigCPtr, hour);
+  }
+
+  public double getMin() {
+    double ret = sxtwlPINVOKE.Time_getMin(swigCPtr);
+    return ret;
+  }
+
+  public void setMour(double min) {
+    sxtwlPINVOKE.Time_setMour(swigCPtr, min);
+  }
+
+  public double getSec() {
+    double ret = sxtwlPINVOKE.Time_getSec(swigCPtr);
+    return ret;
+  }
+
+  public void setSec(double sec) {
+    sxtwlPINVOKE.Time_setSec(swigCPtr, sec);
   }
 
 }

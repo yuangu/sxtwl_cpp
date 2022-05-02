@@ -25,6 +25,8 @@ public class sxtwlJNI {
   public final static native void JDList_doRemoveRange(long jarg1, JDList jarg1_, int jarg2, int jarg3);
   public final static native void delete_JDList(long jarg1);
   public final static native int J2000_get();
+  public final static native long new_Time__SWIG_0();
+  public final static native long new_Time__SWIG_1(int jarg1, int jarg2, int jarg3, double jarg4, double jarg5, double jarg6);
   public final static native void Time_Y_set(long jarg1, Time jarg1_, int jarg2);
   public final static native int Time_Y_get(long jarg1, Time jarg1_);
   public final static native void Time_M_set(long jarg1, Time jarg1_, int jarg2);
@@ -37,7 +39,18 @@ public class sxtwlJNI {
   public final static native double Time_m_get(long jarg1, Time jarg1_);
   public final static native void Time_s_set(long jarg1, Time jarg1_, double jarg2);
   public final static native double Time_s_get(long jarg1, Time jarg1_);
-  public final static native long new_Time();
+  public final static native int Time_getYear(long jarg1, Time jarg1_);
+  public final static native void Time_setYear(long jarg1, Time jarg1_, int jarg2);
+  public final static native void Time_setMonth(long jarg1, Time jarg1_, int jarg2);
+  public final static native int Time_getMonth(long jarg1, Time jarg1_);
+  public final static native int Time_getDay(long jarg1, Time jarg1_);
+  public final static native void Time_setDay(long jarg1, Time jarg1_, int jarg2);
+  public final static native double Time_getHour(long jarg1, Time jarg1_);
+  public final static native void Time_setHour(long jarg1, Time jarg1_, double jarg2);
+  public final static native double Time_getMin(long jarg1, Time jarg1_);
+  public final static native void Time_setMour(long jarg1, Time jarg1_, double jarg2);
+  public final static native double Time_getSec(long jarg1, Time jarg1_);
+  public final static native void Time_setSec(long jarg1, Time jarg1_, double jarg2);
   public final static native void delete_Time(long jarg1);
   public final static native long new_GZ__SWIG_0();
   public final static native long new_GZ__SWIG_1(short jarg1, short jarg2);
@@ -59,7 +72,8 @@ public class sxtwlJNI {
   public final static native long Day_getYearGZ__SWIG_1(long jarg1, Day jarg1_);
   public final static native long Day_getMonthGZ(long jarg1, Day jarg1_);
   public final static native long Day_getDayGZ(long jarg1, Day jarg1_);
-  public final static native long Day_getHourGZ(long jarg1, Day jarg1_, short jarg2);
+  public final static native long Day_getHourGZ__SWIG_0(long jarg1, Day jarg1_, short jarg2, boolean jarg3);
+  public final static native long Day_getHourGZ__SWIG_1(long jarg1, Day jarg1_, short jarg2);
   public final static native boolean Day_isLunarLeap(long jarg1, Day jarg1_);
   public final static native int Day_getSolarYear(long jarg1, Day jarg1_);
   public final static native short Day_getSolarMonth(long jarg1, Day jarg1_);
@@ -75,7 +89,8 @@ public class sxtwlJNI {
   public final static native long fromLunar__SWIG_0(int jarg1, short jarg2, int jarg3, boolean jarg4);
   public final static native long fromLunar__SWIG_1(int jarg1, short jarg2, int jarg3);
   public final static native long siZhu2Year(long jarg1, GZ jarg1_, long jarg2, GZ jarg2_, long jarg3, GZ jarg3_, long jarg4, GZ jarg4_, int jarg5, int jarg6);
-  public final static native long getShiGz(short jarg1, short jarg2);
+  public final static native long getShiGz__SWIG_0(short jarg1, short jarg2, boolean jarg3);
+  public final static native long getShiGz__SWIG_1(short jarg1, short jarg2);
   public final static native short getRunMonth(int jarg1);
   public final static native short getLunarMonthNum__SWIG_0(int jarg1, short jarg2, boolean jarg3);
   public final static native short getLunarMonthNum__SWIG_1(int jarg1, short jarg2);

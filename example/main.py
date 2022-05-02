@@ -8,7 +8,7 @@ numCn = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "
 jqmc = ["冬至", "小寒", "大寒", "立春", "雨水", "惊蛰", "春分", "清明", "谷雨", "立夏",
      "小满", "芒种", "夏至", "小暑", "大暑", "立秋", "处暑","白露", "秋分", "寒露", "霜降", 
      "立冬", "小雪", "大雪"]
-ymc = ["十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" ]
+ymc = [ "正", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二" ]
 rmc = ["初一", "初二", "初三", "初四", "初五", "初六", "初七", "初八", "初九", "初十", 
     "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十", 
     "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三十", "卅一"]
@@ -45,6 +45,9 @@ print(s)
 s = "农历:%d年%s%d月%d日" % (day.getLunarYear(False), '闰' if day.isLunarLeap() else '', day.getLunarMonth(), day.getLunarDay())
 print(s)
 
+# 使用中文表示农历
+s = "农历:%d年%s%d月%d日" % (day.getLunarYear(False), '闰' if day.isLunarLeap() else '', ymc[day.getLunarMonth() - 1], rmc[day.getLunarDay() - 1])
+print(s)
 
 # 以春节为界的天干地支 
 yTG = day.getYearGZ(True)
@@ -64,10 +67,17 @@ print("月干支", Gan[mTG.tg] + Zhi[mTG.dz])
 dTG  = day.getDayGZ()
 print("日干支", Gan[dTG.tg] + Zhi[dTG.dz]) 
 
-#时干支,传24小时制的时间，分早晚子时
+#时干支,传24小时制的时间，默认分早晚子时
 hour = 18
 sTG = day.getHourGZ(hour)
 print("%d时的干支"%(hour, ), Gan[sTG.tg] + Zhi[sTG.dz]) 
+
+
+# 如果想非早晚子时，第二个参数设置成false（注意，如果使用非早晚子时，那么Day要使用第二天的，相当于23点换日）
+hour = 23
+sTG = day.getHourGZ(hour, False)
+print("%d时的干支"%(hour, ), Gan[sTG.tg] + Zhi[sTG.dz]) 
+
 
 #时干支
 for hour in range(24):

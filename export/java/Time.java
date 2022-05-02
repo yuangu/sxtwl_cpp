@@ -36,6 +36,14 @@ public class Time {
     }
   }
 
+  public Time() {
+    this(sxtwlJNI.new_Time__SWIG_0(), true);
+  }
+
+  public Time(int year, int month, int day, double hour, double min, double sec) {
+    this(sxtwlJNI.new_Time__SWIG_1(year, month, day, hour, min, sec), true);
+  }
+
   public void setY(int value) {
     sxtwlJNI.Time_Y_set(swigCPtr, this, value);
   }
@@ -84,8 +92,52 @@ public class Time {
     return sxtwlJNI.Time_s_get(swigCPtr, this);
   }
 
-  public Time() {
-    this(sxtwlJNI.new_Time(), true);
+  public int getYear() {
+    return sxtwlJNI.Time_getYear(swigCPtr, this);
+  }
+
+  public void setYear(int year) {
+    sxtwlJNI.Time_setYear(swigCPtr, this, year);
+  }
+
+  public void setMonth(int month) {
+    sxtwlJNI.Time_setMonth(swigCPtr, this, month);
+  }
+
+  public int getMonth() {
+    return sxtwlJNI.Time_getMonth(swigCPtr, this);
+  }
+
+  public int getDay() {
+    return sxtwlJNI.Time_getDay(swigCPtr, this);
+  }
+
+  public void setDay(int day) {
+    sxtwlJNI.Time_setDay(swigCPtr, this, day);
+  }
+
+  public double getHour() {
+    return sxtwlJNI.Time_getHour(swigCPtr, this);
+  }
+
+  public void setHour(double hour) {
+    sxtwlJNI.Time_setHour(swigCPtr, this, hour);
+  }
+
+  public double getMin() {
+    return sxtwlJNI.Time_getMin(swigCPtr, this);
+  }
+
+  public void setMour(double min) {
+    sxtwlJNI.Time_setMour(swigCPtr, this, min);
+  }
+
+  public double getSec() {
+    return sxtwlJNI.Time_getSec(swigCPtr, this);
+  }
+
+  public void setSec(double sec) {
+    sxtwlJNI.Time_setSec(swigCPtr, this, sec);
   }
 
 }

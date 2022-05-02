@@ -28,8 +28,12 @@ public class sxtwl implements sxtwlConstants {
     return new JDList(sxtwlJNI.siZhu2Year(GZ.getCPtr(year), year, GZ.getCPtr(yue), yue, GZ.getCPtr(ri), ri, GZ.getCPtr(shi), shi, fromYear, toYear), true);
   }
 
+  public static GZ getShiGz(short dayTg, short hour, boolean isZaoWanZiShi) {
+    return new GZ(sxtwlJNI.getShiGz__SWIG_0(dayTg, hour, isZaoWanZiShi), true);
+  }
+
   public static GZ getShiGz(short dayTg, short hour) {
-    return new GZ(sxtwlJNI.getShiGz(dayTg, hour), true);
+    return new GZ(sxtwlJNI.getShiGz__SWIG_1(dayTg, hour), true);
   }
 
   public static short getRunMonth(int By) {

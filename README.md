@@ -21,13 +21,11 @@ sxtwl_cpp是参考[寿星天文历](http://www.nongli.net/sxwnl/)并使用C++实
 
 ![微信二维码](https://gitee.com/yuangu/sxtwl/raw/master/doc/img/WechatIMG5.jpeg)  
 
-请您扫码支持作者的海棠万年历(广告):
+请您扫码关注作者的《通俗万年历公众号》 (广告):
 
-![海棠万年历](https://gitee.com/yuangu/sxtwl/raw/master/doc/img/qrcode_for_gh_d48e82be45fb_430.jpg)
+![通俗万年历](https://gitee.com/yuangu/sxtwl/raw/master/doc/img/qrcode.jpg)
 
-如果您想请作者喝杯奶茶，扫如下微信支付码：
 
-![微信收款](https://gitee.com/yuangu/sxtwl/raw/master/doc/img/WechatIMG7.jpeg)
 
 ## 特性
 
@@ -59,22 +57,25 @@ sxtwl_cpp是参考[寿星天文历](http://www.nongli.net/sxwnl/)并使用C++实
     点击[Python安装及事例文档](python/README.md)阅读文档
 
 + #### C/C++用户专享文档
-    <!-- 点击[C/C++安装及事例文档](doc/如何构建.md)阅读文档 -->
-    待写
+    点击[C/C++安装及事例文档](doc/如何构建.md)阅读文档
 
 + #### java用户专享文档
-    <!-- 点击[java安装及事例文档](doc/如何构建.md)阅读文档 -->
-    待写
+   点击[java安装及事例文档](doc/如何构建.md)阅读文档 
 
 + #### php用户专享文档
-    <!-- 点击[php安装及事例文档](doc/如何构建.md)阅读文档 -->
-    待写
+     点击[php安装及事例文档](doc/如何构建.md)阅读文档
+
 + #### lua用户专享文档
-    <!-- 点击[Python安装及事例文档](doc/如何构建.md)阅读文档 -->
-    待写
+   点击[Python安装及事例文档](doc/如何构建.md)阅读文档
+
 + #### C#用户专享文档
-     <!-- 点击[Python安装及事例文档](doc/如何构建.md)阅读文档 -->
-    待写
+    点击[C#安装及事例文档](doc/如何构建.md)阅读文档
+
++  #### C语言用户专享文档 
+    注：如有需要显示给其它语言调用的用户，可以使用此版本。目前只提供静态库的生成。
+    另外，导接的接口可参考 c/sxtwl_c.h
+    点击[C语言安装及事例文档](doc/如何构建.md)阅读文档
+
 
 ## 最后
 * 如果您喜欢本项目或者发现该库的bug可加微信留言

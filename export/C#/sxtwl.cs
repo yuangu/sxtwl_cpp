@@ -34,8 +34,13 @@ public class sxtwl {
     return ret;
   }
 
+  public static GZ getShiGz(byte dayTg, byte hour, bool isZaoWanZiShi) {
+    GZ ret = new GZ(sxtwlPINVOKE.getShiGz__SWIG_0(dayTg, hour, isZaoWanZiShi), true);
+    return ret;
+  }
+
   public static GZ getShiGz(byte dayTg, byte hour) {
-    GZ ret = new GZ(sxtwlPINVOKE.getShiGz(dayTg, hour), true);
+    GZ ret = new GZ(sxtwlPINVOKE.getShiGz__SWIG_1(dayTg, hour), true);
     return ret;
   }
 

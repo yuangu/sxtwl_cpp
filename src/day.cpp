@@ -3,7 +3,7 @@
 
 namespace sxtwl
 {
-	GZ  getShiGz(uint8_t dayTg, uint8_t hour);
+	GZ  getShiGz(uint8_t dayTg, uint8_t hour, bool isZaoWanZiShi = true);
 };
 
 void Day::checkSSQ()
@@ -198,10 +198,10 @@ GZ Day::getDayGZ()
 	return *(this->Lday2);
 }
 
-GZ Day::getHourGZ(uint8_t hour)
+GZ Day::getHourGZ(uint8_t hour, bool isZaoWanZiShi)
 {
 	GZ dayGZ = this->getDayGZ();
-	return sxtwl::getShiGz(dayGZ.tg, hour);
+	return sxtwl::getShiGz(dayGZ.tg, hour, isZaoWanZiShi);
 }
 
 bool Day::isLunarLeap()

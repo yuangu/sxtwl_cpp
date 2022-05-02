@@ -1,8 +1,8 @@
 #php
-swig -c++ -php5 -outcurrentdir  -outdir export/php5 swig/sxtwl.i
-mv sxtwl_wrap.cxx  export/php5/sxtwl_wrap.cxx
+# swig -c++ -php5 -outcurrentdir  -outdir export/php5 swig/sxtwl.i
+# mv sxtwl_wrap.cxx  export/php5/sxtwl_wrap.cxx
 
-swig -c++ -php7 -outcurrentdir  -outdir export/php5 swig/sxtwl.i
+swig -c++ -php7 -outcurrentdir  -outdir export/php7 swig/sxtwl.i
 mv sxtwl_wrap.cxx  export/php7/sxtwl_wrap.cxx
 
 # lua
