@@ -22,12 +22,12 @@ short getGanZhiIndex(GZ value)
 namespace sxtwl
 {
 
-	Day *fromSolar(int year, uint8_t month, int day)
+	Day* fromSolar(int year, uint8_t month, int day)
 	{
 		return Day::fromSolar(year, month, day);
 	}
 
-	Day *fromLunar(int year, uint8_t month, int day, bool isRun)
+	Day* fromLunar(int year, uint8_t month, int day, bool isRun)
 	{
 		return Day::fromLunar(year, month, day, isRun);
 	}
@@ -489,7 +489,7 @@ namespace sxtwl
 
 		//{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
 		// static int mkIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
-		static int yueIndex[] = {11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		static int yueIndex[] = { 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 		//需要排除11月和12月的，这个可能属于上一个月的信息
 		int leap = SSQPtr->leap - 1;
@@ -537,7 +537,7 @@ namespace sxtwl
 
 		//{ "十一", "十二", "正", "二", "三", "四", "五", "六", "七", "八", "九", "十" }
 		// static int mkIndex[] = { 11, 12, 1,2,3,4,5,6,7, 8,9,10 };
-		static int yueIndex[] = {11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		static int yueIndex[] = { 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 		int yue = 0;
 
@@ -599,7 +599,7 @@ namespace sxtwl
 
 		return SSQPtr->HS[mk + 1] - SSQPtr->HS[mk];
 	}
-	
+
 	//儒略日数转公历
 	Time JD2DD(double jd)
 	{
@@ -611,4 +611,135 @@ namespace sxtwl
 	{
 		return JD::toJD(time);
 	}
+
+	std::vector<JieQiInfo> getJieQiByYear(int year)
+	{
+		std::vector<JieQiInfo> ret;
+
+		Time t(year, 1, 1, 12, 0, 0);
+		auto jd =  sxtwl::toJD(t) - J2000;
+		/*Day* day = Day::fromSolar(year, 1, 1);
+
+		auto jd = day->getJD();
+		delete day;*/
+
+
+		if (!SSQPtr->ZQ.size() || jd < SSQPtr->ZQ[0] || jd >= SSQPtr->ZQ[24])
+		{
+			SSQPtr->calcY(jd);
+		}
+
+		long double d, xn, jd2 = jd + dt_T(jd) - (long double)8 / (long double)24;
+		long double w = XL::S_aLon(jd2 / 36525, 3);
+		w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
+		int D = 0;
+
+		bool startLiChun = false;
+		for (auto it = SSQPtr->ZQ.begin(); it != SSQPtr->ZQ.end(); ++it)
+		{
+			while (true)
+			{
+				d = qi_accurate(w);
+				D = int2(d + 0.5);
+				xn = int2(w / pi2 * 24 + 24000006.01) % 24;
+				w += pi2 / 24;
+				// 这里可能会有误差，实际的不等相等
+				if ( abs(int2(*it) - D) <= 5 )
+				{
+					break;
+				}
+				if (D < *it) continue;
+				break;
+
+			}
+
+			if (xn == 3 && !startLiChun)
+			{
+				startLiChun = true;				
+			}
+			
+			if (!startLiChun)
+			{
+				continue;
+			}
+
+			Time t1 = JD::JD2DD(d);
+			Time t2 = JD::JD2DD(D + J2000);
+
+			t2.h = t1.h;
+			t2.m = t1.m;
+			t2.s = t1.s;
+
+
+			auto jd = JD::toJD(t2);
+
+
+			JieQiInfo tmp;
+			tmp.jd = jd;
+			tmp.jqIndex = xn;
+
+			ret.push_back(tmp);
+			
+		}
+
+		t = Time(year + 1, 1, 1, 12, 0, 0);
+		jd = sxtwl::toJD(t) - J2000;
+		/*jd = SSQPtr->ZQ[24] + 1;*/
+
+		SSQPtr->calcY(jd);
+
+		jd2 = jd + dt_T(jd) - (long double)8 / (long double)24;;
+		w = XL::S_aLon(jd2 / 36525, 3);
+		w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
+
+
+		for (auto it = SSQPtr->ZQ.begin(); it != SSQPtr->ZQ.end(); ++it)
+		{
+			while (true)
+			{
+				d = qi_accurate(w);
+				D = int2(d + 0.5);
+				xn = int2(w / pi2 * 24 + 24000006.01) % 24;
+				w += pi2 / 24;
+				// 这里可能会有误差，实际的不等相等
+				if (abs(int2(*it) - D) <= 5)
+				{
+					break;
+				}
+				if (D < *it) continue;
+				break;
+
+			}
+
+		
+			if (xn == ret[ret.size() - 1].jqIndex)
+			{
+				continue;
+			}
+
+			
+			Time t1 = JD::JD2DD(d);
+			Time t2 = JD::JD2DD(*it + J2000);
+
+			t2.h = t1.h;
+			t2.m = t1.m;
+			t2.s = t1.s;
+
+
+			auto jd = JD::toJD(t2);
+
+			JieQiInfo tmp;
+			tmp.jd = jd;
+			tmp.jqIndex = xn;
+
+			ret.push_back(tmp);
+			
+			
+			if (ret.size() >= 25) {
+				break;
+			}
+		}
+		return  ret;
+	}
 }
+

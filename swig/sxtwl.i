@@ -11,6 +11,7 @@
 
 namespace std{
     %template(JDList) vector<double>;
+    %template(JQList) vector<sxtwl::JieQiInfo>;
 }
 
 %constant int J2000=2451545;
@@ -95,6 +96,12 @@ public:
 
 namespace sxtwl
 {
+    struct JieQiInfo
+    {
+        double jd;  //节气的儒略日
+        uint8_t jqIndex; //节气索引
+    };
+
 	Day *fromSolar(int year, uint8_t month, int day);
 	Day *fromLunar(int year, uint8_t month, int day, bool isRun = false);
 	//通过四柱获取年月日
@@ -109,4 +116,6 @@ namespace sxtwl
 	Time JD2DD(double jd);
 	//公历转儒略日
 	double toJD(Time& time);
+
+    std::vector<JieQiInfo> getJieQiByYear(int year);
 };

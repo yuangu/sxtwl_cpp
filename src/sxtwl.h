@@ -7,6 +7,13 @@
 
 namespace sxtwl
 {
+	struct JieQiInfo
+	{
+		double jd;  //节气的儒略日
+		uint8_t jqIndex; //节气索引
+	};
+
+
 	Day *fromSolar(int year, uint8_t month, int day);
 	Day *fromLunar(int year, uint8_t month, int day, bool isRun = false);
 	//通过四柱获取年月日, 返回的是儒略日列表
@@ -21,4 +28,6 @@ namespace sxtwl
 	Time JD2DD(double jd);
 	//公历转儒略日
 	double toJD(Time& time);
+	//获取某年的节气（立春到立春）
+	std::vector<JieQiInfo> getJieQiByYear(int year);
 };

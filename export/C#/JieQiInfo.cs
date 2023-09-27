@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 
-public class GZ : global::System.IDisposable {
+public class JieQiInfo : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal GZ(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal JieQiInfo(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(GZ obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(JieQiInfo obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(GZ obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(JieQiInfo obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -35,7 +35,7 @@ public class GZ : global::System.IDisposable {
     }
   }
 
-  ~GZ() {
+  ~JieQiInfo() {
     Dispose(false);
   }
 
@@ -49,37 +49,34 @@ public class GZ : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          sxtwlPINVOKE.delete_GZ(swigCPtr);
+          sxtwlPINVOKE.delete_JieQiInfo(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public GZ() : this(sxtwlPINVOKE.new_GZ__SWIG_0(), true) {
-  }
-
-  public GZ(byte tg, byte dz) : this(sxtwlPINVOKE.new_GZ__SWIG_1(tg, dz), true) {
-  }
-
-  public byte tg {
+  public double jd {
     set {
-      sxtwlPINVOKE.GZ_tg_set(swigCPtr, value);
+      sxtwlPINVOKE.JieQiInfo_jd_set(swigCPtr, value);
     } 
     get {
-      byte ret = sxtwlPINVOKE.GZ_tg_get(swigCPtr);
+      double ret = sxtwlPINVOKE.JieQiInfo_jd_get(swigCPtr);
       return ret;
     } 
   }
 
-  public byte dz {
+  public byte jqIndex {
     set {
-      sxtwlPINVOKE.GZ_dz_set(swigCPtr, value);
+      sxtwlPINVOKE.JieQiInfo_jqIndex_set(swigCPtr, value);
     } 
     get {
-      byte ret = sxtwlPINVOKE.GZ_dz_get(swigCPtr);
+      byte ret = sxtwlPINVOKE.JieQiInfo_jqIndex_get(swigCPtr);
       return ret;
     } 
+  }
+
+  public JieQiInfo() : this(sxtwlPINVOKE.new_JieQiInfo(), true) {
   }
 
 }

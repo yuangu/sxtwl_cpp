@@ -8,20 +8,20 @@
 
 package com.seantone.sxtwl;
 
-public class GZ {
+public class JieQiInfo {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected GZ(long cPtr, boolean cMemoryOwn) {
+  protected JieQiInfo(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(GZ obj) {
+  protected static long getCPtr(JieQiInfo obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
-  protected static long swigRelease(GZ obj) {
+  protected static long swigRelease(JieQiInfo obj) {
     long ptr = 0;
     if (obj != null) {
       if (!obj.swigCMemOwn)
@@ -42,34 +42,30 @@ public class GZ {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        sxtwlJNI.delete_GZ(swigCPtr);
+        sxtwlJNI.delete_JieQiInfo(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public GZ() {
-    this(sxtwlJNI.new_GZ__SWIG_0(), true);
+  public void setJd(double value) {
+    sxtwlJNI.JieQiInfo_jd_set(swigCPtr, this, value);
   }
 
-  public GZ(short tg, short dz) {
-    this(sxtwlJNI.new_GZ__SWIG_1(tg, dz), true);
+  public double getJd() {
+    return sxtwlJNI.JieQiInfo_jd_get(swigCPtr, this);
   }
 
-  public void setTg(short value) {
-    sxtwlJNI.GZ_tg_set(swigCPtr, this, value);
+  public void setJqIndex(short value) {
+    sxtwlJNI.JieQiInfo_jqIndex_set(swigCPtr, this, value);
   }
 
-  public short getTg() {
-    return sxtwlJNI.GZ_tg_get(swigCPtr, this);
+  public short getJqIndex() {
+    return sxtwlJNI.JieQiInfo_jqIndex_get(swigCPtr, this);
   }
 
-  public void setDz(short value) {
-    sxtwlJNI.GZ_dz_set(swigCPtr, this, value);
-  }
-
-  public short getDz() {
-    return sxtwlJNI.GZ_dz_get(swigCPtr, this);
+  public JieQiInfo() {
+    this(sxtwlJNI.new_JieQiInfo(), true);
   }
 
 }
