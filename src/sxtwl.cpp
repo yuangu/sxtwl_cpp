@@ -2,6 +2,7 @@
 #include "const.h"
 #include "JD.h"
 #include "eph.h"
+#include "SSQ.h"
 #include <cmath>
 
 //获取干支索引

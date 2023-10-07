@@ -1,11 +1,12 @@
 #pragma once
 
 #include <stdint.h>
+#include <memory>
 #include "JD.h"
 #include "const.h"
 #include "SSQ.h"
 
-static SSQ SSQPtr;
+static std::unique_ptr<SSQ> SSQPtr(new SSQ());
 
 struct GZ
 {
@@ -129,31 +130,31 @@ public:
 public:
     static Day *fromSolar(int _year, uint8_t _month, int _day)
     {
-        Time t;
-        t.h = 12, t.m = 0, t.s = 0.1;
-        t.Y = _year;
-        t.M = _month;
-        t.D = _day;
-        int d0 = int2(JD::toJD(t)) - J2000;
+        Time *t = new Time();
+        t->h = 12, t->m = 0, t->s = 0.1;
+        t->Y = _year;
+        t->M = _month;
+        t->D = _day;
+        int d0 = int2(JD::toJD(*t)) - J2000;
         return new Day(d0);
     }
 
     static Day *fromLunar(int year, uint8_t month, int day, bool isRun = false)
     {
-        Time t;
-        t.h = 12, t.m = 0, t.s = 0.1;
-        t.Y = year;
-        t.M = 1;
-        t.D = 1;
+        Time *t = new Time();
+        t->h = 12, t->m = 0, t->s = 0.1;
+        t->Y = year;
+        t->M = 1;
+        t->D = 1;
         if (month > 10)
         {
-            t.Y = year + 1;
+            t->Y = year + 1;
         }
 
-        int Bd0 = int2(JD::toJD(t)) - J2000;
-        if (!SSQPtr.ZQ.size() || Bd0 < SSQPtr.ZQ[0] || Bd0 >= SSQPtr.ZQ[24])
+        int Bd0 = int2(JD::toJD(*t)) - J2000;
+        if (!SSQPtr->ZQ.size() || Bd0 < SSQPtr->ZQ[0] || Bd0 >= SSQPtr->ZQ[24])
         {
-            SSQPtr.calcY(Bd0);
+            SSQPtr->calcY(Bd0);
         }
 
         static const int yueIndex[12] =  {11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -169,11 +170,11 @@ public:
         }
 
         int mk = 0;
-        int leap = SSQPtr.leap - 1;
+        int leap = SSQPtr->leap - 1;
 
-        for (int i = 0; i < SSQPtr.ym.size(); ++i)
+        for (int i = 0; i < SSQPtr->ym.size(); ++i)
         {
-            int it = SSQPtr.ym[i];
+            int it = SSQPtr->ym[i];
             if (leap < 0)
             {
                 if (it == yue)
@@ -207,7 +208,7 @@ public:
             ++mk;
         }
 
-        int bdi = SSQPtr.HS[mk];
+        int bdi = SSQPtr->HS[mk];
         int jd = bdi + day - 1;
 
         return new Day(jd);
