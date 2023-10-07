@@ -12,7 +12,16 @@ add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
 add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 ENDIF()
 
-file(GLOB SRC_FILES  "*.cpp" )
-add_library(sxtwl_c SHARED  ${SRC_FILES})
+file(GLOB SRC_FILES *.cpp *.c )
+
+IF (EMSCRIPTEN)
+add_executable(sxtwl_c  ${SRC_FILES})
 target_link_libraries(sxtwl_c
 sxtwl)
+ELSE(EMSCRIPTEN)
+add_library(sxtwl_c STATIC  ${SRC_FILES})
+target_link_libraries(sxtwl_c
+sxtwl)
+ENDIF(EMSCRIPTEN)
+
+

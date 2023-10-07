@@ -7,7 +7,16 @@
 
 //===============================================================
 #ifdef _WIN32
-#include <windows.h>
+class MBuf : public std::stringbuf
+{
+  public:
+	int sync()
+	{
+		fputs(str().c_str(), stdout);
+		str("");
+		return 0;
+	}
+};
 #endif
 
 
@@ -68,7 +77,7 @@ void printDay(Day& day)
 	std::cout  << "天干:"
                << Gan[day.getYearGZ().tg] << Zhi[day.getYearGZ().dz] << "年"
 			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "月"
-			   << Gan[day.getDayGZ().tg] << Zhi[day.getDayGZ().dz] << "日"
+			   << Gan[day.getMonthGZ().tg] << Zhi[day.getMonthGZ().dz] << "日"
 			   << std::endl;
 };
 
@@ -80,12 +89,17 @@ int round_double(double number)
 int main()
 {
 	
-#ifdef _WIN32
+//#ifdef _WIN32
 	////http://m.blog.csdn.net/article/details?id=52789570
 	//https://stackoverflow.com/questions/45575863/how-to-print-utf-8-strings-to-stdcout-on-windows
-	SetConsoleOutputCP(65001);
-#endif
+	setvbuf(stdout, nullptr, _IONBF, 0);
+	MBuf buf;
+	std::cout.rdbuf(&buf);
+//#endif
     
+	
+
+
     GZ hourGZ =  sxtwl::getShiGz(0, 23, false);
 
 	do {
@@ -152,9 +166,38 @@ int main()
                           GZ(0, 0)
                           , 2003, 2029);
         
-        printf("finish");
+
+      /*  printf("finish");*/
         
     }
-    
+	{
+
+	
+
+		Day* day = sxtwl::fromSolar(202, 1, 20);
+		if (day->hasJieQi()) {
+			auto t = sxtwl::JD2DD(day->getJieQiJD());
+			std::cout << jqmc[day->getJieQi()] << ": " << t.getYear() << "-" << t.getMonth() << "-"
+				<< t.getDay() << " " << int(t.getHour()) << ":" << int(t.getMin()) << ":" << round_double(t.getSec())
+				<< std::endl;
+		}
+		delete day;
+		
+	}
+
+
+ //===========================================================================   
+	auto ret = sxtwl::getJieQiByYear(202);
+
+	for (auto it = ret.begin(); it != ret.end(); ++it) {
+		auto t = sxtwl::JD2DD(it->jd);
+		std::cout << jqmc[it->jqIndex] << ": " << t.getYear() << "-" << t.getMonth() << "-"
+			<< t.getDay() << " " << int(t.getHour()) << ":" << int(t.getMin()) << ":" << round_double(t.getSec())
+			<< std::endl;
+	}
+
+	Time t(202, 1, 23, 12, 0, 0);
+	auto jd = sxtwl::toJD(t) - J2000;
+//=========================================================================== 
     return 0;
 }

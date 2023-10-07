@@ -9,21 +9,21 @@
 //------------------------------------------------------------------------------
 
 
-public class JDList : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<double>
+public class JQList : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<JieQiInfo>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal JDList(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal JQList(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(JDList obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(JQList obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(JDList obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(JQList obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +36,7 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
     }
   }
 
-  ~JDList() {
+  ~JQList() {
     Dispose(false);
   }
 
@@ -50,25 +50,25 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          sxtwlPINVOKE.delete_JDList(swigCPtr);
+          sxtwlPINVOKE.delete_JQList(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public JDList(global::System.Collections.IEnumerable c) : this() {
+  public JQList(global::System.Collections.IEnumerable c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (double element in c) {
+    foreach (JieQiInfo element in c) {
       this.Add(element);
     }
   }
 
-  public JDList(global::System.Collections.Generic.IEnumerable<double> c) : this() {
+  public JQList(global::System.Collections.Generic.IEnumerable<JieQiInfo> c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (double element in c) {
+    foreach (JieQiInfo element in c) {
       this.Add(element);
     }
   }
@@ -85,7 +85,7 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
     }
   }
 
-  public double this[int index]  {
+  public JieQiInfo this[int index]  {
     get {
       return getitem(index);
     }
@@ -117,17 +117,17 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
     }
   }
 
-  public void CopyTo(double[] array)
+  public void CopyTo(JieQiInfo[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(double[] array, int arrayIndex)
+  public void CopyTo(JieQiInfo[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, double[] array, int arrayIndex, int count)
+  public void CopyTo(int index, JieQiInfo[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -145,22 +145,22 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  public double[] ToArray() {
-    double[] array = new double[this.Count];
+  public JieQiInfo[] ToArray() {
+    JieQiInfo[] array = new JieQiInfo[this.Count];
     this.CopyTo(array);
     return array;
   }
 
-  global::System.Collections.Generic.IEnumerator<double> global::System.Collections.Generic.IEnumerable<double>.GetEnumerator() {
-    return new JDListEnumerator(this);
+  global::System.Collections.Generic.IEnumerator<JieQiInfo> global::System.Collections.Generic.IEnumerable<JieQiInfo>.GetEnumerator() {
+    return new JQListEnumerator(this);
   }
 
   global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new JDListEnumerator(this);
+    return new JQListEnumerator(this);
   }
 
-  public JDListEnumerator GetEnumerator() {
-    return new JDListEnumerator(this);
+  public JQListEnumerator GetEnumerator() {
+    return new JQListEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -168,15 +168,15 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class JDListEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<double>
+  public sealed class JQListEnumerator : global::System.Collections.IEnumerator
+    , global::System.Collections.Generic.IEnumerator<JieQiInfo>
   {
-    private JDList collectionRef;
+    private JQList collectionRef;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public JDListEnumerator(JDList collection) {
+    public JQListEnumerator(JQList collection) {
       collectionRef = collection;
       currentIndex = -1;
       currentObject = null;
@@ -184,7 +184,7 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
     }
 
     // Type-safe iterator Current
-    public double Current {
+    public JieQiInfo Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -192,7 +192,7 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (double)currentObject;
+        return (JieQiInfo)currentObject;
       }
     }
 
@@ -230,126 +230,107 @@ public class JDList : global::System.IDisposable, global::System.Collections.IEn
   }
 
   public void Clear() {
-    sxtwlPINVOKE.JDList_Clear(swigCPtr);
+    sxtwlPINVOKE.JQList_Clear(swigCPtr);
   }
 
-  public void Add(double x) {
-    sxtwlPINVOKE.JDList_Add(swigCPtr, x);
+  public void Add(JieQiInfo x) {
+    sxtwlPINVOKE.JQList_Add(swigCPtr, JieQiInfo.getCPtr(x));
+    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = sxtwlPINVOKE.JDList_size(swigCPtr);
+    uint ret = sxtwlPINVOKE.JQList_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = sxtwlPINVOKE.JDList_capacity(swigCPtr);
+    uint ret = sxtwlPINVOKE.JQList_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    sxtwlPINVOKE.JDList_reserve(swigCPtr, n);
+    sxtwlPINVOKE.JQList_reserve(swigCPtr, n);
   }
 
-  public JDList() : this(sxtwlPINVOKE.new_JDList__SWIG_0(), true) {
+  public JQList() : this(sxtwlPINVOKE.new_JQList__SWIG_0(), true) {
   }
 
-  public JDList(JDList other) : this(sxtwlPINVOKE.new_JDList__SWIG_1(JDList.getCPtr(other)), true) {
+  public JQList(JQList other) : this(sxtwlPINVOKE.new_JQList__SWIG_1(JQList.getCPtr(other)), true) {
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JDList(int capacity) : this(sxtwlPINVOKE.new_JDList__SWIG_2(capacity), true) {
+  public JQList(int capacity) : this(sxtwlPINVOKE.new_JQList__SWIG_2(capacity), true) {
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private double getitemcopy(int index) {
-    double ret = sxtwlPINVOKE.JDList_getitemcopy(swigCPtr, index);
-    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  private double getitem(int index) {
-    double ret = sxtwlPINVOKE.JDList_getitem(swigCPtr, index);
+  private JieQiInfo getitemcopy(int index) {
+    JieQiInfo ret = new JieQiInfo(sxtwlPINVOKE.JQList_getitemcopy(swigCPtr, index), true);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, double val) {
-    sxtwlPINVOKE.JDList_setitem(swigCPtr, index, val);
-    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void AddRange(JDList values) {
-    sxtwlPINVOKE.JDList_AddRange(swigCPtr, JDList.getCPtr(values));
-    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public JDList GetRange(int index, int count) {
-    global::System.IntPtr cPtr = sxtwlPINVOKE.JDList_GetRange(swigCPtr, index, count);
-    JDList ret = (cPtr == global::System.IntPtr.Zero) ? null : new JDList(cPtr, true);
+  private JieQiInfo getitem(int index) {
+    JieQiInfo ret = new JieQiInfo(sxtwlPINVOKE.JQList_getitem(swigCPtr, index), false);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void Insert(int index, double x) {
-    sxtwlPINVOKE.JDList_Insert(swigCPtr, index, x);
+  private void setitem(int index, JieQiInfo val) {
+    sxtwlPINVOKE.JQList_setitem(swigCPtr, index, JieQiInfo.getCPtr(val));
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void InsertRange(int index, JDList values) {
-    sxtwlPINVOKE.JDList_InsertRange(swigCPtr, index, JDList.getCPtr(values));
+  public void AddRange(JQList values) {
+    sxtwlPINVOKE.JQList_AddRange(swigCPtr, JQList.getCPtr(values));
+    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public JQList GetRange(int index, int count) {
+    global::System.IntPtr cPtr = sxtwlPINVOKE.JQList_GetRange(swigCPtr, index, count);
+    JQList ret = (cPtr == global::System.IntPtr.Zero) ? null : new JQList(cPtr, true);
+    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void Insert(int index, JieQiInfo x) {
+    sxtwlPINVOKE.JQList_Insert(swigCPtr, index, JieQiInfo.getCPtr(x));
+    if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InsertRange(int index, JQList values) {
+    sxtwlPINVOKE.JQList_InsertRange(swigCPtr, index, JQList.getCPtr(values));
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    sxtwlPINVOKE.JDList_RemoveAt(swigCPtr, index);
+    sxtwlPINVOKE.JQList_RemoveAt(swigCPtr, index);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    sxtwlPINVOKE.JDList_RemoveRange(swigCPtr, index, count);
+    sxtwlPINVOKE.JQList_RemoveRange(swigCPtr, index, count);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static JDList Repeat(double value, int count) {
-    global::System.IntPtr cPtr = sxtwlPINVOKE.JDList_Repeat(value, count);
-    JDList ret = (cPtr == global::System.IntPtr.Zero) ? null : new JDList(cPtr, true);
+  public static JQList Repeat(JieQiInfo value, int count) {
+    global::System.IntPtr cPtr = sxtwlPINVOKE.JQList_Repeat(JieQiInfo.getCPtr(value), count);
+    JQList ret = (cPtr == global::System.IntPtr.Zero) ? null : new JQList(cPtr, true);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    sxtwlPINVOKE.JDList_Reverse__SWIG_0(swigCPtr);
+    sxtwlPINVOKE.JQList_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    sxtwlPINVOKE.JDList_Reverse__SWIG_1(swigCPtr, index, count);
+    sxtwlPINVOKE.JQList_Reverse__SWIG_1(swigCPtr, index, count);
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetRange(int index, JDList values) {
-    sxtwlPINVOKE.JDList_SetRange(swigCPtr, index, JDList.getCPtr(values));
+  public void SetRange(int index, JQList values) {
+    sxtwlPINVOKE.JQList_SetRange(swigCPtr, index, JQList.getCPtr(values));
     if (sxtwlPINVOKE.SWIGPendingException.Pending) throw sxtwlPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public bool Contains(double value) {
-    bool ret = sxtwlPINVOKE.JDList_Contains(swigCPtr, value);
-    return ret;
-  }
-
-  public int IndexOf(double value) {
-    int ret = sxtwlPINVOKE.JDList_IndexOf(swigCPtr, value);
-    return ret;
-  }
-
-  public int LastIndexOf(double value) {
-    int ret = sxtwlPINVOKE.JDList_LastIndexOf(swigCPtr, value);
-    return ret;
-  }
-
-  public bool Remove(double value) {
-    bool ret = sxtwlPINVOKE.JDList_Remove(swigCPtr, value);
-    return ret;
   }
 
 }

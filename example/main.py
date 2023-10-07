@@ -177,3 +177,13 @@ while True:
         print("节气时间:%d-%d-%d %d:%d:%d"%(t.Y, t.M, t.D, t.h, t.m, round(t.s)))
         
         break
+
+### 快速获取一年的节气时间 （注意，网页版的寿星天文历，202年1月份的大寒显示是不对的）
+ret = sxtwl.getJieQiByYear(202)
+
+for v in ret:
+    # 将儒略日数转换成年月日时秒
+    t = sxtwl.JD2DD(v.jd)
+    print('节气：%s 节气时间:%d-%d-%d %d:%d:%d'% (jqmc[v.jqIndex],t.Y, t.M, t.D, t.h, t.m, round(t.s)))
+  
+   

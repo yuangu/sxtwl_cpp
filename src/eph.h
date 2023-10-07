@@ -162,11 +162,11 @@ long double dt_T(long double t);
 inline long double qi_accurate(long double W)
 {
 	long double t = XL::S_aLon_t(W) * 36525;
-	return t - dt_T(t) + 8.0f / 24.f;
+	return t - dt_T(t) + (long double)8.0 / (long double)24.0;
 }
 
 inline long double so_accurate(long double W)
 {
 	long double t = XL::MS_aLon_t(W) * 36525;
-	return t - dt_T(t) + 8.0f / 24.0f;
+	return t - dt_T(t) + (long double)8.0 / (long double)24.0;
 } //精朔

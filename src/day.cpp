@@ -1,5 +1,6 @@
 #include "day.h"
 #include "eph.h"
+#include "JD.h"
 
 namespace sxtwl
 {
@@ -272,10 +273,10 @@ double Day::getJieQiJD()
 {
 	if (this->jqjd != 0)
 	{
-		return this->jqjd + J2000;
+		return this->jqjd;
 	}
 
-	long double d, xn, jd2 = this->d0 + dt_T(this->d0) - 8 / 24;
+	long double d, xn, jd2 = this->d0 + dt_T(this->d0) - (long double)8 / (long double)24;
 	long double w = XL::S_aLon(jd2 / 36525, 3);
 	w = int2((w - 0.13) / pi2 * 24) * pi2 / 24;
 	int D = 0;
@@ -293,13 +294,22 @@ double Day::getJieQiJD()
 			continue;
 		if (D == this->d0)
 		{
-			this->jqjd = d;
+			Time t1 = JD::JD2DD(d);
+			Time t2 = JD::JD2DD(D + J2000);
+
+			t2.h = t1.h;
+			t2.m = t1.m;
+			t2.s = t1.s;
+
+			auto jd = JD::toJD(t2);
+
+			this->jqjd = jd;
 			this->qk = xn;
 			break;
 		}
 	} while (D + 12 < this->d0);
 
-	return this->jqjd + J2000;
+	return this->jqjd; //+ J2000;
 }
 
 // 获取星座
