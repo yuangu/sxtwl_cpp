@@ -9,9 +9,9 @@ namespace sxtwl
 
 void Day::checkSSQ()
 {
-	if (!SSQPtr.ZQ.size() || this->d0 < SSQPtr.ZQ[0] || this->d0 >= SSQPtr.ZQ[24])
+	if (!SSQPtr->ZQ.size() || this->d0 < SSQPtr->ZQ[0] || this->d0 >= SSQPtr->ZQ[24])
 	{
-		SSQPtr.calcY(this->d0);
+		SSQPtr->calcY(this->d0);
 	}
 }
 
@@ -27,20 +27,20 @@ void Day::checkLunarData()
 	}
 	this->checkSSQ();
 
-	int mk = int2((this->d0 - SSQPtr.HS[0]) / 30);
-	if (mk < 13 && SSQPtr.HS[mk + 1] <= this->d0)
+	int mk = int2((this->d0 - SSQPtr->HS[0]) / 30);
+	if (mk < 13 && SSQPtr->HS[mk + 1] <= this->d0)
 	{
 		mk++; //农历所在月的序数
 	}
 
-	//if (this.d0 == SSQPtr.HS[mk]) { //月的信息
-	this->Lmc = SSQPtr.ym[mk];                              //月名称
-	this->Ldn = SSQPtr.dx[mk];                              //月大小
-	this->Lleap = (SSQPtr.leap != 0 && SSQPtr.leap == mk); //闰状况
+	//if (this.d0 == SSQPtr->HS[mk]) { //月的信息
+	this->Lmc = SSQPtr->ym[mk];                              //月名称
+	this->Ldn = SSQPtr->dx[mk];                              //月大小
+	this->Lleap = (SSQPtr->leap != 0 && SSQPtr->leap == mk); //闰状况
 	//}
 
 	// 阴历所处的日
-	this->Ldi = this->d0 - SSQPtr.HS[mk];
+	this->Ldi = this->d0 - SSQPtr->HS[mk];
 }
 
 void Day::checkSolarData()
@@ -71,15 +71,15 @@ void Day::checkJQData()
 
 	//this->checkSSQ();
 
-	//int qk = int2((this->d0 - SSQPtr.ZQ[0] - 7) / 15.2184);
+	//int qk = int2((this->d0 - SSQPtr->ZQ[0] - 7) / 15.2184);
 	//////节气的取值范围是0-23
-	//if (qk < 23 && this->d0 >= SSQPtr.ZQ[qk + 1])
+	//if (qk < 23 && this->d0 >= SSQPtr->ZQ[qk + 1])
 	//{
 	//    qk++;
 	//}
 
 	//this->qk = -1;
-	//if (this->d0 == SSQPtr.ZQ[qk])
+	//if (this->d0 == SSQPtr->ZQ[qk])
 	//{
 	//    this->qk = qk;
 	//}
@@ -122,7 +122,7 @@ int Day::getLunarYear(bool chineseNewYearBoundary)
 		if (this->Lyear == 0)
 		{
 			this->checkSSQ();
-			long double D = SSQPtr.ZQ[3] + (this->d0 < SSQPtr.ZQ[3] ? -365 : 0) + 365.25 * 16 - 35; //以立春为界定纪年
+			long double D = SSQPtr->ZQ[3] + (this->d0 < SSQPtr->ZQ[3] ? -365 : 0) + 365.25 * 16 - 35; //以立春为界定纪年
 			this->Lyear = int2(D / 365.2422 + 0.5);
 		}
 		return this->Lyear + 1984;
@@ -131,12 +131,12 @@ int Day::getLunarYear(bool chineseNewYearBoundary)
 	if (this->Lyear0 == 0)
 	{
 		this->checkSSQ();
-		int D = SSQPtr.HS[2]; //一般第3个月为春节
+		int D = SSQPtr->HS[2]; //一般第3个月为春节
 		for (int j = 0; j < 14; j++)
 		{ //找春节
-			if (SSQPtr.ym[j] != 2 || SSQPtr.leap == j && j)
+			if (SSQPtr->ym[j] != 2 || SSQPtr->leap == j && j)
 				continue;
-			D = SSQPtr.HS[j];
+			D = SSQPtr->HS[j];
 			if (this->d0 < D)
 			{
 				D -= 365;
@@ -178,12 +178,12 @@ GZ Day::getMonthGZ()
 	if (this->Lmonth2 == NULL)
 	{
 		this->checkSSQ();
-		int mk = int2((this->d0 - SSQPtr.ZQ[0]) / 30.43685);
+		int mk = int2((this->d0 - SSQPtr->ZQ[0]) / 30.43685);
 		//相对大雪的月数计算,mk的取值范围0-12
-		if (mk < 12 && this->d0 >= SSQPtr.ZQ[2 * mk + 1])
+		if (mk < 12 && this->d0 >= SSQPtr->ZQ[2 * mk + 1])
 			mk++;
 		//相对于1998年12月7(大雪)的月数,900000为正数基数
-		int D = mk + int2((SSQPtr.ZQ[12] + 390) / 365.2422) * 12 + 900000;
+		int D = mk + int2((SSQPtr->ZQ[12] + 390) / 365.2422) * 12 + 900000;
 		this->Lmonth2 = new GZ(D % 10, D % 12);
 	}
 	return *(this->Lmonth2);
@@ -318,9 +318,9 @@ uint8_t Day::getConstellation()
 	if (this->XiZ == 0xFF)
 	{
 		this->checkSSQ();
-		int mk = int2((this->d0 - SSQPtr.ZQ[0] - 15) / 30.43685);
+		int mk = int2((this->d0 - SSQPtr->ZQ[0] - 15) / 30.43685);
 		//星座所在月的序数,(如果j=13,ob.d0不会超过第14号中气)
-		if (mk < 11 && this->d0 >= SSQPtr.ZQ[2 * mk + 2])
+		if (mk < 11 && this->d0 >= SSQPtr->ZQ[2 * mk + 2])
 		{
 			mk++;
 		}
