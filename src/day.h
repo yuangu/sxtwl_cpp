@@ -1,11 +1,12 @@
 #pragma once
 
 #include <stdint.h>
+#include <memory>
 #include "JD.h"
 #include "const.h"
 #include "SSQ.h"
 
-static SSQ *SSQPtr = new SSQ();
+static std::unique_ptr<SSQ> SSQPtr(new SSQ());
 
 struct GZ
 {
