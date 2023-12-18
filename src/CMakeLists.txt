@@ -14,6 +14,23 @@ elseif(MSVC)
     add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 endif()
 
-
-
 add_library(sxtwl STATIC ${SRC_FILES})
+
+# 安装库文件
+install(TARGETS sxtwl
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+)
+
+# 安装头文件
+install(FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/const.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/day.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/eph.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/JD.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/SSQ.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/sxtwl.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/XL.h
+    DESTINATION include
+)
