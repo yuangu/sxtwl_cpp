@@ -3,8 +3,7 @@ project(sxtwl_cpp)
 
 IF(MSVC)
 ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options(/source-charset:utf-8)
 add_compile_options(/wd26495) # 初始化警告
 add_compile_options(/wd6011) #可能为null指针警告
 add_compile_options(/wd4244) #隐式转换可能丢失数据警告
