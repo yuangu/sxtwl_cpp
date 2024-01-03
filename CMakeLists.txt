@@ -9,6 +9,7 @@ add_compile_options(/wd6011) #可能为null指针警告
 add_compile_options(/wd4244) #隐式转换可能丢失数据警告
 add_compile_options(/wd4101) #未引用的局部变量警告
 add_compile_options(/wd4267) #隐式转换可能丢失数据警告 size_t -> int
+add_compile_options(/wd4018) #有符号与无符号的比较
 ENDIF()
 
 #编译库的例子
