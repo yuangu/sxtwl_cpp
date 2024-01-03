@@ -72,17 +72,17 @@ std::string JD::timeStr(double jd)
 	std::string ret = "";
 	char buff[11];
 	memset(buff, 0, 11);
-	sprintf(buff, "0%d", h);
+    std::snprintf(buff, sizeof(buff), "0%d", h);
 	ret.append(buff + strlen(buff) - 2);
 	ret += ":";
 
 	memset(buff, 0, 11);
-	sprintf(buff, "0%d", m);
+	std::snprintf(buff, sizeof(buff), "0%d", m);
 	ret.append(buff + strlen(buff) - 2);
 	ret += ":";
 
 	memset(buff, 0, 11);
-	sprintf(buff, "0%d", s);
+	std::snprintf(buff, sizeof(buff), "0%d", s);
 	ret.append(buff + strlen(buff) - 2);
 
 	return ret;
