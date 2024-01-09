@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD 11)
 
 file(GLOB SRC_FILES  "*.cpp" )
 
-if(CMAKE_COMPILER_IS_GNUCXX)
+if(UNIX)
     add_compile_options(-fPIC)
 elseif(MSVC)
     ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
