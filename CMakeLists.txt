@@ -3,8 +3,13 @@ project(sxtwl_cpp)
 
 IF(MSVC)
 ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options(/source-charset:utf-8)
+add_compile_options(/wd26495) # 初始化警告
+add_compile_options(/wd6011) #可能为null指针警告
+add_compile_options(/wd4244) #隐式转换可能丢失数据警告
+add_compile_options(/wd4101) #未引用的局部变量警告
+add_compile_options(/wd4267) #隐式转换可能丢失数据警告 size_t -> int
+add_compile_options(/wd4018) #有符号与无符号的比较
 ENDIF()
 
 #编译库的例子
