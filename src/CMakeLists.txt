@@ -15,5 +15,8 @@ elseif(MSVC)
 endif()
 
 
-
-add_library(sxtwl STATIC ${SRC_FILES})
+if(SXTWL_SHARED)
+    add_library(sxtwl SHARED ${SRC_FILES})
+else(SXTWL_SHARED)
+    add_library(sxtwl STATIC ${SRC_FILES})
+endif(SXTWL_SHARED)

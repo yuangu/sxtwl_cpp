@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <time.h>
 #include <string>
+#include <sstream>
 
 struct Time
 {
@@ -60,6 +61,13 @@ struct Time
 
 	void setSec(double  sec) {
 		s = sec;
+	}
+
+	std::string toStr() {
+		std::stringstream ss;
+		ss << getYear() << "-" << getMonth() << "-" << getDay() << ' '
+			<< getHour() << ":" << getMin() << ":" << (int)getSec();
+		return ss.str();
 	}
 };
 
