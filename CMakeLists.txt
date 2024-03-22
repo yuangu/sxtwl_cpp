@@ -11,6 +11,7 @@ ENDIF()
 add_subdirectory(src)
 
 #编译例子
+option(SXTWL_BUILD_EXAMPLES "sxtwl examples" OFF)
 if(SXTWL_BUILD_EXAMPLES)
     add_subdirectory(example)
 endif(SXTWL_BUILD_EXAMPLES)
@@ -31,6 +32,7 @@ endif(SXTWL_BUILD_EXAMPLES)
 # endif(SXTWL_WRAPPER_PYTHON)
 
 #java的接口导出(适作于android, 在externalNativeBuild 下的cmake加上 arguments "-DSXTWL_WRAPPER_JAVA=1")
+option(SXTWL_WRAPPER_JAVA "sxtwl java wrapper" OFF)
 if(SXTWL_WRAPPER_JAVA)
     # find_package(SWIG REQUIRED)
    
@@ -79,6 +81,7 @@ if(SXTWL_WRAPPER_JAVA)
 endif(SXTWL_WRAPPER_JAVA)
 
 #lua接口的导出
+option(SXTWL_WRAPPER_LUA "sxtwl lua wrapper" OFF)
 if(SXTWL_WRAPPER_LUA)
     # find_package(SWIG REQUIRED)
     # include(${SWIG_USE_FILE})
@@ -106,6 +109,7 @@ endif(SXTWL_WRAPPER_LUA)
 
 
 #C#接口导出
+option(SXTWL_WRAPPER_CSHARP "sxtwl csharp wrapper" OFF)
 if(SXTWL_WRAPPER_CSHARP)
     # find_package(SWIG REQUIRED)
     # include(${SWIG_USE_FILE})
@@ -126,6 +130,7 @@ endif(SXTWL_WRAPPER_CSHARP)
 
 
 #php接口导出(仅支持php5和php7)
+option(SXTWL_WRAPPER_PHP5 "sxtwl php5 wrapper" OFF)
 if(SXTWL_WRAPPER_PHP5)
 
     include(${CMAKE_SOURCE_DIR}/cmake/FindPHP.cmake)
@@ -152,7 +157,7 @@ if(SXTWL_WRAPPER_PHP5)
     
 endif(SXTWL_WRAPPER_PHP5)
 
-
+option(SXTWL_WRAPPER_PHP7 "sxtwl php7 wrapper" OFF)
 if(SXTWL_WRAPPER_PHP7)
     include(${CMAKE_SOURCE_DIR}/cmake/FindPHP.cmake)
     
@@ -179,6 +184,7 @@ if(SXTWL_WRAPPER_PHP7)
 endif(SXTWL_WRAPPER_PHP7)
 
 # for golang
+option(SXTWL_WRAPPER_GO "sxtwl golang wrapper" OFF)
 if(SXTWL_WRAPPER_GO)
     include_directories("./src")
     add_library(sxtwl_go  STATIC  "./export/golang/sxtwl_wrap.cxx") 
