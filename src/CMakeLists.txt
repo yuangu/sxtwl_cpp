@@ -10,7 +10,7 @@ if(UNIX)
     add_compile_options(-fPIC)
 elseif(MSVC)
     ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
-    add_compile_options(/source-charset:utf-8)
+    #add_compile_options(/source-charset:utf-8)
 endif()
 
 add_library(sxtwl STATIC ${SRC_FILES})
