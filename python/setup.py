@@ -16,7 +16,9 @@ try:
         with open('README.md') as f:
             long_description = f.read()
     else:
-        long_description = io.open('README.md', 'r', encoding="utf-8").read()
+         with open('README.md', 'r', encoding="utf-8") as f:
+            long_description = f.read()
+        # long_description = io.open('README.md', 'r', encoding="utf-8").read()
 except Exception as e:
     long_description = ""
 finally:
