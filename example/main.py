@@ -46,7 +46,7 @@ s = "农历:%d年%s%d月%d日" % (day.getLunarYear(False), '闰' if day.isLunarL
 print(s)
 
 # 使用中文表示农历
-s = "农历:%d年%s%d月%d日" % (day.getLunarYear(False), '闰' if day.isLunarLeap() else '', ymc[day.getLunarMonth() - 1], rmc[day.getLunarDay() - 1])
+s = "农历:%d年%s%s月%s日" % (day.getLunarYear(False), '闰' if day.isLunarLeap() else '', ymc[day.getLunarMonth() - 1], rmc[day.getLunarDay() - 1])
 print(s)
 
 # 以春节为界的天干地支 

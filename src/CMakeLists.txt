@@ -14,7 +14,7 @@ elseif(MSVC)
     add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 endif()
 
-
+### 支持sxtwl生成dll的格式
 if(SXTWL_SHARED)
     add_library(sxtwl SHARED ${SRC_FILES})
 else(SXTWL_SHARED)
