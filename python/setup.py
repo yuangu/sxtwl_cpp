@@ -25,15 +25,15 @@ finally:
 # if sys.version_info < (3, 0) and platform.system() == 'Windows':
 #     long_description = long_description.decode("utf-8").encode("gbk")
 
-if sys.version_info >= (3, 0) and platform.system() == 'Windows':
-        try:
-            if isinstance(long_description, unicode):
-                tmp=copy.deepcopy(long_description)
-                tmp.encode("mbcs")
-        except Exception as e:
-            long_description = ''
-        else:
-            pass
+# if sys.version_info >= (3, 0) and platform.system() == 'Windows':
+#         try:
+#             if isinstance(long_description, unicode):
+#                 tmp=copy.deepcopy(long_description)
+#                 tmp.encode("mbcs")
+#         except Exception as e:
+#             long_description = ''
+#         else:
+#             pass
 
 
 # if sys.version_info < (3, 0):
