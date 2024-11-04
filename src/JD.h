@@ -50,7 +50,7 @@ struct Time
 		return m;
 	}
 
-	void setMour(double  min) {
+	void setMin(double  min) {
 		m = min;
 	}
 

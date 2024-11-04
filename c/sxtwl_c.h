@@ -31,11 +31,7 @@
 
 EXTERN_C_BEGIN
 
-typedef struct sxtwl_Time
-{
-    int year, month, day;
-    double hour, min, sec;
-} sxtwl_Time;
+
 
 typedef struct sxtwl_Day
 {
@@ -88,10 +84,10 @@ FFI_PLUGIN_EXPORT void *sxtwl_getShiGz(void *gzPtr, uint8_t dayTg, uint8_t hour,
 FFI_PLUGIN_EXPORT uint8_t sxtwl_getRunMonth(int By);
 // 获取一月中的阴日数量
 FFI_PLUGIN_EXPORT uint8_t sxtwl_getLunarMonthNum(int By, uint8_t month, bool isRun);
-// 儒略日数转公历
-FFI_PLUGIN_EXPORT sxtwl_Time sxtwl_JD2DD(double jd);
-// 公历转儒略日
-FFI_PLUGIN_EXPORT double sxtwl_toJD(sxtwl_Time *time);
+// 儒略日数转公历(返回的是Time指针)
+FFI_PLUGIN_EXPORT void* sxtwl_JD2DD(double jd);
+// 公历转儒略日(参数是Time指针)
+FFI_PLUGIN_EXPORT double sxtwl_toJD(void* time);
 
 // 反推的jd列表使用
 FFI_PLUGIN_EXPORT void *JdList_new();
@@ -105,5 +101,21 @@ FFI_PLUGIN_EXPORT int GZ_getTg(void *ptr);
 FFI_PLUGIN_EXPORT void GZ_setTg(void *ptr, int tg);
 FFI_PLUGIN_EXPORT int GZ_getDz(void *ptr);
 FFI_PLUGIN_EXPORT void GZ_setDz(void *ptr, int dz);
+
+
+FFI_PLUGIN_EXPORT void *Time_new();
+FFI_PLUGIN_EXPORT void Time_free(void *ptr);
+FFI_PLUGIN_EXPORT int Time_getYear(void *ptr);
+FFI_PLUGIN_EXPORT void Time_setYear(void *ptr, int year);
+FFI_PLUGIN_EXPORT void Time_setMonth(void *ptr,int month);
+FFI_PLUGIN_EXPORT int Time_getMonth(void *ptr);
+FFI_PLUGIN_EXPORT int Time_getDay(void *ptr);
+FFI_PLUGIN_EXPORT void Time_setDay(void *ptr, int day);
+FFI_PLUGIN_EXPORT double Time_getHour(void *ptr);
+FFI_PLUGIN_EXPORT void Time_setHour(void *ptr,double hour) ;
+FFI_PLUGIN_EXPORT double Time_getMin(void *ptr);
+FFI_PLUGIN_EXPORT void Time_setMin(void *ptr,double  min);
+FFI_PLUGIN_EXPORT double Time_getSec(void *ptr);
+FFI_PLUGIN_EXPORT void Time_setSec(void *ptr,double  sec);
 
 EXTERN_C_END

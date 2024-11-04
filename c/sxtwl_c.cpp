@@ -1,4 +1,4 @@
-#include "sxtwl_export.h"
+#include "sxtwl_c.h"
 
 #include "sxtwl.h"
 
@@ -131,7 +131,7 @@ void sxtwl_freeDay(sxtwl_Day *day)
     delete day;
 }
 
-void *sxtwl_getShiGz(void  *GZPtr, uint8_t dayTg, uint8_t hour, bool isZaoWanZiShi)
+void *sxtwl_getShiGz(void *GZPtr, uint8_t dayTg, uint8_t hour, bool isZaoWanZiShi)
 {
     auto ret = (GZ *)GZPtr;
     *ret = sxtwl::getShiGz(dayTg, hour, isZaoWanZiShi);
@@ -148,24 +148,25 @@ uint8_t sxtwl_getLunarMonthNum(int By, uint8_t month, bool isRun)
     return sxtwl::getLunarMonthNum(By, month, isRun);
 }
 
-sxtwl_Time sxtwl_JD2DD(double jd)
+// 儒略日数转公历(返回的是Time指针)
+void *sxtwl_JD2DD(double jd)
 {
     Time t = sxtwl::JD2DD(jd);
-    sxtwl_Time time;
-    time.year = t.Y;
-    time.month = t.M;
-    time.day = t.D;
+    Time *time = new Time();
+    time->Y = t.Y;
+    time->M = t.M;
+    time->D = t.D;
 
-    time.hour = t.h;
-    time.min = t.m;
-    time.sec = t.s;
+    time->h = t.h;
+    time->m = t.m;
+    time->s = t.s;
     return time;
 }
-
-double sxtwl_toJD(sxtwl_Time *time)
+// 公历转儒略日(参数是Time指针)
+FFI_PLUGIN_EXPORT double sxtwl_toJD(void *time)
 {
-    Time t(time->year, time->month, time->day, time->hour, time->min, time->sec);
-    return sxtwl::toJD(t);
+    Time *t = (Time *)time;
+    return sxtwl::toJD(*t);
 }
 
 sxtwl_Day *sxtwl_fromSolar(sxtwl_Day *ret, int year, uint8_t month, int day)
@@ -238,4 +239,87 @@ void GZ_setDz(void *ptr, int dz)
     auto ret = (GZ *)ptr;
     ret->dz = dz;
 }
+
+void *Time_new()
+{
+    return new Time();
+}
+
+void Time_free(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    delete ret;
+}
+
+int Time_getYear(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getYear();
+}
+
+void Time_setYear(void *ptr, int year)
+{
+    auto ret = (Time *)ptr;
+    ret->setYear(year);
+}
+
+void Time_setMonth(void *ptr, int month)
+{
+    auto ret = (Time *)ptr;
+    ret->setMonth(month);
+}
+
+int Time_getMonth(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getMonth();
+}
+
+int Time_getDay(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getDay();
+}
+
+void Time_setDay(void *ptr, int day)
+{
+    auto ret = (Time *)ptr;
+    ret->setDay(day);
+}
+
+double Time_getHour(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getHour();
+}
+
+void Time_setHour(void *ptr, double hour)
+{
+    auto ret = (Time *)ptr;
+    ret->setHour(hour);
+}
+
+double Time_getMin(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getMin();
+}
+
+void Time_setMin(void *ptr, double min)
+{
+    auto ret = (Time *)ptr;
+    return ret->setMin(min);
+}
+
+double Time_getSec(void *ptr)
+{
+    auto ret = (Time *)ptr;
+    return ret->getSec();
+}
+void Time_setSec(void *ptr, double sec)
+{
+    auto ret = (Time *)ptr;
+    ret->setSec(sec);
+}
+
 EXTERN_C_END
