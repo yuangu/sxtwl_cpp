@@ -1,4 +1,4 @@
-#include "sxtwl_export.h"
+#include "sxtwl_c.h"
 
 #include "sxtwl.h"
 
