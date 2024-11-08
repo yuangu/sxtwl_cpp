@@ -149,10 +149,10 @@ uint8_t sxtwl_getLunarMonthNum(int By, uint8_t month, bool isRun)
 }
 
 // 儒略日数转公历(返回的是Time指针)
-void *sxtwl_JD2DD(double jd)
+void *sxtwl_JD2DD(void * _time, double jd)
 {
     Time t = sxtwl::JD2DD(jd);
-    Time *time = new Time();
+    Time *time = (Time*)(_time);
     time->Y = t.Y;
     time->M = t.M;
     time->D = t.D;

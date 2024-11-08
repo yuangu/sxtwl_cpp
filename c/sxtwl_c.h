@@ -85,7 +85,7 @@ FFI_PLUGIN_EXPORT uint8_t sxtwl_getRunMonth(int By);
 // 获取一月中的阴日数量
 FFI_PLUGIN_EXPORT uint8_t sxtwl_getLunarMonthNum(int By, uint8_t month, bool isRun);
 // 儒略日数转公历(返回的是Time指针)
-FFI_PLUGIN_EXPORT void* sxtwl_JD2DD(double jd);
+FFI_PLUGIN_EXPORT void* sxtwl_JD2DD(void * time, double jd);
 // 公历转儒略日(参数是Time指针)
 FFI_PLUGIN_EXPORT double sxtwl_toJD(void* time);
 
